@@ -41,10 +41,10 @@ This project focuses on building a modern data transformation pipeline. We use *
 ---
 
 ## 👥 Team Members
-* **Aliaa Raafat Anwar Elbaz** (https://github.com/Lamiaa-Dardeer)
-* **Elsayed Hussein Mohamed Gouda** (https://github.com/Lamiaa-Dardeer)
+* **Aliaa Raafat Anwar Elbaz** (https://github.com/aliaelbaz)
+* **Elsayed Hussein Mohamed Gouda** (https://github.com/godajr)
 * **Lamiaa Mohammad Abdulhameed Dardeer** (https://github.com/Lamiaa-Dardeer)
-* **Makary Makeen Makary** ()
+* **Makary Makeen Makary** (https://github.com/MakaryMakeen10)
 
 ---
 *Generated as part of the Digital Egypt Pioneers Initiative (DEPI).*
