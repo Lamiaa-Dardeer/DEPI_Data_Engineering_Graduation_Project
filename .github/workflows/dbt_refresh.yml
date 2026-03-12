@@ -43,7 +43,7 @@ jobs:
                 dataset: staging_area
                 threads: 1
                 timeout_seconds: 300
-                location: US # تأكدي لو الداتا في مكان تاني غير أمريكا اكتبيها هنا
+                location: us-central1 # تأكدي لو الداتا في مكان تاني غير أمريكا اكتبيها هنا
             target: dev" > ~/.dbt/profiles.yml
 
       - name: Run dbt
