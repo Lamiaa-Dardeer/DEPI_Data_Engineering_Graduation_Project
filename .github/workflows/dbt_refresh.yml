@@ -1,0 +1,36 @@
+name: BigQuery Table Refresh
+
+on:
+  workflow_dispatch: # هذا يسمح لكِ بتشغيل الروبوت يدوياً بضغطة زر
+  schedule:
+    - cron: '0 0 * * 5' # سيعمل تلقائياً كل يوم جمعة الساعة 12 صباحاً
+
+jobs:
+  refresh-tables:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write' # ضروري جداً لكي يعمل جسر الثقة (OIDC)
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: 'projects/113456966208/locations/global/workloadIdentityPools/depi-pool/providers/github-provider'
+          service_account: 'expire-dbt-robot@depi-graduation-project-489604.iam.gserviceaccount.com'
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dbt
+        run: |
+          pip install dbt-bigquery
+
+      - name: Run dbt
+        run: |
+          dbt run --full-refresh
