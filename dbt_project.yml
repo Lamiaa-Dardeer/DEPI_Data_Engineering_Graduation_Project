@@ -1,1 +1,7 @@
+name: 'depi_graduation_project'
+version: '1.0.0'
+config-version: 2
 
+profile: 'default' # هذا يجب أن يطابق ما كتبناه في الروبوت
+
+model-paths: ["models"]
