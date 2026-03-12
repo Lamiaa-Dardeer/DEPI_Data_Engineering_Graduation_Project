@@ -1,16 +1,16 @@
 name: BigQuery Table Refresh
 
 on:
-  workflow_dispatch: # هذا يسمح لكِ بتشغيل الروبوت يدوياً بضغطة زر
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 5' # سيعمل تلقائياً كل يوم جمعة الساعة 12 صباحاً
+    - cron: '0 0 * * 5'
 
 jobs:
   refresh-tables:
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'
-      id-token: 'write' # ضروري جداً لكي يعمل جسر الثقة (OIDC)
+      id-token: 'write'
 
     steps:
       - name: Checkout Code
@@ -30,6 +30,21 @@ jobs:
       - name: Install dbt
         run: |
           pip install dbt-bigquery
+
+      - name: Create dbt Profile
+        run: |
+          mkdir -p ~/.dbt
+          echo "default:
+            outputs:
+              dev:
+                type: bigquery
+                method: oauth
+                project: depi-graduation-project-489604
+                dataset: staging_area
+                threads: 1
+                timeout_seconds: 300
+                location: US # تأكدي لو الداتا في مكان تاني غير أمريكا اكتبيها هنا
+            target: dev" > ~/.dbt/profiles.yml
 
       - name: Run dbt
         run: |
