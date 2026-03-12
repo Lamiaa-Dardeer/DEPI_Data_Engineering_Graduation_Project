@@ -4,6 +4,18 @@
 ## 📋 Project Overview
 This project focuses on building a modern data transformation pipeline. We use **BigQuery** as our Data Warehouse and **dbt (data build tool)** for transforming raw data into clean, analytics-ready models, following software engineering best practices like modularity and testing.
 
+# 🚀 Automated Data Pipeline & Maintenance
+To overcome the Google BigQuery Sandbox 60-day expiration policy, I implemented a robust automation workflow using dbt (Data Build Tool) and GitHub Actions.
+
+How it works:
+Orchestration: A GitHub Actions workflow is scheduled to run weekly.
+
+Security: Authentication is handled securely via Workload Identity Federation, eliminating the need for sensitive JSON keys.
+
+Data Transformation: The system uses dbt run --full-refresh to recreate the core datasets, effectively resetting the expiration timer while maintaining data integrity.
+
+Reliability: This ensures that the 2M+ air quality records remain available for analysis throughout the duration of the graduation project.
+
 ---
 
 ## 🏗️ Project Architecture & Milestones
