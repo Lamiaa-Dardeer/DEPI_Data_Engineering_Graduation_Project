@@ -4,7 +4,7 @@
 ## 📋 Project Overview
 This project focuses on building a modern data transformation pipeline. We use **BigQuery** as our Data Warehouse and **dbt (data build tool)** for transforming raw data into clean, analytics-ready models, following software engineering best practices like modularity and testing.
 
-# 🚀 Automated Data Pipeline & Maintenance
+## 🚀 Automated Data Pipeline & Maintenance
 To overcome the Google BigQuery Sandbox 60-day expiration policy, I implemented a robust automation workflow using dbt (Data Build Tool) and GitHub Actions.
 
 How it works:
