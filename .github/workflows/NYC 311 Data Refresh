@@ -1,9 +1,10 @@
-name: BigQuery Connection Test
+name: NYC 311 Data Refresh
+
 on:
-  workflow_dispatch: # يتيح لكِ تشغيل الروبوت يدوياً للتجربة
+  workflow_dispatch: # يسمح لكِ بتشغيل الروبوت يدوياً في أي وقت
 
 jobs:
-  test-connection:
+  refresh-data:
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'
@@ -19,6 +20,11 @@ jobs:
           workload_identity_provider: 'projects/113456966208/locations/global/workloadIdentityPools/depi-pool/providers/github-provider'
           service_account: 'dbt-user-311@depi-graduation-project-489604.iam.gserviceaccount.com'
 
-      - name: Test BigQuery Access
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Refresh Script
         run: |
-          gcloud bw query --use_legacy_sql=false 'SELECT count(*) FROM `depi-graduation-project-489604.nyc_311_raw_data.raw_service_requests` LIMIT 10'
+          echo "سيتم هنا وضع كود بايثون الخاص بسحب البيانات في الخطوة القادمة"
