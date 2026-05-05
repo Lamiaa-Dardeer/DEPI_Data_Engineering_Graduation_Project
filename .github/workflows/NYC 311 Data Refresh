@@ -1,30 +1,34 @@
 name: NYC 311 Data Refresh
 
 on:
-  workflow_dispatch: # يسمح لكِ بتشغيل الروبوت يدوياً في أي وقت
+  workflow_dispatch: 
+
+env:
+  # هذا السطر ينهي التحذير ويجعل الروبوت يستخدم أحدث نظام تشغيل
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
 
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'
-      id-token: 'write' # ضروري جداً لاستخدام Workload Identity
+      id-token: 'write' 
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5 # تم التحديث من v4 لـ v5
 
       - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@v3 # تم التحديث من v2 لـ v3
         with:
           workload_identity_provider: 'projects/113456966208/locations/global/workloadIdentityPools/depi-pool/providers/github-new-provider'
           service_account: 'dbt-user-311@depi-graduation-project-489604.iam.gserviceaccount.com'
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6 # تم التحديث من v5 لـ v6
         with:
           python-version: '3.10'
 
       - name: Run Refresh Script
         run: |
-          echo "سيتم هنا وضع كود بايثون الخاص بسحب البيانات في الخطوة القادمة"
+          echo "الربط ناجح تماماً وبدون تحذيرات!"
