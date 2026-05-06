@@ -1,0 +1,327 @@
+==================== 2026-05-06T11:47:28.969975Z | 85d2f240-f0cc-4f4a-9f8f-dbaf9ee15363 ====================
+11:47:28.970083 [info ]: Starting dbt LSP server
+11:47:28.970141 [info ]: Connecting to LSP client on port 8000
+11:47:28.971536 [info ]: Successfully connected to LSP client
+11:47:28.971545 [info ]: Creating LSP service...
+11:47:29.025903 [info ]: Creating LSP server...
+11:47:29.025919 [info ]: Starting LSP server...
+11:47:29.042465 [info ]: Loading profiles.yml
+11:47:29.074200 [info ]: Started loading project
+11:47:29.074753 [info ]: Loading profiles.yml
+11:47:29.076499 [debug]:    Started loading packages
+11:47:29.078671 [debug]:     Loaded [  0.00s] packages
+11:47:29.079778 [info ]: Started parsing
+11:47:29.102144 [info ]: Finished loading project [  0.03s]
+11:47:29.106233 [debug]: Finished parsing models\pollution_raw_data.sql [  0.00s]
+11:47:29.107760 [debug]: Finished parsing models\transform_311.sql [  0.00s]
+11:47:29.108775 [info ]: Finished parsing [  0.03s]
+11:47:29.109104 [info ]: Cached model count updated: 2 models (estimate)
+11:47:29.109112 [info ]: Cached model count updated: 2 models (accurate)
+11:47:29.109177 [info ]: Started scheduling
+11:47:29.109383 [info ]: Finished scheduling [  0.00s]
+11:47:29.109408 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.pollution_raw_data"}
+11:47:29.109437 [info ]: Started scheduling
+11:47:29.109455 [info ]: Finished scheduling [  0.00s]
+11:47:29.227296 [info ]: Started building task graph
+11:47:29.227445 [info ]: Finished building task graph [  0.00s]
+11:47:29.227795 [info ]: Started rendering (1 nodes)
+11:47:29.227855 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+11:47:29.227891 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+11:47:29.229862 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+11:47:29.230040 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:47:29.230055 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:47:29.230084 [info ]: Started analyzing (1 nodes)
+11:47:29.230093 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+11:47:29.234639 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:47:29.234655 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:47:29.234663 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.pollution_raw_data (table)
+11:47:29.238221 [info ]: Started scheduling
+11:47:29.238246 [info ]: Finished scheduling [  0.00s]
+11:47:29.238644 [info ]: Cached model count updated: 2 models (accurate)
+11:47:30.784606 [info ]: Started loading project
+11:47:30.785088 [info ]: Loading profiles.yml
+11:47:30.802166 [info ]: Cached model count updated: 2 models (estimate)
+11:47:30.802183 [info ]: Cached model count updated: 2 models (accurate)
+11:47:30.802201 [info ]: Started scheduling
+11:47:30.802236 [info ]: Finished scheduling [  0.00s]
+11:47:30.802246 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.pollution_raw_data"}
+11:47:30.904506 [info ]: Started building task graph
+11:47:30.904537 [info ]: Finished building task graph [  0.00s]
+11:47:30.904632 [info ]: Started rendering (1 nodes)
+11:47:30.904653 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+11:47:30.904662 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+11:47:30.904701 [info ]: Finished loading project [  0.12s]
+11:47:30.905028 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+11:47:30.905156 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:47:30.905167 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:47:30.905181 [info ]: Started analyzing (1 nodes)
+11:47:30.905188 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+11:47:30.905343 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:47:30.905351 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:47:30.905356 [info ]:  Succeeded [-------] model nyc_311_raw_data.pollution_raw_data (table)
+11:47:30.908318 [info ]: Started scheduling
+11:47:30.908340 [info ]: Finished scheduling [  0.00s]
+11:47:30.909381 [info ]: Cached model count updated: 2 models (accurate)
+11:47:32.456584 [info ]: Started loading project
+11:47:32.457535 [info ]: Loading profiles.yml
+11:47:32.474757 [info ]: Cached model count updated: 2 models (estimate)
+11:47:32.474765 [info ]: Cached model count updated: 2 models (accurate)
+11:47:32.474775 [info ]: Started scheduling
+11:47:32.474798 [info ]: Finished scheduling [  0.00s]
+11:47:32.474807 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.pollution_raw_data"}
+11:47:32.569581 [info ]: Started building task graph
+11:47:32.569605 [info ]: Finished building task graph [  0.00s]
+11:47:32.569680 [info ]: Started rendering (1 nodes)
+11:47:32.569690 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+11:47:32.569699 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+11:47:32.569725 [info ]: Finished loading project [  0.11s]
+11:47:32.570286 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+11:47:32.570337 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:47:32.570348 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:47:32.570357 [info ]: Started analyzing (1 nodes)
+11:47:32.570363 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+11:47:32.570516 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:47:32.570523 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:47:32.570528 [info ]:  Succeeded [-------] model nyc_311_raw_data.pollution_raw_data (table)
+11:47:32.572797 [info ]: Started scheduling
+11:47:32.572814 [info ]: Finished scheduling [  0.00s]
+11:47:32.573812 [info ]: Cached model count updated: 2 models (accurate)
+11:47:40.459796 [info ]: Started loading project
+11:47:40.460279 [info ]: Loading profiles.yml
+11:47:40.480938 [info ]: Cached model count updated: 2 models (estimate)
+11:47:40.480957 [info ]: Cached model count updated: 2 models (accurate)
+11:47:40.480980 [info ]: Started scheduling
+11:47:40.481024 [info ]: Finished scheduling [  0.00s]
+11:47:40.481038 [debug]: Compilation - 0 nodes selected: {}
+11:47:40.481079 [warn ]: dbt1092: The selection criterion '+fqn:model.nyc_311_project.transform_311' does not match any enabled nodes
+11:47:40.481109 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:47:40.583899 [info ]: Started building task graph
+11:47:40.583921 [info ]: Finished building task graph [  0.00s]
+11:47:40.586618 [info ]: Started scheduling
+11:47:40.586640 [info ]: Finished scheduling [  0.00s]
+11:47:40.586844 [info ]: Finished loading project [  0.13s]
+11:47:40.587054 [info ]: Cached model count updated: 2 models (accurate)
+11:47:40.588422 [info ]: Waiting for lease on 'target' directory
+11:47:41.031655 [info ]: Started loading project
+11:47:41.032274 [info ]: Loading profiles.yml
+11:47:41.048230 [info ]: Cached model count updated: 2 models (estimate)
+11:47:41.048240 [info ]: Cached model count updated: 2 models (accurate)
+11:47:41.048255 [info ]: Started scheduling
+11:47:41.048282 [info ]: Finished scheduling [  0.00s]
+11:47:41.048291 [debug]: Compilation - 0 nodes selected: {}
+11:47:41.048299 [warn ]: dbt1092: The selection criterion '+fqn:model.nyc_311_project.transform_311' does not match any enabled nodes
+11:47:41.048305 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:47:41.143745 [info ]: Started building task graph
+11:47:41.143766 [info ]: Finished building task graph [  0.00s]
+11:47:41.146427 [info ]: Started scheduling
+11:47:41.146449 [info ]: Finished scheduling [  0.00s]
+11:47:41.146644 [info ]: Finished loading project [  0.11s]
+11:47:41.146859 [info ]: Cached model count updated: 2 models (accurate)
+11:47:41.148344 [info ]: Waiting for lease on 'target' directory
+11:47:41.596270 [info ]: Started loading project
+11:47:41.596733 [info ]: Loading profiles.yml
+11:47:41.612836 [info ]: Cached model count updated: 2 models (estimate)
+11:47:41.612845 [info ]: Cached model count updated: 2 models (accurate)
+11:47:41.612860 [info ]: Started scheduling
+11:47:41.612888 [info ]: Finished scheduling [  0.00s]
+11:47:41.612897 [debug]: Compilation - 0 nodes selected: {}
+11:47:41.612905 [warn ]: dbt1092: The selection criterion '+fqn:model.nyc_311_project.transform_311' does not match any enabled nodes
+11:47:41.612911 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:47:41.710169 [info ]: Started building task graph
+11:47:41.710190 [info ]: Finished building task graph [  0.00s]
+11:47:41.712753 [info ]: Started scheduling
+11:47:41.712773 [info ]: Finished scheduling [  0.00s]
+11:47:41.712965 [info ]: Finished loading project [  0.12s]
+11:47:41.713183 [info ]: Cached model count updated: 2 models (accurate)
+11:47:41.715529 [info ]: Waiting for lease on 'target' directory
+11:47:42.155743 [info ]: Started loading project
+11:47:42.156213 [info ]: Loading profiles.yml
+11:47:42.172068 [info ]: Cached model count updated: 2 models (estimate)
+11:47:42.172077 [info ]: Cached model count updated: 2 models (accurate)
+11:47:42.172093 [info ]: Started scheduling
+11:47:42.172120 [info ]: Finished scheduling [  0.00s]
+11:47:42.172129 [debug]: Compilation - 0 nodes selected: {}
+11:47:42.172137 [warn ]: dbt1092: The selection criterion '+fqn:model.nyc_311_project.transform_311' does not match any enabled nodes
+11:47:42.172143 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:47:42.267707 [info ]: Started building task graph
+11:47:42.267728 [info ]: Finished building task graph [  0.00s]
+11:47:42.270307 [info ]: Started scheduling
+11:47:42.270328 [info ]: Finished scheduling [  0.00s]
+11:47:42.270516 [info ]: Finished loading project [  0.11s]
+11:47:42.270727 [info ]: Cached model count updated: 2 models (accurate)
+11:47:43.819041 [info ]: Started loading project
+11:47:43.819532 [info ]: Loading profiles.yml
+11:47:43.835903 [info ]: Cached model count updated: 2 models (estimate)
+11:47:43.835917 [info ]: Cached model count updated: 2 models (accurate)
+11:47:43.835936 [info ]: Started scheduling
+11:47:43.835968 [info ]: Finished scheduling [  0.00s]
+11:47:43.835978 [debug]: Compilation - 0 nodes selected: {}
+11:47:43.835987 [warn ]: dbt1092: The selection criterion '+fqn:model.nyc_311_project.transform_311+' does not match any enabled nodes
+11:47:43.835994 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:47:43.934164 [info ]: Started building task graph
+11:47:43.934188 [info ]: Finished building task graph [  0.00s]
+11:47:43.937221 [info ]: Started scheduling
+11:47:43.937245 [info ]: Finished scheduling [  0.00s]
+11:47:43.937468 [info ]: Finished loading project [  0.12s]
+11:47:43.938599 [info ]: Cached model count updated: 2 models (accurate)
+11:47:45.483756 [info ]: Started loading project
+11:47:45.484285 [info ]: Loading profiles.yml
+11:47:45.503228 [info ]: Cached model count updated: 2 models (estimate)
+11:47:45.503240 [info ]: Cached model count updated: 2 models (accurate)
+11:47:45.503253 [info ]: Started scheduling
+11:47:45.503278 [info ]: Finished scheduling [  0.00s]
+11:47:45.503287 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.pollution_raw_data"}
+11:47:45.598958 [info ]: Started building task graph
+11:47:45.598990 [info ]: Finished building task graph [  0.00s]
+11:47:45.599079 [info ]: Started rendering (1 nodes)
+11:47:45.599091 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+11:47:45.599099 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+11:47:45.599130 [info ]: Finished loading project [  0.12s]
+11:47:45.599701 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+11:47:45.599751 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:47:45.599764 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:47:45.599776 [info ]: Started analyzing (1 nodes)
+11:47:45.599783 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+11:47:45.599942 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:47:45.599949 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:47:45.599954 [info ]:  Succeeded [-------] model nyc_311_raw_data.pollution_raw_data (table)
+11:47:45.602726 [info ]: Started scheduling
+11:47:45.602747 [info ]: Finished scheduling [  0.00s]
+11:47:45.603902 [info ]: Cached model count updated: 2 models (accurate)
+11:49:09.687166 [info ]: Started loading project
+11:49:09.687784 [info ]: Loading profiles.yml
+11:49:09.706684 [info ]: Cached model count updated: 2 models (estimate)
+11:49:09.706699 [info ]: Cached model count updated: 2 models (accurate)
+11:49:09.706718 [info ]: Started scheduling
+11:49:09.706747 [info ]: Finished scheduling [  0.00s]
+11:49:09.706758 [debug]: Compilation - 0 nodes selected: {}
+11:49:09.706768 [warn ]: dbt1092: The selection criterion '+fqn:model.nyc_311_project.transform_311' does not match any enabled nodes
+11:49:09.706774 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:49:09.801864 [info ]: Started building task graph
+11:49:09.801886 [info ]: Finished building task graph [  0.00s]
+11:49:09.804638 [info ]: Started scheduling
+11:49:09.804660 [info ]: Finished scheduling [  0.00s]
+11:49:09.804859 [info ]: Finished loading project [  0.12s]
+11:49:09.805064 [info ]: Cached model count updated: 2 models (accurate)
+11:49:11.366113 [info ]: Started loading project
+11:49:11.366545 [info ]: Loading profiles.yml
+11:49:11.383263 [info ]: Cached model count updated: 2 models (estimate)
+11:49:11.383277 [info ]: Cached model count updated: 2 models (accurate)
+11:49:11.383295 [info ]: Started scheduling
+11:49:11.383326 [info ]: Finished scheduling [  0.00s]
+11:49:11.383337 [debug]: Compilation - 0 nodes selected: {}
+11:49:11.383347 [warn ]: dbt1092: The selection criterion '+fqn:model.nyc_311_project.transform_311+' does not match any enabled nodes
+11:49:11.383354 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:49:11.484349 [info ]: Started building task graph
+11:49:11.484373 [info ]: Finished building task graph [  0.00s]
+11:49:11.487298 [info ]: Started scheduling
+11:49:11.487320 [info ]: Finished scheduling [  0.00s]
+11:49:11.487537 [info ]: Finished loading project [  0.12s]
+11:49:11.488457 [info ]: Cached model count updated: 2 models (accurate)
+11:49:13.042569 [info ]: Started loading project
+11:49:13.043158 [info ]: Loading profiles.yml
+11:49:13.060410 [info ]: Cached model count updated: 2 models (estimate)
+11:49:13.060423 [info ]: Cached model count updated: 2 models (accurate)
+11:49:13.060437 [info ]: Started scheduling
+11:49:13.060463 [info ]: Finished scheduling [  0.00s]
+11:49:13.060473 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.pollution_raw_data"}
+11:49:13.160793 [info ]: Started building task graph
+11:49:13.160830 [info ]: Finished building task graph [  0.00s]
+11:49:13.160941 [info ]: Started rendering (1 nodes)
+11:49:13.160954 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+11:49:13.160963 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+11:49:13.161001 [info ]: Finished loading project [  0.12s]
+11:49:13.161437 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+11:49:13.161486 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:49:13.161496 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:49:13.161505 [info ]: Started analyzing (1 nodes)
+11:49:13.161509 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+11:49:13.161653 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+11:49:13.161660 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:49:13.161664 [info ]:  Succeeded [-------] model nyc_311_raw_data.pollution_raw_data (table)
+11:49:13.164819 [info ]: Started scheduling
+11:49:13.164845 [info ]: Finished scheduling [  0.00s]
+11:49:13.166224 [info ]: Cached model count updated: 2 models (accurate)
+==================== 2026-05-06T11:50:26.890453Z | 32734be7-4617-4161-bed0-fc7e044e9067 ====================
+11:50:26.890498 [info ]: Starting dbt LSP server
+11:50:26.890522 [info ]: Connecting to LSP client on port 8000
+11:50:26.891806 [info ]: Successfully connected to LSP client
+11:50:26.891815 [info ]: Creating LSP service...
+11:50:26.944655 [info ]: Creating LSP server...
+11:50:26.944669 [info ]: Starting LSP server...
+==================== 2026-05-06T12:04:46.636078Z | a6c27398-b602-413f-a35a-fb14f381eb1b ====================
+12:04:46.636122 [info ]: Starting dbt LSP server
+12:04:46.636147 [info ]: Connecting to LSP client on port 8000
+12:04:46.637423 [info ]: Successfully connected to LSP client
+12:04:46.637431 [info ]: Creating LSP service...
+12:04:46.690730 [info ]: Creating LSP server...
+12:04:46.690745 [info ]: Starting LSP server...
+==================== 2026-05-06T12:12:46.343516Z | 5c79f944-1a12-456e-bfb5-bf87d1959df1 ====================
+12:12:46.343562 [info ]: Starting dbt LSP server
+12:12:46.343586 [info ]: Connecting to LSP client on port 8000
+12:12:46.344909 [info ]: Successfully connected to LSP client
+12:12:46.344920 [info ]: Creating LSP service...
+12:12:46.404107 [info ]: Creating LSP server...
+12:12:46.404126 [info ]: Starting LSP server...
+==================== 2026-05-06T12:16:21.425824Z | bdaaa5fd-711e-4e0c-88e3-0009fdf61142 ====================
+12:16:21.425869 [info ]: Starting dbt LSP server
+12:16:21.425893 [info ]: Connecting to LSP client on port 8000
+12:16:21.427214 [info ]: Successfully connected to LSP client
+12:16:21.427224 [info ]: Creating LSP service...
+12:16:21.486945 [info ]: Creating LSP server...
+12:16:21.486960 [info ]: Starting LSP server...
+==================== 2026-05-06T13:27:26.894638Z | 45c10afb-9d31-4036-a6d8-cd771411b50a ====================
+13:27:26.894685 [info ]: Starting dbt LSP server
+13:27:26.894710 [info ]: Connecting to LSP client on port 8000
+13:27:26.895946 [info ]: Successfully connected to LSP client
+13:27:26.895956 [info ]: Creating LSP service...
+13:27:26.951217 [info ]: Creating LSP server...
+13:27:26.951231 [info ]: Starting LSP server...
+13:27:37.760009 [info ]: Loading profiles.yml
+13:36:58.407436 [info ]: Started loading project
+13:36:58.407930 [info ]: Loading profiles.yml
+13:36:58.419362 [debug]:    Started loading packages
+13:36:58.421403 [debug]:     Loaded [  0.00s] packages
+13:36:58.422115 [info ]: Started parsing
+13:36:58.441715 [info ]: Finished loading project [  0.03s]
+13:36:58.443870 [debug]: Finished parsing models\pollution_raw_data.sql [  0.00s]
+13:36:58.445060 [debug]: Finished parsing models\transform_311.sql [  0.00s]
+13:36:58.445759 [info ]: Finished parsing [  0.02s]
+13:36:58.446171 [info ]: Cached model count updated: 2 models (estimate)
+13:36:58.446180 [info ]: Cached model count updated: 2 models (accurate)
+13:36:58.446204 [info ]: Started scheduling
+13:36:58.446259 [info ]: Finished scheduling [  0.00s]
+13:36:58.446270 [debug]: Compilation - 0 nodes selected: {}
+13:36:58.446283 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+13:36:58.446298 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+13:36:58.446308 [info ]: Started scheduling
+13:36:58.446328 [info ]: Finished scheduling [  0.00s]
+13:36:58.542613 [info ]: Started building task graph
+13:36:58.542655 [info ]: Finished building task graph [  0.00s]
+13:36:58.545915 [info ]: Started scheduling
+13:36:58.545940 [info ]: Finished scheduling [  0.00s]
+13:36:58.546282 [info ]: Cached model count updated: 2 models (accurate)
+13:37:00.097487 [info ]: Started loading project
+13:37:00.097983 [info ]: Loading profiles.yml
+13:37:00.115240 [info ]: Cached model count updated: 2 models (estimate)
+13:37:00.115256 [info ]: Cached model count updated: 2 models (accurate)
+13:37:00.115269 [info ]: Started scheduling
+13:37:00.115295 [info ]: Finished scheduling [  0.00s]
+13:37:00.115305 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.pollution_raw_data"}
+13:37:00.226558 [info ]: Started building task graph
+13:37:00.226624 [info ]: Finished building task graph [  0.00s]
+13:37:00.226768 [info ]: Started rendering (1 nodes)
+13:37:00.226794 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+13:37:00.226814 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+13:37:00.226869 [info ]: Finished loading project [  0.13s]
+13:37:00.228087 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+13:37:00.228192 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+13:37:00.228204 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+13:37:00.228220 [info ]: Started analyzing (1 nodes)
+13:37:00.228228 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+13:37:00.231238 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+13:37:00.231248 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+13:37:00.231254 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.pollution_raw_data (table)
+13:37:00.237037 [info ]: Started scheduling
+13:37:00.237103 [info ]: Finished scheduling [  0.00s]
+13:37:00.238487 [info ]: Cached model count updated: 2 models (accurate)

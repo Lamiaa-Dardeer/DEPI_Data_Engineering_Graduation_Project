@@ -1,0 +1,223 @@
+[0m11:32:29.265936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027EEA48F550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027EEB81C3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027EEB81C1C0>]}
+
+
+============================== 11:32:29.269940 | eeeef5d6-a573-4f20-bfed-bf1b493bb561 ==============================
+[0m11:32:29.269940 [info ] [MainThread]: Running with dbt=1.11.8
+[0m11:32:29.269940 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m11:32:29.439093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eeeef5d6-a573-4f20-bfed-bf1b493bb561', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027EE7827C40>]}
+[0m11:32:29.465117 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m11:32:29.466118 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m11:32:29.467119 [debug] [MainThread]: Command `cli deps` succeeded at 11:32:29.467119 after 0.28 seconds
+[0m11:32:29.468120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027EEA48F550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027EEB947970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027EEB995990>]}
+[0m11:32:29.468120 [debug] [MainThread]: Flushing usage events
+[0m11:32:30.110589 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:35:56.255960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0811DF5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C08266C430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C08266C250>]}
+
+
+============================== 14:35:56.259964 | 830f770d-e75b-44a8-9ca8-a5fc81c956ad ==============================
+[0m14:35:56.259964 [info ] [MainThread]: Running with dbt=1.11.8
+[0m14:35:56.259964 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt ', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m14:35:56.432120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '830f770d-e75b-44a8-9ca8-a5fc81c956ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C08266C9D0>]}
+[0m14:35:56.460145 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m14:35:56.462147 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m14:35:56.463148 [debug] [MainThread]: Command `cli deps` succeeded at 14:35:56.463148 after 0.29 seconds
+[0m14:35:56.464149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0811DF5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C08266C9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0825F6680>]}
+[0m14:35:56.464149 [debug] [MainThread]: Flushing usage events
+[0m14:35:57.083476 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:35:59.518158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002008645F5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200877EC430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200877EC250>]}
+
+
+============================== 14:35:59.522161 | e5e9caa8-b3df-4f86-831a-6136618cdce5 ==============================
+[0m14:35:59.522161 [info ] [MainThread]: Running with dbt=1.11.8
+[0m14:35:59.522161 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m14:35:59.544181 [info ] [MainThread]: dbt version: 1.11.8
+[0m14:35:59.544181 [info ] [MainThread]: python version: 3.10.20
+[0m14:35:59.545182 [info ] [MainThread]: python path: D:\users\user\miniconda3\envs\dbt_depi\python.exe
+[0m14:35:59.545182 [info ] [MainThread]: os info: Windows-10-10.0.19041-SP0
+[0m14:36:00.649199 [info ] [MainThread]: Using profiles dir at c:\Users\user\DEPI_Data_Engineering_Graduation_Project
+[0m14:36:00.650200 [info ] [MainThread]: Using profiles.yml file at c:\Users\user\DEPI_Data_Engineering_Graduation_Project\profiles.yml
+[0m14:36:00.650200 [info ] [MainThread]: Using dbt_project.yml file at c:\Users\user\DEPI_Data_Engineering_Graduation_Project\dbt_project.yml
+[0m14:36:00.651201 [info ] [MainThread]: adapter type: bigquery
+[0m14:36:00.652202 [info ] [MainThread]: adapter version: 1.11.1
+[0m14:36:00.760300 [info ] [MainThread]: Configuration:
+[0m14:36:00.761301 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:36:00.762302 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:36:00.762302 [info ] [MainThread]: Required dependencies:
+[0m14:36:00.763303 [debug] [MainThread]: Executing "git --help"
+[0m14:36:00.799335 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:36:00.799335 [debug] [MainThread]: STDERR: "b''"
+[0m14:36:00.800336 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:36:00.801337 [info ] [MainThread]: Connection:
+[0m14:36:00.801337 [info ] [MainThread]:   method: oauth
+[0m14:36:00.802338 [info ] [MainThread]:   database: depi-graduation-project-489604
+[0m14:36:00.802338 [info ] [MainThread]:   execution_project: depi-graduation-project-489604
+[0m14:36:00.803340 [info ] [MainThread]:   schema: nyc_311_raw_data
+[0m14:36:00.803340 [info ] [MainThread]:   location: None
+[0m14:36:00.804340 [info ] [MainThread]:   priority: interactive
+[0m14:36:00.804340 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m14:36:00.804340 [info ] [MainThread]:   impersonate_service_account: None
+[0m14:36:00.805341 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m14:36:00.805341 [info ] [MainThread]:   job_retries: 1
+[0m14:36:00.806342 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m14:36:00.806342 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m14:36:00.807343 [info ] [MainThread]:   timeout_seconds: None
+[0m14:36:00.807343 [info ] [MainThread]:   client_id: None
+[0m14:36:00.808344 [info ] [MainThread]:   token_uri: None
+[0m14:36:00.808344 [info ] [MainThread]:   compute_region: None
+[0m14:36:00.809344 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m14:36:00.809344 [info ] [MainThread]:   gcs_bucket: None
+[0m14:36:00.810346 [info ] [MainThread]:   dataproc_batch: None
+[0m14:36:00.810346 [info ] [MainThread]: Registered adapter: bigquery=1.11.1
+[0m14:36:01.598058 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m14:36:01.599058 [debug] [MainThread]: On debug: select 1 as id
+[0m14:36:01.599058 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:36:13.636635 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: 'Runtime Error
+  Failed to authenticate with supplied credentials
+  error:
+  Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.'
+[0m14:36:13.637634 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m14:36:13.638635 [debug] [MainThread]: BigQuery adapter: Database Error
+  Runtime Error
+    Failed to authenticate with supplied credentials
+    error:
+    Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+[0m14:36:13.638635 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m14:36:13.639636 [info ] [MainThread]: [31m1 check failed:[0m
+[0m14:36:13.639636 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m14:36:13.640638 [debug] [MainThread]: Command `cli debug` failed at 14:36:13.640638 after 14.20 seconds
+[0m14:36:13.641638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002008645F5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200A8A12F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000200A8A13040>]}
+[0m14:36:13.641638 [debug] [MainThread]: Flushing usage events
+[0m14:36:14.273353 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019dfd1f-f9d3-76e3-bc85-ce1ca54bbf44","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":196,"thread":"tokio-rt-worker","ts":"2026-05-06T11:50:24.469481Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019dfd1f-f9d3-76e3-bc85-ce1ca54bbf44","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":196,"thread":"tokio-rt-worker","ts":"2026-05-06T11:50:24.469491Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019dfd1f-f9d3-76e3-bc85-ce1ca54bbf44","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":196,"thread":"tokio-rt-worker","ts":"2026-05-06T11:50:24.473190Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019dfd1f-f9d3-76e3-bc85-ce1ca54bbf44","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":196,"thread":"tokio-rt-worker","ts":"2026-05-06T11:50:24.473768Z"}}
+{"data":{"completed_at":"2026-05-06T11:50:26.775042Z","elapsed":2.3056657314300537,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019dfd1f-f9d3-76e3-bc85-ce1ca54bbf44","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [2.3s]","name":"CommandCompleted","pid":196,"thread":"tokio-rt-worker","ts":"2026-05-06T11:50:26.775151Z"}}
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019dfd2d-1c8d-7df1-a1a3-70b1e9cd36b2","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":10360,"thread":"tokio-rt-worker","ts":"2026-05-06T12:04:45.327633Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019dfd2d-1c8d-7df1-a1a3-70b1e9cd36b2","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":10360,"thread":"tokio-rt-worker","ts":"2026-05-06T12:04:45.327645Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019dfd2d-1c8d-7df1-a1a3-70b1e9cd36b2","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":10360,"thread":"tokio-rt-worker","ts":"2026-05-06T12:04:45.330686Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019dfd2d-1c8d-7df1-a1a3-70b1e9cd36b2","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":10360,"thread":"tokio-rt-worker","ts":"2026-05-06T12:04:45.331188Z"}}
+{"data":{"completed_at":"2026-05-06T12:04:46.539978Z","elapsed":1.2124223709106445,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019dfd2d-1c8d-7df1-a1a3-70b1e9cd36b2","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.2s]","name":"CommandCompleted","pid":10360,"thread":"tokio-rt-worker","ts":"2026-05-06T12:04:46.540066Z"}}
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019dfd34-6c60-7731-bdf6-4d95d102cdf2","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":828,"thread":"tokio-rt-worker","ts":"2026-05-06T12:12:44.513823Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019dfd34-6c60-7731-bdf6-4d95d102cdf2","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":828,"thread":"tokio-rt-worker","ts":"2026-05-06T12:12:44.513834Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019dfd34-6c60-7731-bdf6-4d95d102cdf2","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":828,"thread":"tokio-rt-worker","ts":"2026-05-06T12:12:44.517004Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019dfd34-6c60-7731-bdf6-4d95d102cdf2","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":828,"thread":"tokio-rt-worker","ts":"2026-05-06T12:12:44.517481Z"}}
+{"data":{"completed_at":"2026-05-06T12:12:46.257660Z","elapsed":1.7439093589782715,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019dfd34-6c60-7731-bdf6-4d95d102cdf2","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.7s]","name":"CommandCompleted","pid":828,"thread":"tokio-rt-worker","ts":"2026-05-06T12:12:46.257735Z"}}
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019dfd37-b5fe-7030-80bf-2cf20312b76f","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":17872,"thread":"tokio-rt-worker","ts":"2026-05-06T12:16:19.968692Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019dfd37-b5fe-7030-80bf-2cf20312b76f","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":17872,"thread":"tokio-rt-worker","ts":"2026-05-06T12:16:19.968703Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019dfd37-b5fe-7030-80bf-2cf20312b76f","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":17872,"thread":"tokio-rt-worker","ts":"2026-05-06T12:16:19.972619Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019dfd37-b5fe-7030-80bf-2cf20312b76f","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":17872,"thread":"tokio-rt-worker","ts":"2026-05-06T12:16:19.973348Z"}}
+{"data":{"completed_at":"2026-05-06T12:16:21.342996Z","elapsed":1.3743770122528076,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019dfd37-b5fe-7030-80bf-2cf20312b76f","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.4s]","name":"CommandCompleted","pid":17872,"thread":"tokio-rt-worker","ts":"2026-05-06T12:16:21.343071Z"}}
+==================== 2026-05-06T12:18:18.820718Z | 019dfd39-8642-79d0-a755-3295fb86d9d3 ====================
+12:18:18.820830 [info ]: dbt-fusion 2.0.0-preview.175
+12:18:18.821222 [info ]: Started loading project
+12:18:18.824148 [info ]: Loading profiles.yml
+12:18:18.824795 [info ]: Finished loading project [  0.00s]
+12:18:18.824926 [info ]: Started debugging
+12:18:18.825004 [info ]: Debugging profile: dev
+12:18:18.825073 [info ]: Debugging dbt version: 2.0.0-preview.175
+12:18:18.825160 [info ]: Debugging platform: windows x86_64 (windows)
+12:18:18.825253 [info ]: Debugging adapter type: bigquery (remote)
+12:18:18.848320 [info ]: Debugging dependencies:
+  git: OK
+12:18:18.848489 [info ]: Debugging connection:
+  "database": "depi-graduation-project-489604",
+  "schema": "nyc_311_raw_data",
+  "priority": "interactive",
+  "method": "oauth",
+  "dataproc_batch": null
+12:18:22.965890 [info ]: Finished debugging [  4.14s]
+12:18:22.966039 [error]: dbt1011: dbt was unable to connect to the specified database.
+The following error was returned:
+
+[BigQuery] bigquery: constructing client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+12:18:23.596758 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error for target 'dev' [4.8s]
+==================== 2026-05-06T12:39:24.271060Z | 019dfd4c-d56c-7f32-914f-feeb1de6a011 ====================
+12:39:24.271142 [info ]: dbt-fusion 2.0.0-preview.175
+12:39:24.271417 [info ]: Started loading project
+12:39:24.273996 [info ]: Loading profiles.yml
+12:39:24.274609 [info ]: Finished loading project [  0.00s]
+12:39:24.274719 [info ]: Started debugging
+12:39:24.274781 [info ]: Debugging profile: dev
+12:39:24.274859 [info ]: Debugging dbt version: 2.0.0-preview.175
+12:39:24.274948 [info ]: Debugging platform: windows x86_64 (windows)
+12:39:24.275026 [info ]: Debugging adapter type: bigquery (remote)
+12:39:24.296425 [info ]: Debugging dependencies:
+  git: OK
+12:39:24.296579 [info ]: Debugging connection:
+  "database": "depi-graduation-project-489604",
+  "schema": "nyc_311_raw_data",
+  "priority": "interactive",
+  "method": "oauth",
+  "dataproc_batch": null
+12:39:24.335597 [info ]: Finished debugging [  0.06s]
+12:39:24.335704 [error]: dbt1011: dbt was unable to connect to the specified database.
+The following error was returned:
+
+[BigQuery] bigquery: constructing client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+12:39:25.157849 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error for target 'dev' [886ms]
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019dfd78-cc4f-7952-bc8f-6235fe534f7d","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":16120,"thread":"tokio-rt-worker","ts":"2026-05-06T13:27:25.520826Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019dfd78-cc4f-7952-bc8f-6235fe534f7d","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":16120,"thread":"tokio-rt-worker","ts":"2026-05-06T13:27:25.520840Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019dfd78-cc4f-7952-bc8f-6235fe534f7d","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":16120,"thread":"tokio-rt-worker","ts":"2026-05-06T13:27:25.524183Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019dfd78-cc4f-7952-bc8f-6235fe534f7d","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":16120,"thread":"tokio-rt-worker","ts":"2026-05-06T13:27:25.524708Z"}}
+{"data":{"completed_at":"2026-05-06T13:27:26.814396Z","elapsed":1.2936546802520752,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019dfd78-cc4f-7952-bc8f-6235fe534f7d","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.3s]","name":"CommandCompleted","pid":16120,"thread":"tokio-rt-worker","ts":"2026-05-06T13:27:26.814483Z"}}
+[0m16:27:37.124041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA6A2BF5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA6B64C430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA6B64C250>]}
+
+
+============================== 16:27:37.127044 | 15b66ba3-8fdc-462e-b8a3-a1666ea19260 ==============================
+[0m16:27:37.127044 [info ] [MainThread]: Running with dbt=1.11.8
+[0m16:27:37.128045 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt ', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m16:27:37.292193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '15b66ba3-8fdc-462e-b8a3-a1666ea19260', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA6A667280>]}
+[0m16:27:37.318217 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m16:27:37.319218 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m16:27:37.320219 [debug] [MainThread]: Command `cli deps` succeeded at 16:27:37.320219 after 0.31 seconds
+[0m16:27:37.321220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA6A2BF5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA6B77D960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA6B642A40>]}
+[0m16:27:37.321220 [debug] [MainThread]: Flushing usage events
+[0m16:27:39.056153 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-05-06T13:32:07.402672Z | 019dfd7d-1968-7b23-9303-18ed27f5cfe9 ====================
+13:32:07.402767 [info ]: dbt-fusion 2.0.0-preview.175
+13:32:07.403100 [info ]: Started loading project
+13:32:07.405602 [info ]: Loading profiles.yml
+13:32:07.406208 [info ]: Finished loading project [  0.00s]
+13:32:07.406317 [info ]: Started debugging
+13:32:07.406380 [info ]: Debugging profile: dev
+13:32:07.406451 [info ]: Debugging dbt version: 2.0.0-preview.175
+13:32:07.406532 [info ]: Debugging platform: windows x86_64 (windows)
+13:32:07.406619 [info ]: Debugging adapter type: bigquery (remote)
+13:32:07.427619 [info ]: Debugging dependencies:
+  git: OK
+13:32:07.427751 [info ]: Debugging connection:
+  "database": "depi-graduation-project-489604",
+  "schema": "nyc_311_raw_data",
+  "priority": "interactive",
+  "method": "oauth",
+  "dataproc_batch": null
+13:32:12.215177 [debug]: Query executed on node unknown:
+select 1 as id
+13:32:12.215350 [info ]: Debugging connection test: OK
+13:32:12.215574 [info ]: Debugged All checks passed!
+13:32:12.215762 [info ]: Finished debugging [  4.81s]
+13:32:12.912969 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' successfully for target 'dev' [5.5s]
