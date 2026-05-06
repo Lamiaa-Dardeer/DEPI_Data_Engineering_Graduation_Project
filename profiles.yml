@@ -1,0 +1,10 @@
+nyc_311_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: depi-graduation-project-489604
+      dataset: nyc_311_raw_data # أو Dataset التحليلات الخاص بكِ
+      threads: 1
+      priority: interactive
