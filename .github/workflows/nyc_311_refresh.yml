@@ -33,6 +33,18 @@ jobs:
         run: |
           pip install dbt-bigquery
 
-      - name: Run dbt to Reset Sandbox Clock
+      - name: Run dbt
         run: |
+          mkdir -p ~/.dbt
+          cat <<EOF > ~/.dbt/profiles.yml
+          default:
+            outputs:
+              dev:
+                type: bigquery
+                method: oauth
+                project: depi-graduation-project-489604
+                dataset: nyc_311_raw_data
+                threads: 1
+            target: dev
+          EOF
           dbt run --full-refresh
