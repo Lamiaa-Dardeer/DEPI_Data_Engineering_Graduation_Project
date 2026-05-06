@@ -29,6 +29,18 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Run Refresh Script
+      - name: Reset BigQuery Sandbox Clock
         run: |
-          echo "الربط ناجح تماماً وبدون تحذيرات!"
+          pip install google-cloud-bigquery
+          python -c "
+          from google.cloud import bigquery
+          client = bigquery.Client()
+          dataset_id = 'nyc_311_raw_data'
+          table_id = 'raw_service_requests'
+          table_ref = client.dataset(dataset_id).table(table_id)
+          
+          # الحيلة: نسخ الجدول فوق نفسه لتحديث تاريخ 'Last Modified'
+          job = client.copy_table(table_ref, table_ref)
+          job.result()
+          print(f'Successfully reset clock for {table_id}')
+          "
