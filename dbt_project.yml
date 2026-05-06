@@ -1,0 +1,14 @@
+name: 'nyc_311_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'nyc_311_profile' # هذا الاسم يجب أن يطابق ما في الملف التالي
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+models:
+  nyc_311_project:
+    example:
+      +materialized: table # يعني تحويل كود SQL إلى جدول حقيقي
