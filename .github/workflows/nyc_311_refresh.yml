@@ -1,0 +1,47 @@
+name: NYC 311 Data Refresh
+
+on:
+  workflow_dispatch: 
+
+env:
+  # هذا السطر ينهي التحذير ويجعل الروبوت يستخدم أحدث نظام تشغيل
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write' 
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v5 # تم التحديث من v4 لـ v5
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v3 # تم التحديث من v2 لـ v3
+        with:
+          workload_identity_provider: 'projects/113456966208/locations/global/workloadIdentityPools/depi-pool/providers/github-new-provider'
+          service_account: 'dbt-user-311@depi-graduation-project-489604.iam.gserviceaccount.com'
+
+      - name: Setup Python
+        uses: actions/setup-python@v6 # تم التحديث من v5 لـ v6
+        with:
+          python-version: '3.10'
+
+      - name: Reset BigQuery Sandbox Clock
+        run: |
+          pip install google-cloud-bigquery
+          python -c "
+          from google.cloud import bigquery
+          client = bigquery.Client()
+          dataset_id = 'nyc_311_raw_data'
+          table_id = 'raw_service_requests'
+          table_ref = client.dataset(dataset_id).table(table_id)
+          
+          # الحيلة: نسخ الجدول فوق نفسه لتحديث تاريخ 'Last Modified'
+          job = client.copy_table(table_ref, table_ref)
+          job.result()
+          print(f'Successfully reset clock for {table_id}')
+          "
+#It is still here
