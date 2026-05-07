@@ -660,3 +660,111 @@
 06:27:22.371506 [info ]: Started scheduling
 06:27:22.371528 [info ]: Finished scheduling [  0.00s]
 06:27:22.372585 [info ]: Cached model count updated: 3 models (accurate)
+07:40:45.917575 [info ]: Started loading project
+07:40:45.918036 [info ]: Loading profiles.yml
+07:40:45.921108 [info ]: Started loading project
+07:40:45.921468 [info ]: Loading profiles.yml
+07:40:45.921494 [info ]: Finished loading project [  0.00s]
+07:40:45.933291 [debug]:    Started loading packages
+07:40:45.935619 [debug]:     Loaded [  0.00s] packages
+07:40:45.936282 [info ]: Started parsing
+07:40:45.956490 [info ]: Finished loading project [  0.04s]
+07:40:45.957933 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+07:40:45.958482 [debug]: Finished parsing models\pollution_raw_data.sql [  0.00s]
+07:40:45.959888 [debug]: Finished parsing models\transform_311.sql [  0.00s]
+07:40:45.960763 [info ]: Finished parsing [  0.02s]
+07:40:45.961199 [info ]: Cached model count updated: 3 models (estimate)
+07:40:45.961208 [info ]: Cached model count updated: 3 models (accurate)
+07:40:45.961222 [info ]: Started scheduling
+07:40:45.961244 [info ]: Finished scheduling [  0.00s]
+07:40:45.961252 [debug]: Compilation - 0 nodes selected: {}
+07:40:45.961260 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+07:40:45.961269 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+07:40:45.961274 [info ]: Started scheduling
+07:40:45.961291 [info ]: Finished scheduling [  0.00s]
+07:40:46.062140 [info ]: Started building task graph
+07:40:46.062165 [info ]: Finished building task graph [  0.00s]
+07:40:46.064998 [info ]: Started scheduling
+07:40:46.065020 [info ]: Finished scheduling [  0.00s]
+07:40:46.067042 [info ]: Cached model count updated: 3 models (accurate)
+07:40:47.632148 [info ]: Started loading project
+07:40:47.632572 [info ]: Loading profiles.yml
+07:40:47.649473 [info ]: Cached model count updated: 3 models (estimate)
+07:40:47.649490 [info ]: Cached model count updated: 3 models (accurate)
+07:40:47.649504 [info ]: Started scheduling
+07:40:47.649534 [info ]: Finished scheduling [  0.00s]
+07:40:47.649545 [debug]: Compilation - 2 nodes selected: {"model.nyc_311_project.pollution_raw_data", "model.nyc_311_project.raw_service_requests"}
+07:40:47.748553 [info ]: Started building task graph
+07:40:47.748589 [info ]: Finished building task graph [  0.00s]
+07:40:47.748704 [info ]: Started rendering (2 nodes)
+07:40:47.748716 [info ]: Started model nyc_311_raw_data.raw_service_requests
+07:40:47.748725 [debug]: Started rendering model nyc_311_raw_data.raw_service_requests
+07:40:47.748739 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+07:40:47.748744 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+07:40:47.748767 [info ]: Finished loading project [  0.12s]
+07:40:47.749807 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+07:40:47.749862 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+07:40:47.749882 [info ]: Started analyzing (2 nodes)
+07:40:47.749889 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+07:40:47.750044 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+07:40:47.750052 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.pollution_raw_data (table)
+07:40:47.764297 [debug]: Compiled SQL for node model.nyc_311_project.raw_service_requests at target\.lsp\compiled\nyc_311_project\models\Staging\raw_service_requests.sql
+07:40:47.764397 [debug]: Finished rendering [  0.02s] model nyc_311_raw_data.raw_service_requests [success]
+07:40:47.764413 [info ]: Finished rendering [  0.02s] (2 nodes, 0 skipped, 0 errors)
+07:40:47.764429 [debug]: Started analyzing model nyc_311_raw_data.raw_service_requests
+07:40:47.764592 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+07:40:47.764600 [info ]: Finished analyzing [  0.01s] (2 nodes, 0 skipped, 0 errors)
+07:40:47.764607 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.raw_service_requests (table)
+07:40:47.768080 [info ]: Started scheduling
+07:40:47.768102 [info ]: Finished scheduling [  0.00s]
+07:40:47.769153 [info ]: Cached model count updated: 3 models (accurate)
+07:43:43.292372 [info ]: Started loading project
+07:43:43.292831 [info ]: Loading profiles.yml
+07:43:43.295611 [info ]: Started loading project
+07:43:43.295942 [info ]: Loading profiles.yml
+07:43:43.295961 [info ]: Finished loading project [  0.00s]
+07:43:43.306402 [debug]:    Started loading packages
+07:43:43.308227 [debug]:     Loaded [  0.00s] packages
+07:43:43.308819 [info ]: Started parsing
+07:43:43.327280 [info ]: Finished loading project [  0.03s]
+07:43:43.328804 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+07:43:43.329950 [debug]: Finished parsing models\transform_311.sql [  0.00s]
+07:43:43.330680 [info ]: Finished parsing [  0.02s]
+07:43:43.331067 [info ]: Cached model count updated: 2 models (estimate)
+07:43:43.331076 [info ]: Cached model count updated: 2 models (accurate)
+07:43:43.331088 [info ]: Started scheduling
+07:43:43.331106 [info ]: Finished scheduling [  0.00s]
+07:43:43.331114 [debug]: Compilation - 0 nodes selected: {}
+07:43:43.331121 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+07:43:43.331128 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+07:43:43.331133 [info ]: Started scheduling
+07:43:43.331147 [info ]: Finished scheduling [  0.00s]
+07:43:43.431987 [info ]: Started building task graph
+07:43:43.432010 [info ]: Finished building task graph [  0.00s]
+07:43:43.434953 [info ]: Started scheduling
+07:43:43.434975 [info ]: Finished scheduling [  0.00s]
+07:43:43.437031 [info ]: Cached model count updated: 2 models (accurate)
+07:43:44.984512 [info ]: Started loading project
+07:43:44.984991 [info ]: Loading profiles.yml
+07:43:45.003588 [info ]: Cached model count updated: 2 models (estimate)
+07:43:45.003605 [info ]: Cached model count updated: 2 models (accurate)
+07:43:45.003622 [info ]: Started scheduling
+07:43:45.003652 [info ]: Finished scheduling [  0.00s]
+07:43:45.003663 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.raw_service_requests"}
+07:43:45.112301 [info ]: Started building task graph
+07:43:45.112336 [info ]: Finished building task graph [  0.00s]
+07:43:45.112459 [info ]: Started rendering (1 nodes)
+07:43:45.112471 [info ]: Started model nyc_311_raw_data.raw_service_requests
+07:43:45.112480 [debug]: Started rendering model nyc_311_raw_data.raw_service_requests
+07:43:45.112513 [info ]: Finished loading project [  0.13s]
+07:43:45.113546 [debug]: Compiled SQL for node model.nyc_311_project.raw_service_requests at target\.lsp\compiled\nyc_311_project\models\Staging\raw_service_requests.sql
+07:43:45.113613 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+07:43:45.113626 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:43:45.113638 [info ]: Started analyzing (1 nodes)
+07:43:45.113644 [debug]: Started analyzing model nyc_311_raw_data.raw_service_requests
+07:43:45.113821 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+07:43:45.113830 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+07:43:45.113836 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.raw_service_requests (table)
+07:43:45.118531 [info ]: Started scheduling
+07:43:45.118575 [info ]: Finished scheduling [  0.00s]
+07:43:45.120117 [info ]: Cached model count updated: 2 models (accurate)
