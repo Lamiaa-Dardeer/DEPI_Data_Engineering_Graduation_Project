@@ -603,3 +603,60 @@
 06:06:18.088218 [info ]: Loading profiles.yml
 06:06:26.277004 [info ]: Loading profiles.yml
 06:06:35.566156 [info ]: Loading profiles.yml
+06:07:28.480303 [info ]: Loading profiles.yml
+06:27:20.478512 [info ]: Loading profiles.yml
+06:27:20.506622 [info ]: Started loading project
+06:27:20.507099 [info ]: Loading profiles.yml
+06:27:20.521152 [debug]:    Started loading packages
+06:27:20.523823 [debug]:     Loaded [  0.00s] packages
+06:27:20.524814 [info ]: Started parsing
+06:27:20.546223 [info ]: Finished loading project [  0.04s]
+06:27:20.549693 [debug]: Finished parsing models\Staging\refresh_nyc_311.sql [  0.00s]
+06:27:20.550038 [debug]: Finished parsing models\pollution_raw_data.sql [  0.00s]
+06:27:20.551706 [debug]: Finished parsing models\transform_311.sql [  0.00s]
+06:27:20.552607 [info ]: Finished parsing [  0.03s]
+06:27:20.553052 [info ]: Cached model count updated: 3 models (estimate)
+06:27:20.553061 [info ]: Cached model count updated: 3 models (accurate)
+06:27:20.553111 [info ]: Started scheduling
+06:27:20.553244 [info ]: Finished scheduling [  0.00s]
+06:27:20.553266 [debug]: Compilation - 0 nodes selected: {}
+06:27:20.553291 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+06:27:20.553309 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+06:27:20.553325 [info ]: Started scheduling
+06:27:20.553376 [info ]: Finished scheduling [  0.00s]
+06:27:20.654611 [info ]: Started building task graph
+06:27:20.654690 [info ]: Finished building task graph [  0.00s]
+06:27:20.658061 [info ]: Started scheduling
+06:27:20.658100 [info ]: Finished scheduling [  0.00s]
+06:27:20.658472 [info ]: Cached model count updated: 3 models (accurate)
+06:27:22.239086 [info ]: Started loading project
+06:27:22.239593 [info ]: Loading profiles.yml
+06:27:22.258589 [info ]: Cached model count updated: 3 models (estimate)
+06:27:22.258604 [info ]: Cached model count updated: 3 models (accurate)
+06:27:22.258620 [info ]: Started scheduling
+06:27:22.258652 [info ]: Finished scheduling [  0.00s]
+06:27:22.258663 [debug]: Compilation - 2 nodes selected: {"model.nyc_311_project.pollution_raw_data", "model.nyc_311_project.refresh_nyc_311"}
+06:27:22.362834 [info ]: Started building task graph
+06:27:22.362944 [info ]: Finished building task graph [  0.00s]
+06:27:22.363124 [info ]: Started rendering (2 nodes)
+06:27:22.363175 [info ]: Started model nyc_311_raw_data.refresh_nyc_311
+06:27:22.363210 [debug]: Started rendering model nyc_311_raw_data.refresh_nyc_311
+06:27:22.363247 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+06:27:22.363253 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+06:27:22.363273 [info ]: Finished loading project [  0.12s]
+06:27:22.364808 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+06:27:22.364811 [debug]: Compiled SQL for node model.nyc_311_project.refresh_nyc_311 at target\.lsp\compiled\nyc_311_project\models\Staging\refresh_nyc_311.sql
+06:27:22.365048 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.refresh_nyc_311 [success]
+06:27:22.365084 [info ]: Started analyzing (2 nodes)
+06:27:22.365094 [debug]: Started analyzing model nyc_311_raw_data.refresh_nyc_311
+06:27:22.365107 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+06:27:22.365113 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+06:27:22.365121 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+06:27:22.368633 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+06:27:22.368646 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.pollution_raw_data (table)
+06:27:22.368668 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.refresh_nyc_311 [success]
+06:27:22.368673 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+06:27:22.368678 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.refresh_nyc_311 (table)
+06:27:22.371506 [info ]: Started scheduling
+06:27:22.371528 [info ]: Finished scheduling [  0.00s]
+06:27:22.372585 [info ]: Cached model count updated: 3 models (accurate)

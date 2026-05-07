@@ -1,7 +1,9 @@
 name: NYC 311 Data Refresh
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch: # للتشغيل اليدوي
+  schedule:
+    - cron: '0 0 * * 0' # سيقوم بتصفير العداد تلقائياً كل يوم أحد
 
 env:
   # هذا السطر ينهي التحذير ويجعل الروبوت يستخدم أحدث نظام تشغيل
