@@ -221,3 +221,34 @@ select 1 as id
 13:32:12.912969 [info ]: 
 ==================== Execution Summary =====================
 Finished 'debug' successfully for target 'dev' [5.5s]
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e00fb-94a7-7802-a8f2-bff17b1dcd4d","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":19208,"thread":"tokio-rt-worker","ts":"2026-05-07T05:49:08.138853Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e00fb-94a7-7802-a8f2-bff17b1dcd4d","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":19208,"thread":"tokio-rt-worker","ts":"2026-05-07T05:49:08.138871Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e00fb-94a7-7802-a8f2-bff17b1dcd4d","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":19208,"thread":"tokio-rt-worker","ts":"2026-05-07T05:49:08.141546Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e00fb-94a7-7802-a8f2-bff17b1dcd4d","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":19208,"thread":"tokio-rt-worker","ts":"2026-05-07T05:49:08.142353Z"}}
+{"data":{"completed_at":"2026-05-07T05:49:11.062734Z","elapsed":2.9240360260009766,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e00fb-94a7-7802-a8f2-bff17b1dcd4d","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [2.9s]","name":"CommandCompleted","pid":19208,"thread":"tokio-rt-worker","ts":"2026-05-07T05:49:11.062869Z"}}
+[0m08:49:19.190622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278E974F4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278EAADC400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278EAADC220>]}
+
+
+============================== 08:49:19.289526 | fc1b36f3-4420-454b-8fe4-04d0ad05162b ==============================
+[0m08:49:19.289526 [info ] [MainThread]: Running with dbt=1.11.8
+[0m08:49:19.290527 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt ', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m08:49:19.299535 [warn ] [MainThread]: [[33mWARNING[0m][CustomTopLevelKeyDeprecation]: Deprecated functionality
+Unexpected top-level key modals in file
+`c:\Users\user\DEPI_Data_Engineering_Graduation_Project\dbt_project.yml`
+[0m08:49:19.300536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'fc1b36f3-4420-454b-8fe4-04d0ad05162b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278EAADCEE0>]}
+[0m08:49:19.378607 [error] [MainThread]: Encountered an error:
+Runtime Error
+  at path []: Additional properties are not allowed ('modals' was unexpected)
+
+Error encountered in c:\Users\user\DEPI_Data_Engineering_Graduation_Project\dbt_project.yml
+[0m08:49:19.379608 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- CustomTopLevelKeyDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m08:49:19.381610 [debug] [MainThread]: Command `cli deps` failed at 08:49:19.381610 after 0.35 seconds
+[0m08:49:19.382611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278E974F4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278EA1D9540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000278EA1DB9D0>]}
+[0m08:49:19.383613 [debug] [MainThread]: Flushing usage events
+[0m08:49:21.360409 [debug] [MainThread]: An error was encountered while trying to flush usage events

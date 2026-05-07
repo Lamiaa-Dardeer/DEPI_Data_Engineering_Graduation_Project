@@ -325,3 +325,269 @@
 13:37:00.237037 [info ]: Started scheduling
 13:37:00.237103 [info ]: Finished scheduling [  0.00s]
 13:37:00.238487 [info ]: Cached model count updated: 2 models (accurate)
+16:34:37.834925 [info ]: Started loading project
+16:34:37.835500 [info ]: Loading profiles.yml
+16:34:37.838904 [info ]: Started loading project
+16:34:37.839279 [info ]: Loading profiles.yml
+16:34:37.839306 [info ]: Finished loading project [  0.00s]
+16:34:37.850489 [debug]:    Started loading packages
+16:34:37.852563 [debug]:     Loaded [  0.00s] packages
+16:34:37.853188 [info ]: Started parsing
+16:34:37.872801 [info ]: Finished loading project [  0.03s]
+16:34:37.874242 [debug]: Finished parsing models\Staging\refresh_nyc_311.sql [  0.00s]
+16:34:37.874710 [debug]: Finished parsing models\pollution_raw_data.sql [  0.00s]
+16:34:37.876079 [debug]: Finished parsing models\transform_311.sql [  0.00s]
+16:34:37.876851 [info ]: Finished parsing [  0.02s]
+16:34:37.877229 [info ]: Cached model count updated: 3 models (estimate)
+16:34:37.877237 [info ]: Cached model count updated: 3 models (accurate)
+16:34:37.877249 [info ]: Started scheduling
+16:34:37.877269 [info ]: Finished scheduling [  0.00s]
+16:34:37.877276 [debug]: Compilation - 0 nodes selected: {}
+16:34:37.877283 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+16:34:37.877290 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+16:34:37.877294 [info ]: Started scheduling
+16:34:37.877308 [info ]: Finished scheduling [  0.00s]
+16:34:37.971354 [info ]: Started building task graph
+16:34:37.971376 [info ]: Finished building task graph [  0.00s]
+16:34:37.974251 [info ]: Started scheduling
+16:34:37.974271 [info ]: Finished scheduling [  0.00s]
+16:34:37.976329 [info ]: Cached model count updated: 3 models (accurate)
+16:34:39.519874 [info ]: Started loading project
+16:34:39.520353 [info ]: Loading profiles.yml
+16:34:39.540855 [info ]: Cached model count updated: 3 models (estimate)
+16:34:39.540877 [info ]: Cached model count updated: 3 models (accurate)
+16:34:39.540895 [info ]: Started scheduling
+16:34:39.540927 [info ]: Finished scheduling [  0.00s]
+16:34:39.540938 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.pollution_raw_data"}
+16:34:39.644436 [info ]: Started building task graph
+16:34:39.644469 [info ]: Finished building task graph [  0.00s]
+16:34:39.644569 [info ]: Started rendering (1 nodes)
+16:34:39.644581 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+16:34:39.644590 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+16:34:39.644622 [info ]: Finished loading project [  0.12s]
+16:34:39.645626 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+16:34:39.645690 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+16:34:39.645702 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+16:34:39.645712 [info ]: Started analyzing (1 nodes)
+16:34:39.645718 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+16:34:39.645888 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+16:34:39.645895 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+16:34:39.645901 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.pollution_raw_data (table)
+16:34:39.648793 [info ]: Started scheduling
+16:34:39.648814 [info ]: Finished scheduling [  0.00s]
+16:34:39.649857 [info ]: Cached model count updated: 3 models (accurate)
+16:35:14.187574 [info ]: Started loading project
+16:35:14.188050 [info ]: Loading profiles.yml
+16:35:14.192229 [info ]: Started parsing
+16:35:14.206236 [info ]: Finished loading project [  0.02s]
+16:35:14.208367 [debug]: Finished parsing models\Staging\refresh_nyc_311.sql [  0.00s]
+16:35:14.208991 [info ]: Finished parsing [  0.02s]
+16:35:14.209915 [info ]: Cached model count updated: 3 models (estimate)
+16:35:14.209923 [info ]: Cached model count updated: 3 models (accurate)
+16:35:14.209938 [info ]: Started scheduling
+16:35:14.209979 [info ]: Finished scheduling [  0.00s]
+16:35:14.209986 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.refresh_nyc_311"}
+16:35:14.305729 [info ]: Started building task graph
+16:35:14.305759 [info ]: Finished building task graph [  0.00s]
+16:35:14.305843 [info ]: Started rendering (1 nodes)
+16:35:14.305853 [info ]: Started model nyc_311_raw_data.refresh_nyc_311
+16:35:14.305861 [debug]: Started rendering model nyc_311_raw_data.refresh_nyc_311
+16:35:14.307012 [debug]: Compiled SQL for node model.nyc_311_project.refresh_nyc_311 at target\.lsp\compiled\nyc_311_project\models\Staging\refresh_nyc_311.sql
+16:35:14.307080 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.refresh_nyc_311 [success]
+16:35:14.307096 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+16:35:14.307108 [info ]: Started analyzing (1 nodes)
+16:35:14.307117 [debug]: Started analyzing model nyc_311_raw_data.refresh_nyc_311
+16:35:14.307282 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.refresh_nyc_311 [success]
+16:35:14.307290 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+16:35:14.307295 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.refresh_nyc_311 (table)
+16:35:14.309918 [info ]: Started scheduling
+16:35:14.309952 [info ]: Finished scheduling [  0.00s]
+16:35:14.310909 [info ]: Cached model count updated: 3 models (accurate)
+16:35:15.860974 [info ]: Started loading project
+16:35:15.861409 [info ]: Loading profiles.yml
+16:35:15.878678 [info ]: Cached model count updated: 3 models (estimate)
+16:35:15.878692 [info ]: Cached model count updated: 3 models (accurate)
+16:35:15.878710 [info ]: Started scheduling
+16:35:15.878746 [info ]: Finished scheduling [  0.00s]
+16:35:15.878756 [debug]: Compilation - 1 nodes selected: {"model.nyc_311_project.refresh_nyc_311"}
+16:35:15.980846 [info ]: Started building task graph
+16:35:15.980878 [info ]: Finished building task graph [  0.00s]
+16:35:15.980977 [info ]: Started rendering (1 nodes)
+16:35:15.980988 [info ]: Started model nyc_311_raw_data.refresh_nyc_311
+16:35:15.980996 [debug]: Started rendering model nyc_311_raw_data.refresh_nyc_311
+16:35:15.981027 [info ]: Finished loading project [  0.12s]
+16:35:15.981390 [debug]: Compiled SQL for node model.nyc_311_project.refresh_nyc_311 at target\.lsp\compiled\nyc_311_project\models\Staging\refresh_nyc_311.sql
+16:35:15.981433 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.refresh_nyc_311 [success]
+16:35:15.981441 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+16:35:15.981449 [info ]: Started analyzing (1 nodes)
+16:35:15.981452 [debug]: Started analyzing model nyc_311_raw_data.refresh_nyc_311
+16:35:15.981576 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.refresh_nyc_311 [success]
+16:35:15.981582 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+16:35:15.981586 [info ]:  Succeeded [-------] model nyc_311_raw_data.refresh_nyc_311 (table)
+16:35:15.984514 [info ]: Started scheduling
+16:35:15.984535 [info ]: Finished scheduling [  0.00s]
+16:35:15.985529 [info ]: Cached model count updated: 3 models (accurate)
+16:35:17.536688 [info ]: Started loading project
+16:35:17.537351 [info ]: Loading profiles.yml
+16:35:17.562366 [info ]: Cached model count updated: 3 models (estimate)
+16:35:17.562374 [info ]: Cached model count updated: 3 models (accurate)
+16:35:17.562387 [info ]: Started scheduling
+16:35:17.562428 [info ]: Finished scheduling [  0.00s]
+16:35:17.562437 [debug]: Compilation - 2 nodes selected: {"model.nyc_311_project.pollution_raw_data", "model.nyc_311_project.refresh_nyc_311"}
+16:35:17.656646 [info ]: Started building task graph
+16:35:17.656686 [info ]: Finished building task graph [  0.00s]
+16:35:17.656773 [info ]: Started rendering (2 nodes)
+16:35:17.656784 [info ]: Started model nyc_311_raw_data.refresh_nyc_311
+16:35:17.656792 [debug]: Started rendering model nyc_311_raw_data.refresh_nyc_311
+16:35:17.656804 [info ]: Started model nyc_311_raw_data.pollution_raw_data
+16:35:17.656809 [debug]: Started rendering model nyc_311_raw_data.pollution_raw_data
+16:35:17.656828 [info ]: Finished loading project [  0.12s]
+16:35:17.657397 [debug]: Compiled SQL for node model.nyc_311_project.refresh_nyc_311 at target\.lsp\compiled\nyc_311_project\models\Staging\refresh_nyc_311.sql
+16:35:17.657441 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.refresh_nyc_311 [success]
+16:35:17.657459 [info ]: Started analyzing (2 nodes)
+16:35:17.657465 [debug]: Started analyzing model nyc_311_raw_data.refresh_nyc_311
+16:35:17.657509 [debug]: Compiled SQL for node model.nyc_311_project.pollution_raw_data at target\.lsp\compiled\nyc_311_project\models\pollution_raw_data.sql
+16:35:17.657540 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+16:35:17.657551 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+16:35:17.657560 [debug]: Started analyzing model nyc_311_raw_data.pollution_raw_data
+16:35:17.657605 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.refresh_nyc_311 [success]
+16:35:17.657615 [info ]:  Succeeded [-------] model nyc_311_raw_data.refresh_nyc_311 (table)
+16:35:17.657678 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.pollution_raw_data [success]
+16:35:17.657692 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+16:35:17.657697 [info ]:  Succeeded [-------] model nyc_311_raw_data.pollution_raw_data (table)
+16:35:17.660017 [info ]: Started scheduling
+16:35:17.660038 [info ]: Finished scheduling [  0.00s]
+16:35:17.660975 [info ]: Cached model count updated: 3 models (accurate)
+16:46:00.301290 [info ]: Loading profiles.yml
+16:46:00.328519 [info ]: Started loading project
+16:46:00.329045 [info ]: Loading profiles.yml
+16:46:00.329350 [info ]: Finished loading project [  0.00s]
+16:46:00.329412 [info ]: Cached model count updated: 3 models (accurate)
+16:46:00.635411 [info ]: Loading profiles.yml
+16:46:01.210558 [info ]: Loading profiles.yml
+16:46:01.879924 [info ]: Loading profiles.yml
+16:46:01.881852 [info ]: Started loading project
+16:46:01.882216 [info ]: Loading profiles.yml
+16:46:01.882493 [info ]: Cached model count updated: 3 models (accurate)
+16:46:01.882511 [info ]: Finished loading project [  0.00s]
+16:46:02.223925 [info ]: Loading profiles.yml
+16:46:02.800351 [info ]: Loading profiles.yml
+16:46:13.706139 [info ]: Loading profiles.yml
+16:46:13.733767 [info ]: Started loading project
+16:46:13.734494 [info ]: Loading profiles.yml
+16:46:13.734882 [info ]: Finished loading project [  0.00s]
+16:46:13.734931 [info ]: Cached model count updated: 3 models (accurate)
+16:46:14.028780 [info ]: Loading profiles.yml
+16:46:14.618066 [info ]: Loading profiles.yml
+16:46:15.287069 [info ]: Loading profiles.yml
+16:46:15.289417 [info ]: Started loading project
+16:46:15.289891 [info ]: Loading profiles.yml
+16:46:15.290209 [info ]: Finished loading project [  0.00s]
+16:46:15.290236 [info ]: Cached model count updated: 3 models (accurate)
+16:46:15.616111 [info ]: Loading profiles.yml
+16:46:16.209193 [info ]: Loading profiles.yml
+16:46:32.729159 [info ]: Loading profiles.yml
+16:46:32.755353 [info ]: Started loading project
+16:46:32.755822 [info ]: Loading profiles.yml
+16:46:32.756106 [info ]: Finished loading project [  0.00s]
+16:46:32.756129 [info ]: Cached model count updated: 3 models (accurate)
+16:46:33.069860 [info ]: Loading profiles.yml
+16:46:33.646518 [info ]: Loading profiles.yml
+16:46:34.303457 [info ]: Loading profiles.yml
+16:46:34.305256 [info ]: Started loading project
+16:46:34.305599 [info ]: Loading profiles.yml
+16:46:34.305830 [info ]: Finished loading project [  0.00s]
+16:46:34.305848 [info ]: Cached model count updated: 3 models (accurate)
+16:46:34.643394 [info ]: Loading profiles.yml
+16:46:35.203521 [info ]: Loading profiles.yml
+16:47:45.402343 [info ]: Loading profiles.yml
+16:47:45.428163 [info ]: Started loading project
+16:47:45.428632 [info ]: Loading profiles.yml
+16:47:45.428890 [info ]: Finished loading project [  0.00s]
+16:47:45.428915 [info ]: Cached model count updated: 3 models (accurate)
+16:47:45.738413 [info ]: Loading profiles.yml
+16:47:46.319860 [info ]: Loading profiles.yml
+16:47:46.977770 [info ]: Loading profiles.yml
+16:47:46.979469 [info ]: Started loading project
+16:47:46.979817 [info ]: Loading profiles.yml
+16:47:46.980055 [info ]: Finished loading project [  0.00s]
+16:47:46.980075 [info ]: Cached model count updated: 3 models (accurate)
+16:47:47.308830 [info ]: Loading profiles.yml
+16:47:47.888441 [info ]: Loading profiles.yml
+16:51:36.680481 [info ]: Loading profiles.yml
+16:51:36.706890 [info ]: Started loading project
+16:51:36.707364 [info ]: Loading profiles.yml
+16:51:36.707635 [info ]: Finished loading project [  0.00s]
+16:51:36.707657 [info ]: Cached model count updated: 3 models (accurate)
+16:51:37.013045 [info ]: Loading profiles.yml
+16:51:37.603469 [info ]: Loading profiles.yml
+16:51:38.257831 [info ]: Loading profiles.yml
+16:51:38.260699 [info ]: Started loading project
+16:51:38.261277 [info ]: Loading profiles.yml
+16:51:38.261666 [info ]: Finished loading project [  0.00s]
+16:51:38.261705 [info ]: Cached model count updated: 3 models (accurate)
+16:51:38.600224 [info ]: Loading profiles.yml
+16:51:39.176956 [info ]: Loading profiles.yml
+16:52:09.728173 [info ]: Loading profiles.yml
+16:52:09.752879 [info ]: Started loading project
+16:52:09.753332 [info ]: Loading profiles.yml
+16:52:09.753599 [info ]: Finished loading project [  0.00s]
+16:52:09.753618 [info ]: Cached model count updated: 3 models (accurate)
+16:52:10.059743 [info ]: Loading profiles.yml
+16:52:10.650615 [info ]: Loading profiles.yml
+16:52:11.303467 [info ]: Loading profiles.yml
+16:52:11.305325 [info ]: Started loading project
+16:52:11.305681 [info ]: Loading profiles.yml
+16:52:11.305925 [info ]: Finished loading project [  0.00s]
+16:52:11.305946 [info ]: Cached model count updated: 3 models (accurate)
+16:52:11.633137 [info ]: Loading profiles.yml
+16:52:12.226563 [info ]: Loading profiles.yml
+16:52:50.540770 [info ]: Loading profiles.yml
+16:54:29.886539 [info ]: Loading profiles.yml
+16:54:29.913863 [info ]: Started loading project
+16:54:29.914342 [info ]: Loading profiles.yml
+16:54:29.914602 [info ]: Finished loading project [  0.00s]
+16:54:29.914621 [info ]: Cached model count updated: 3 models (accurate)
+16:54:30.213826 [info ]: Loading profiles.yml
+16:54:30.801033 [info ]: Loading profiles.yml
+16:54:31.456703 [info ]: Loading profiles.yml
+16:54:31.458966 [info ]: Started loading project
+16:54:31.459395 [info ]: Loading profiles.yml
+16:54:31.459689 [info ]: Finished loading project [  0.00s]
+16:54:31.459717 [info ]: Cached model count updated: 3 models (accurate)
+16:54:31.798570 [info ]: Loading profiles.yml
+16:54:32.373676 [info ]: Loading profiles.yml
+16:56:07.940081 [info ]: Loading profiles.yml
+17:00:44.282881 [info ]: Loading profiles.yml
+17:00:56.031994 [info ]: Loading profiles.yml
+17:01:31.027344 [info ]: Loading profiles.yml
+17:01:36.952098 [info ]: Loading profiles.yml
+17:01:37.870785 [info ]: Loading profiles.yml
+17:01:39.790896 [info ]: Loading profiles.yml
+==================== 2026-05-07T05:49:11.138810Z | 9ea879c0-564a-4b8a-90e0-6697d65cdaa9 ====================
+05:49:11.138905 [info ]: Starting dbt LSP server
+05:49:11.138973 [info ]: Connecting to LSP client on port 8000
+05:49:11.140325 [info ]: Successfully connected to LSP client
+05:49:11.140336 [info ]: Creating LSP service...
+05:49:11.203263 [info ]: Creating LSP server...
+05:49:11.203278 [info ]: Starting LSP server...
+05:49:11.283159 [info ]: Loading profiles.yml
+05:49:29.589645 [info ]: Loading profiles.yml
+05:49:33.125170 [info ]: Loading profiles.yml
+05:49:44.366219 [info ]: Loading profiles.yml
+05:50:33.555803 [info ]: Loading profiles.yml
+05:50:36.667822 [info ]: Loading profiles.yml
+05:51:04.224505 [info ]: Loading profiles.yml
+05:52:09.241105 [info ]: Loading profiles.yml
+05:52:09.266953 [info ]: Started loading project
+05:52:09.267486 [info ]: Loading profiles.yml
+05:52:09.267884 [info ]: Finished loading project [  0.00s]
+05:52:09.580281 [info ]: Loading profiles.yml
+05:52:10.141851 [info ]: Loading profiles.yml
+06:03:04.880254 [info ]: Loading profiles.yml
+06:03:09.375673 [info ]: Loading profiles.yml
+06:03:09.404888 [info ]: Started loading project
+06:03:09.405336 [info ]: Loading profiles.yml
+06:03:09.405620 [info ]: Finished loading project [  0.00s]
+06:03:10.019878 [info ]: Loading profiles.yml
+06:03:10.417403 [info ]: Loading profiles.yml
