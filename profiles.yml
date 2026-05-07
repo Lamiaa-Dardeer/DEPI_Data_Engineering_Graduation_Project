@@ -1,4 +1,4 @@
-nyc_311_profile:
+default:
   target: dev
   outputs:
     dev:
