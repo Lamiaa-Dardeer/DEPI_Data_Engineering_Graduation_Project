@@ -1,11 +1,14 @@
 name: 'nyc_311_project'
 version: '1.0.0'
 config-version: 2
+
 profile: 'default'
+
 model-paths: ["models"]
 seed-paths: ["seeds"]
 test-paths: ["tests"]
-modals:
+
+models:
   nyc_311_project:
-    Staging:
-      materialized: 'table'
+    staging:
+      +materialized: table
