@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="time_period", model=get_where_subquery(ref('fct_nyc_311_performance')), values=["Morning","Afternoon","Evening","Night"]) }}

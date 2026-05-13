@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="creation_month", model=get_where_subquery(ref('fct_nyc_311_performance')), values=["January","February","March","April","May","June","July","August","September","October","November","December"]) }}

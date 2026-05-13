@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: fct_nyc_311_performance
+    description: "جدول وسيط شامل يحلل أداء الشكاوى (المغلقة والمفتوحة) وتوقيتاتها"
+    columns:
+      - name: complaint_id
+        tests:
+          - unique
+          - not_null
+
+      - name: ticket_age_days
+        description: "عُمر الشكوى بالأيام (حتى تاريخ الإغلاق أو تاريخ اليوم للشكاوى المفتوحة)"
+        tests:
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: ">= 0"
+
+      - name: is_late
+        description: "مؤشر منطقي يحدد ما إذا تجاوزت الشكوى 5 أيام"
+        tests:
+          - not_null
+
+      - name: is_open_backlog
+        description: "يحدد ما إذا كانت الشكوى لا تزال مفتوحة"
+        tests:
+          - not_null
+
+      - name: creation_month
+        description: "الشهر الذي قُدمت فيه الشكوى"
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['January', 'February', 'March', 'April', 'May', 'June', 
+                         'July', 'August', 'September', 'October', 'November', 'December']
+
+      - name: time_period
+        description: "فترة اليوم التي تم تقديم الشكوى فيها"
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Morning', 'Afternoon', 'Evening', 'Night']

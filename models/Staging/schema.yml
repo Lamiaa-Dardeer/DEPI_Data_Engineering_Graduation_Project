@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_nyc_311_requests
+    description: "النسخة المنظمة والمصفاة من بيانات شكاوى نيويورك 311"
+    columns:
+      - name: complaint_id
+        description: "الرقم التعريفي الفريد لكل شكوى"
+        tests:
+          - unique
+          - not_null
+
+      - name: complaint_status
+        description: "حالة الشكوى الحالية"
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Closed', 'Open', 'Pending', 'Assigned', 'In Progress','Started', 'Unspecified']
