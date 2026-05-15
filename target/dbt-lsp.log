@@ -5995,3 +5995,434 @@ SELECT * FROM raw_data
 13:18:03.297116 [info ]: Started scheduling
 13:18:03.297148 [info ]: Finished scheduling [  0.00s]
 13:18:03.298515 [info ]: Cached model count updated: 8 models (accurate)
+==================== 2026-05-15T00:42:26.535547Z | 84422dd3-d870-4b35-a6c8-c6039e8ffd87 ====================
+00:42:26.535622 [info ]: Starting dbt LSP server
+00:42:26.535668 [info ]: Connecting to LSP client on port 8000
+00:42:26.537127 [info ]: Successfully connected to LSP client
+00:42:26.537139 [info ]: Creating LSP service...
+00:42:26.602594 [info ]: Creating LSP server...
+00:42:26.602610 [info ]: Starting LSP server...
+00:42:26.689785 [info ]: Loading profiles.yml
+00:42:26.727346 [info ]: Started loading project
+00:42:26.727955 [info ]: Loading profiles.yml
+00:42:26.743369 [info ]:    Started resolving packages from packages.yml
+00:42:27.253452 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+00:42:27.253925 [debug]:    Started loading packages
+00:42:27.253917 [info ]:   Finished [  0.51s] resolving packages from packages.yml (1 items)
+00:42:27.265027 [debug]:     Loaded [  0.01s] packages
+00:42:27.265900 [info ]: Finished loading project [  0.54s]
+00:42:27.266190 [info ]: Started parsing
+00:42:27.307952 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+00:42:27.308150 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+00:42:27.310921 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+00:42:27.311332 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+00:42:27.311829 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+00:42:27.312265 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+00:42:27.312675 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+00:42:27.313090 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+00:42:27.313513 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+00:42:27.317945 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+00:42:27.320282 [info ]: Finished parsing [  0.05s]
+00:42:27.321398 [info ]: Cached model count updated: 8 models (estimate)
+00:42:27.321409 [info ]: Cached model count updated: 8 models (accurate)
+00:42:27.321484 [info ]: Started scheduling
+00:42:27.321643 [info ]: Finished scheduling [  0.00s]
+00:42:27.321673 [debug]: Compilation - 0 nodes selected: {}
+00:42:27.321703 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+00:42:27.321710 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+00:42:27.321730 [info ]: Started scheduling
+00:42:27.321813 [info ]: Finished scheduling [  0.00s]
+00:42:27.479886 [info ]: Started building task graph
+00:42:27.479973 [info ]: Finished building task graph [  0.00s]
+00:42:27.486059 [info ]: Started scheduling
+00:42:27.486118 [info ]: Finished scheduling [  0.00s]
+00:42:27.486684 [info ]: Cached model count updated: 8 models (accurate)
+00:42:29.078740 [info ]: Started loading project
+00:42:29.079213 [info ]: Loading profiles.yml
+00:42:29.101550 [info ]: Cached model count updated: 8 models (estimate)
+00:42:29.101564 [info ]: Cached model count updated: 8 models (accurate)
+00:42:29.101589 [info ]: Started scheduling
+00:42:29.101618 [info ]: Finished scheduling [  0.00s]
+00:42:29.101627 [debug]: Compilation - 0 nodes selected: {}
+00:42:29.101635 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+00:42:29.101642 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+00:42:29.236139 [info ]: Started building task graph
+00:42:29.236163 [info ]: Finished building task graph [  0.00s]
+00:42:29.239689 [info ]: Started scheduling
+00:42:29.239720 [info ]: Finished scheduling [  0.00s]
+00:42:29.239997 [info ]: Finished loading project [  0.16s]
+00:42:29.241126 [info ]: Cached model count updated: 8 models (accurate)
+00:42:30.804848 [info ]: Started loading project
+00:42:30.805280 [info ]: Loading profiles.yml
+00:42:30.826999 [info ]: Cached model count updated: 8 models (estimate)
+00:42:30.827012 [info ]: Cached model count updated: 8 models (accurate)
+00:42:30.827035 [info ]: Started scheduling
+00:42:30.827097 [info ]: Finished scheduling [  0.00s]
+00:42:30.827108 [debug]: Compilation - 8 nodes selected: {"model.nyc_311_project.audit_raw_311_data", "model.nyc_311_project.dim_complaint_types", "model.nyc_311_project.dim_date", "model.nyc_311_project.dim_locations", "model.nyc_311_project.dim_nyc_311_monthly_summary", "model.nyc_311_project.fct_nyc_311_performance", "model.nyc_311_project.raw_service_requests", "model.nyc_311_project.stg_nyc_311_requests"}
+00:42:30.961264 [info ]: Started building task graph
+00:42:30.961442 [info ]: Finished building task graph [  0.00s]
+00:42:30.961674 [info ]: Started rendering (8 nodes)
+00:42:30.961728 [info ]: Started model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:42:30.961767 [debug]: Started rendering model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:42:30.961800 [info ]: Started model nyc_311_raw_data.fct_nyc_311_performance
+00:42:30.961806 [debug]: Started rendering model nyc_311_raw_data.fct_nyc_311_performance
+00:42:30.961814 [info ]: Started model nyc_311_raw_data.dim_locations
+00:42:30.961819 [debug]: Started rendering model nyc_311_raw_data.dim_locations
+00:42:30.961822 [info ]: Finished loading project [  0.16s]
+00:42:30.961826 [info ]: Started model nyc_311_raw_data.dim_date
+00:42:30.961831 [debug]: Started rendering model nyc_311_raw_data.dim_date
+00:42:30.961840 [info ]: Started model nyc_311_raw_data.dim_complaint_types
+00:42:30.961851 [debug]: Started rendering model nyc_311_raw_data.dim_complaint_types
+00:42:30.961862 [info ]: Started model nyc_311_raw_data.stg_nyc_311_requests
+00:42:30.961868 [debug]: Started rendering model nyc_311_raw_data.stg_nyc_311_requests
+00:42:30.961897 [info ]: Started model nyc_311_raw_data.audit_raw_311_data
+00:42:30.961906 [debug]: Started rendering model nyc_311_raw_data.audit_raw_311_data
+00:42:30.961923 [info ]: Started model nyc_311_raw_data.raw_service_requests
+00:42:30.961932 [debug]: Started rendering model nyc_311_raw_data.raw_service_requests
+00:42:30.963949 [debug]: Compiled SQL for node model.nyc_311_project.raw_service_requests at target\.lsp\compiled\nyc_311_project\models\Staging\raw_service_requests.sql
+00:42:30.963949 [debug]: Compiled SQL for node model.nyc_311_project.dim_nyc_311_monthly_summary at target\.lsp\compiled\nyc_311_project\models\Marts\dim_nyc_311_monthly_summary.sql
+00:42:30.963978 [debug]: Compiled SQL for node model.nyc_311_project.stg_nyc_311_requests at target\.lsp\compiled\nyc_311_project\models\Staging\stg_nyc_311_requests.sql
+00:42:30.963994 [debug]: Compiled SQL for node model.nyc_311_project.audit_raw_311_data at target\.lsp\compiled\nyc_311_project\models\Staging\audit_raw_311_data.sql
+00:42:30.964239 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.audit_raw_311_data [success]
+00:42:30.964244 [debug]: Compiled SQL for node model.nyc_311_project.dim_date at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_date.sql
+00:42:30.964283 [debug]: Compiled SQL for node model.nyc_311_project.fct_nyc_311_performance at target\.lsp\compiled\nyc_311_project\models\Intermediate\fct_nyc_311_performance.sql
+00:42:30.964294 [info ]: Started analyzing (8 nodes)
+00:42:30.964297 [debug]: Compiled SQL for node model.nyc_311_project.dim_locations at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_locations.sql
+00:42:30.964308 [debug]: Started analyzing model nyc_311_raw_data.audit_raw_311_data
+00:42:30.964318 [debug]: Compiled SQL for node model.nyc_311_project.dim_complaint_types at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_complaint_types.sql
+00:42:30.964326 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:42:30.964338 [debug]: Started analyzing model nyc_311_raw_data.stg_nyc_311_requests
+00:42:30.964351 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:42:30.964360 [debug]: Started analyzing model nyc_311_raw_data.raw_service_requests
+00:42:30.964373 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+00:42:30.964384 [debug]: Started analyzing model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:42:30.964396 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_date [success]
+00:42:30.964404 [debug]: Started analyzing model nyc_311_raw_data.dim_date
+00:42:30.964415 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:42:30.964421 [debug]: Started analyzing model nyc_311_raw_data.fct_nyc_311_performance
+00:42:30.964430 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_locations [success]
+00:42:30.964440 [debug]: Started analyzing model nyc_311_raw_data.dim_locations
+00:42:30.964453 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+00:42:30.964459 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+00:42:30.964469 [debug]: Started analyzing model nyc_311_raw_data.dim_complaint_types
+00:42:30.968452 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:42:30.968468 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.raw_service_requests (table)
+00:42:30.970899 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:42:30.970910 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.stg_nyc_311_requests (view)
+00:42:30.972299 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.dim_complaint_types [success]
+00:42:30.972310 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.dim_complaint_types (table)
+00:42:30.972426 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.dim_date [success]
+00:42:30.972439 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.dim_date (table)
+00:42:30.975956 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.audit_raw_311_data [success]
+00:42:30.975966 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.audit_raw_311_data (table)
+00:42:30.976230 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+00:42:30.976241 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.dim_nyc_311_monthly_summary (table)
+00:42:30.977636 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.dim_locations [success]
+00:42:30.977647 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.dim_locations (table)
+00:42:30.981523 [debug]: Finished analyzing [  0.02s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:42:30.981534 [info ]: Finished analyzing [  0.02s] (8 nodes, 0 skipped, 0 errors)
+00:42:30.981540 [info ]:  Succeeded [  0.02s] model nyc_311_raw_data.fct_nyc_311_performance (table)
+00:42:30.985082 [info ]: Started scheduling
+00:42:30.985114 [info ]: Finished scheduling [  0.00s]
+00:42:30.986551 [info ]: Cached model count updated: 8 models (accurate)
+00:47:42.605933 [info ]: Started loading project
+00:47:42.606459 [info ]: Loading profiles.yml
+00:47:42.612684 [info ]: Started parsing
+00:47:42.628893 [info ]: Finished loading project [  0.02s]
+00:47:42.629451 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+00:47:42.630864 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+00:47:42.631224 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+00:47:42.631721 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+00:47:42.633729 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+00:47:42.634466 [info ]: Finished parsing [  0.02s]
+00:47:42.636168 [info ]: Cached model count updated: 8 models (estimate)
+00:47:42.636176 [info ]: Cached model count updated: 8 models (accurate)
+00:47:42.636206 [info ]: Started scheduling
+00:47:42.636305 [info ]: Finished scheduling [  0.00s]
+00:47:42.636313 [debug]: Compilation - 5 nodes selected: {"model.nyc_311_project.dim_complaint_types", "model.nyc_311_project.dim_locations", "model.nyc_311_project.fct_nyc_311_performance", "model.nyc_311_project.raw_service_requests", "model.nyc_311_project.stg_nyc_311_requests"}
+00:47:42.761403 [info ]: Started building task graph
+00:47:42.761453 [info ]: Finished building task graph [  0.00s]
+00:47:42.761570 [info ]: Started rendering (5 nodes)
+00:47:42.761581 [info ]: Started model nyc_311_raw_data.fct_nyc_311_performance
+00:47:42.761590 [debug]: Started rendering model nyc_311_raw_data.fct_nyc_311_performance
+00:47:42.761604 [info ]: Started model nyc_311_raw_data.dim_locations
+00:47:42.761609 [debug]: Started rendering model nyc_311_raw_data.dim_locations
+00:47:42.761616 [info ]: Started model nyc_311_raw_data.dim_complaint_types
+00:47:42.761620 [debug]: Started rendering model nyc_311_raw_data.dim_complaint_types
+00:47:42.761626 [info ]: Started model nyc_311_raw_data.stg_nyc_311_requests
+00:47:42.761634 [debug]: Started rendering model nyc_311_raw_data.stg_nyc_311_requests
+00:47:42.761642 [info ]: Started model nyc_311_raw_data.raw_service_requests
+00:47:42.761646 [debug]: Started rendering model nyc_311_raw_data.raw_service_requests
+00:47:42.762124 [debug]: Compiled SQL for node model.nyc_311_project.stg_nyc_311_requests at target\.lsp\compiled\nyc_311_project\models\Staging\stg_nyc_311_requests.sql
+00:47:42.762133 [debug]: Compiled SQL for node model.nyc_311_project.raw_service_requests at target\.lsp\compiled\nyc_311_project\models\Staging\raw_service_requests.sql
+00:47:42.762164 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:47:42.762187 [info ]: Started analyzing (5 nodes)
+00:47:42.762195 [debug]: Started analyzing model nyc_311_raw_data.stg_nyc_311_requests
+00:47:42.762208 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:47:42.762215 [debug]: Started analyzing model nyc_311_raw_data.raw_service_requests
+00:47:42.762214 [debug]: Compiled SQL for node model.nyc_311_project.dim_locations at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_locations.sql
+00:47:42.762245 [debug]: Compiled SQL for node model.nyc_311_project.dim_complaint_types at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_complaint_types.sql
+00:47:42.762247 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_locations [success]
+00:47:42.762269 [debug]: Started analyzing model nyc_311_raw_data.dim_locations
+00:47:42.762287 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+00:47:42.762299 [debug]: Started analyzing model nyc_311_raw_data.dim_complaint_types
+00:47:42.762332 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:47:42.762340 [info ]:  Succeeded [-------] model nyc_311_raw_data.raw_service_requests (table)
+00:47:42.762513 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:47:42.762523 [info ]:  Succeeded [-------] model nyc_311_raw_data.stg_nyc_311_requests (view)
+00:47:42.762554 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+00:47:42.762563 [info ]:  Succeeded [-------] model nyc_311_raw_data.dim_complaint_types (table)
+00:47:42.762887 [debug]: Compiled SQL for node model.nyc_311_project.fct_nyc_311_performance at target\.lsp\compiled\nyc_311_project\models\Intermediate\fct_nyc_311_performance.sql
+00:47:42.762932 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:47:42.762942 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+00:47:42.762954 [debug]: Started analyzing model nyc_311_raw_data.fct_nyc_311_performance
+00:47:42.762970 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_locations [success]
+00:47:42.762978 [info ]:  Succeeded [-------] model nyc_311_raw_data.dim_locations (table)
+00:47:42.770936 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:47:42.770945 [info ]: Finished analyzing [  0.01s] (5 nodes, 0 skipped, 0 errors)
+00:47:42.770951 [info ]:  Succeeded [  0.01s] model nyc_311_raw_data.fct_nyc_311_performance (table)
+00:47:42.774635 [info ]: Started scheduling
+00:47:42.774707 [info ]: Finished scheduling [  0.00s]
+00:47:42.775814 [info ]: Cached model count updated: 8 models (accurate)
+00:47:44.326196 [info ]: Started loading project
+00:47:44.326669 [info ]: Loading profiles.yml
+00:47:44.347283 [info ]: Cached model count updated: 8 models (estimate)
+00:47:44.347296 [info ]: Cached model count updated: 8 models (accurate)
+00:47:44.347321 [info ]: Started scheduling
+00:47:44.347393 [info ]: Finished scheduling [  0.00s]
+00:47:44.347404 [debug]: Compilation - 6 nodes selected: {"model.nyc_311_project.dim_complaint_types", "model.nyc_311_project.dim_locations", "model.nyc_311_project.dim_nyc_311_monthly_summary", "model.nyc_311_project.fct_nyc_311_performance", "model.nyc_311_project.raw_service_requests", "model.nyc_311_project.stg_nyc_311_requests"}
+00:47:44.476359 [info ]: Started building task graph
+00:47:44.476411 [info ]: Finished building task graph [  0.00s]
+00:47:44.476519 [info ]: Started rendering (6 nodes)
+00:47:44.476529 [info ]: Started model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:47:44.476538 [debug]: Started rendering model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:47:44.476552 [info ]: Started model nyc_311_raw_data.fct_nyc_311_performance
+00:47:44.476557 [debug]: Started rendering model nyc_311_raw_data.fct_nyc_311_performance
+00:47:44.476563 [info ]: Started model nyc_311_raw_data.dim_locations
+00:47:44.476568 [debug]: Started rendering model nyc_311_raw_data.dim_locations
+00:47:44.476573 [info ]: Started model nyc_311_raw_data.dim_complaint_types
+00:47:44.476577 [debug]: Started rendering model nyc_311_raw_data.dim_complaint_types
+00:47:44.476578 [info ]: Finished loading project [  0.15s]
+00:47:44.476583 [info ]: Started model nyc_311_raw_data.stg_nyc_311_requests
+00:47:44.476587 [debug]: Started rendering model nyc_311_raw_data.stg_nyc_311_requests
+00:47:44.476594 [info ]: Started model nyc_311_raw_data.raw_service_requests
+00:47:44.476600 [debug]: Started rendering model nyc_311_raw_data.raw_service_requests
+00:47:44.477206 [debug]: Compiled SQL for node model.nyc_311_project.raw_service_requests at target\.lsp\compiled\nyc_311_project\models\Staging\raw_service_requests.sql
+00:47:44.477206 [debug]: Compiled SQL for node model.nyc_311_project.dim_nyc_311_monthly_summary at target\.lsp\compiled\nyc_311_project\models\Marts\dim_nyc_311_monthly_summary.sql
+00:47:44.477213 [debug]: Compiled SQL for node model.nyc_311_project.fct_nyc_311_performance at target\.lsp\compiled\nyc_311_project\models\Intermediate\fct_nyc_311_performance.sql
+00:47:44.477238 [debug]: Compiled SQL for node model.nyc_311_project.dim_complaint_types at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_complaint_types.sql
+00:47:44.477240 [debug]: Compiled SQL for node model.nyc_311_project.stg_nyc_311_requests at target\.lsp\compiled\nyc_311_project\models\Staging\stg_nyc_311_requests.sql
+00:47:44.477246 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:47:44.477266 [info ]: Started analyzing (6 nodes)
+00:47:44.477276 [debug]: Started analyzing model nyc_311_raw_data.raw_service_requests
+00:47:44.477285 [debug]: Compiled SQL for node model.nyc_311_project.dim_locations at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_locations.sql
+00:47:44.477293 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+00:47:44.477303 [debug]: Started analyzing model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:47:44.477316 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:47:44.477326 [debug]: Started analyzing model nyc_311_raw_data.fct_nyc_311_performance
+00:47:44.477339 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+00:47:44.477349 [debug]: Started analyzing model nyc_311_raw_data.dim_complaint_types
+00:47:44.477361 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:47:44.477370 [debug]: Started analyzing model nyc_311_raw_data.stg_nyc_311_requests
+00:47:44.477384 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_locations [success]
+00:47:44.477392 [info ]: Finished rendering [  0.00s] (6 nodes, 0 skipped, 0 errors)
+00:47:44.477399 [debug]: Started analyzing model nyc_311_raw_data.dim_locations
+00:47:44.477413 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:47:44.477422 [info ]:  Succeeded [-------] model nyc_311_raw_data.raw_service_requests (table)
+00:47:44.477629 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+00:47:44.477639 [info ]:  Succeeded [-------] model nyc_311_raw_data.dim_complaint_types (table)
+00:47:44.477674 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:47:44.477686 [info ]:  Succeeded [-------] model nyc_311_raw_data.stg_nyc_311_requests (view)
+00:47:44.477699 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+00:47:44.477706 [info ]:  Succeeded [-------] model nyc_311_raw_data.dim_nyc_311_monthly_summary (table)
+00:47:44.478090 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_locations [success]
+00:47:44.478100 [info ]:  Succeeded [-------] model nyc_311_raw_data.dim_locations (table)
+00:47:44.479964 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:47:44.479974 [info ]: Finished analyzing [  0.00s] (6 nodes, 0 skipped, 0 errors)
+00:47:44.479979 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance (table)
+00:47:44.483492 [info ]: Started scheduling
+00:47:44.483528 [info ]: Finished scheduling [  0.00s]
+00:47:44.485227 [info ]: Cached model count updated: 8 models (accurate)
+00:47:46.046906 [info ]: Started loading project
+00:47:46.047440 [info ]: Loading profiles.yml
+00:47:46.068149 [info ]: Cached model count updated: 8 models (estimate)
+00:47:46.068158 [info ]: Cached model count updated: 8 models (accurate)
+00:47:46.068178 [info ]: Started scheduling
+00:47:46.068234 [info ]: Finished scheduling [  0.00s]
+00:47:46.068245 [debug]: Compilation - 8 nodes selected: {"model.nyc_311_project.audit_raw_311_data", "model.nyc_311_project.dim_complaint_types", "model.nyc_311_project.dim_date", "model.nyc_311_project.dim_locations", "model.nyc_311_project.dim_nyc_311_monthly_summary", "model.nyc_311_project.fct_nyc_311_performance", "model.nyc_311_project.raw_service_requests", "model.nyc_311_project.stg_nyc_311_requests"}
+00:47:46.195956 [info ]: Started building task graph
+00:47:46.196012 [info ]: Finished building task graph [  0.00s]
+00:47:46.196121 [info ]: Started rendering (8 nodes)
+00:47:46.196135 [info ]: Started model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:47:46.196143 [debug]: Started rendering model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:47:46.196156 [info ]: Started model nyc_311_raw_data.fct_nyc_311_performance
+00:47:46.196161 [debug]: Started rendering model nyc_311_raw_data.fct_nyc_311_performance
+00:47:46.196167 [info ]: Started model nyc_311_raw_data.dim_locations
+00:47:46.196170 [debug]: Started rendering model nyc_311_raw_data.dim_locations
+00:47:46.196176 [info ]: Started model nyc_311_raw_data.dim_date
+00:47:46.196180 [debug]: Started rendering model nyc_311_raw_data.dim_date
+00:47:46.196189 [info ]: Started model nyc_311_raw_data.dim_complaint_types
+00:47:46.196194 [debug]: Started rendering model nyc_311_raw_data.dim_complaint_types
+00:47:46.196200 [info ]: Started model nyc_311_raw_data.stg_nyc_311_requests
+00:47:46.196198 [info ]: Finished loading project [  0.15s]
+00:47:46.196204 [debug]: Started rendering model nyc_311_raw_data.stg_nyc_311_requests
+00:47:46.196209 [info ]: Started model nyc_311_raw_data.audit_raw_311_data
+00:47:46.196213 [debug]: Started rendering model nyc_311_raw_data.audit_raw_311_data
+00:47:46.196219 [info ]: Started model nyc_311_raw_data.raw_service_requests
+00:47:46.196222 [debug]: Started rendering model nyc_311_raw_data.raw_service_requests
+00:47:46.196928 [debug]: Compiled SQL for node model.nyc_311_project.dim_nyc_311_monthly_summary at target\.lsp\compiled\nyc_311_project\models\Marts\dim_nyc_311_monthly_summary.sql
+00:47:46.196943 [debug]: Compiled SQL for node model.nyc_311_project.fct_nyc_311_performance at target\.lsp\compiled\nyc_311_project\models\Intermediate\fct_nyc_311_performance.sql
+00:47:46.196976 [debug]: Compiled SQL for node model.nyc_311_project.dim_locations at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_locations.sql
+00:47:46.196974 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+00:47:46.196999 [info ]: Started analyzing (8 nodes)
+00:47:46.197009 [debug]: Compiled SQL for node model.nyc_311_project.stg_nyc_311_requests at target\.lsp\compiled\nyc_311_project\models\Staging\stg_nyc_311_requests.sql
+00:47:46.197010 [debug]: Started analyzing model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:47:46.197022 [debug]: Compiled SQL for node model.nyc_311_project.raw_service_requests at target\.lsp\compiled\nyc_311_project\models\Staging\raw_service_requests.sql
+00:47:46.197028 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:47:46.197024 [debug]: Compiled SQL for node model.nyc_311_project.dim_complaint_types at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_complaint_types.sql
+00:47:46.197037 [debug]: Started analyzing model nyc_311_raw_data.fct_nyc_311_performance
+00:47:46.197047 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_locations [success]
+00:47:46.197053 [debug]: Started analyzing model nyc_311_raw_data.dim_locations
+00:47:46.197062 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:47:46.197068 [debug]: Started analyzing model nyc_311_raw_data.stg_nyc_311_requests
+00:47:46.197077 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:47:46.197082 [debug]: Started analyzing model nyc_311_raw_data.raw_service_requests
+00:47:46.197090 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+00:47:46.197101 [debug]: Started analyzing model nyc_311_raw_data.dim_complaint_types
+00:47:46.197129 [debug]: Compiled SQL for node model.nyc_311_project.audit_raw_311_data at target\.lsp\compiled\nyc_311_project\models\Staging\audit_raw_311_data.sql
+00:47:46.197142 [debug]: Compiled SQL for node model.nyc_311_project.dim_date at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_date.sql
+00:47:46.197169 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.audit_raw_311_data [success]
+00:47:46.197187 [debug]: Started analyzing model nyc_311_raw_data.audit_raw_311_data
+00:47:46.197202 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_date [success]
+00:47:46.197208 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+00:47:46.197215 [debug]: Started analyzing model nyc_311_raw_data.dim_date
+00:47:46.197317 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:47:46.197328 [info ]:  Succeeded [-------] model nyc_311_raw_data.raw_service_requests (table)
+00:47:46.197470 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:47:46.197481 [info ]:  Succeeded [-------] model nyc_311_raw_data.stg_nyc_311_requests (view)
+00:47:46.197491 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_date [success]
+00:47:46.197496 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.dim_date (table)
+00:47:46.197504 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+00:47:46.197509 [info ]:  Succeeded [-------] model nyc_311_raw_data.dim_complaint_types (table)
+00:47:46.197539 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+00:47:46.197548 [info ]:  Succeeded [-------] model nyc_311_raw_data.dim_nyc_311_monthly_summary (table)
+00:47:46.198143 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_locations [success]
+00:47:46.198155 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.dim_locations (table)
+00:47:46.198264 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.audit_raw_311_data [success]
+00:47:46.198274 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.audit_raw_311_data (table)
+00:47:46.199901 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:47:46.199911 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+00:47:46.199916 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance (table)
+00:47:46.203345 [info ]: Started scheduling
+00:47:46.203375 [info ]: Finished scheduling [  0.00s]
+00:47:46.204645 [info ]: Cached model count updated: 8 models (accurate)
+00:54:56.072078 [info ]: Started loading project
+00:54:56.072592 [info ]: Loading profiles.yml
+00:54:56.078644 [info ]: Started parsing
+00:54:56.095043 [info ]: Finished loading project [  0.02s]
+00:54:56.095595 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+00:54:56.097044 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+00:54:56.097393 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+00:54:56.097828 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+00:54:56.099697 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+00:54:56.100470 [info ]: Finished parsing [  0.02s]
+00:54:56.102148 [info ]: Cached model count updated: 8 models (estimate)
+00:54:56.102156 [info ]: Cached model count updated: 8 models (accurate)
+00:54:56.102174 [info ]: Started scheduling
+00:54:56.102198 [info ]: Finished scheduling [  0.00s]
+00:54:56.102205 [debug]: Compilation - 0 nodes selected: {}
+00:54:56.102211 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+00:54:56.102217 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+00:54:56.229364 [info ]: Started building task graph
+00:54:56.229386 [info ]: Finished building task graph [  0.00s]
+00:54:56.232338 [info ]: Started scheduling
+00:54:56.232367 [info ]: Finished scheduling [  0.00s]
+00:54:56.233587 [info ]: Cached model count updated: 8 models (accurate)
+00:54:57.786814 [info ]: Started loading project
+00:54:57.787272 [info ]: Loading profiles.yml
+00:54:57.810818 [info ]: Cached model count updated: 8 models (estimate)
+00:54:57.810837 [info ]: Cached model count updated: 8 models (accurate)
+00:54:57.810871 [info ]: Started scheduling
+00:54:57.810911 [info ]: Finished scheduling [  0.00s]
+00:54:57.810924 [debug]: Compilation - 0 nodes selected: {}
+00:54:57.810935 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+00:54:57.810945 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+00:54:57.948468 [info ]: Started building task graph
+00:54:57.948491 [info ]: Finished building task graph [  0.00s]
+00:54:57.951862 [info ]: Started scheduling
+00:54:57.951891 [info ]: Finished scheduling [  0.00s]
+00:54:57.952130 [info ]: Finished loading project [  0.17s]
+00:54:57.953215 [info ]: Cached model count updated: 8 models (accurate)
+00:54:59.517014 [info ]: Started loading project
+00:54:59.517723 [info ]: Loading profiles.yml
+00:54:59.543656 [info ]: Cached model count updated: 8 models (estimate)
+00:54:59.543666 [info ]: Cached model count updated: 8 models (accurate)
+00:54:59.543687 [info ]: Started scheduling
+00:54:59.543743 [info ]: Finished scheduling [  0.00s]
+00:54:59.543753 [debug]: Compilation - 8 nodes selected: {"model.nyc_311_project.audit_raw_311_data", "model.nyc_311_project.dim_complaint_types", "model.nyc_311_project.dim_date", "model.nyc_311_project.dim_locations", "model.nyc_311_project.dim_nyc_311_monthly_summary", "model.nyc_311_project.fct_nyc_311_performance", "model.nyc_311_project.raw_service_requests", "model.nyc_311_project.stg_nyc_311_requests"}
+00:54:59.672886 [info ]: Started building task graph
+00:54:59.672951 [info ]: Finished building task graph [  0.00s]
+00:54:59.673061 [info ]: Started rendering (8 nodes)
+00:54:59.673071 [info ]: Started model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:54:59.673080 [debug]: Started rendering model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:54:59.673093 [info ]: Started model nyc_311_raw_data.fct_nyc_311_performance
+00:54:59.673097 [debug]: Started rendering model nyc_311_raw_data.fct_nyc_311_performance
+00:54:59.673104 [info ]: Started model nyc_311_raw_data.dim_locations
+00:54:59.673108 [debug]: Started rendering model nyc_311_raw_data.dim_locations
+00:54:59.673114 [info ]: Started model nyc_311_raw_data.dim_date
+00:54:59.673117 [debug]: Started rendering model nyc_311_raw_data.dim_date
+00:54:59.673123 [info ]: Started model nyc_311_raw_data.dim_complaint_types
+00:54:59.673121 [info ]: Finished loading project [  0.16s]
+00:54:59.673127 [debug]: Started rendering model nyc_311_raw_data.dim_complaint_types
+00:54:59.673133 [info ]: Started model nyc_311_raw_data.stg_nyc_311_requests
+00:54:59.673136 [debug]: Started rendering model nyc_311_raw_data.stg_nyc_311_requests
+00:54:59.673141 [info ]: Started model nyc_311_raw_data.audit_raw_311_data
+00:54:59.673146 [debug]: Started rendering model nyc_311_raw_data.audit_raw_311_data
+00:54:59.673152 [info ]: Started model nyc_311_raw_data.raw_service_requests
+00:54:59.673156 [debug]: Started rendering model nyc_311_raw_data.raw_service_requests
+00:54:59.673440 [debug]: Compiled SQL for node model.nyc_311_project.dim_nyc_311_monthly_summary at target\.lsp\compiled\nyc_311_project\models\Marts\dim_nyc_311_monthly_summary.sql
+00:54:59.673488 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+00:54:59.673513 [info ]: Started analyzing (8 nodes)
+00:54:59.673524 [debug]: Started analyzing model nyc_311_raw_data.dim_nyc_311_monthly_summary
+00:54:59.673743 [debug]: Compiled SQL for node model.nyc_311_project.raw_service_requests at target\.lsp\compiled\nyc_311_project\models\Staging\raw_service_requests.sql
+00:54:59.673776 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:54:59.673784 [debug]: Compiled SQL for node model.nyc_311_project.stg_nyc_311_requests at target\.lsp\compiled\nyc_311_project\models\Staging\stg_nyc_311_requests.sql
+00:54:59.673794 [debug]: Started analyzing model nyc_311_raw_data.raw_service_requests
+00:54:59.673808 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:54:59.673816 [debug]: Compiled SQL for node model.nyc_311_project.audit_raw_311_data at target\.lsp\compiled\nyc_311_project\models\Staging\audit_raw_311_data.sql
+00:54:59.673819 [debug]: Started analyzing model nyc_311_raw_data.stg_nyc_311_requests
+00:54:59.673838 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.audit_raw_311_data [success]
+00:54:59.673846 [debug]: Started analyzing model nyc_311_raw_data.audit_raw_311_data
+00:54:59.673955 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.raw_service_requests [success]
+00:54:59.673968 [info ]:  Succeeded [-------] model nyc_311_raw_data.raw_service_requests (table)
+00:54:59.674091 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.stg_nyc_311_requests [success]
+00:54:59.674101 [info ]:  Succeeded [-------] model nyc_311_raw_data.stg_nyc_311_requests (view)
+00:54:59.674109 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+00:54:59.674114 [info ]:  Succeeded [-------] model nyc_311_raw_data.dim_nyc_311_monthly_summary (table)
+00:54:59.674637 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.audit_raw_311_data [success]
+00:54:59.674645 [info ]:  Succeeded [-------] model nyc_311_raw_data.audit_raw_311_data (table)
+00:54:59.674874 [debug]: Compiled SQL for node model.nyc_311_project.dim_date at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_date.sql
+00:54:59.674887 [debug]: Compiled SQL for node model.nyc_311_project.dim_locations at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_locations.sql
+00:54:59.674906 [debug]: Compiled SQL for node model.nyc_311_project.fct_nyc_311_performance at target\.lsp\compiled\nyc_311_project\models\Intermediate\fct_nyc_311_performance.sql
+00:54:59.674923 [debug]: Compiled SQL for node model.nyc_311_project.dim_complaint_types at target\.lsp\compiled\nyc_311_project\models\Intermediate\dim_complaint_types.sql
+00:54:59.674921 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_date [success]
+00:54:59.674935 [debug]: Started analyzing model nyc_311_raw_data.dim_date
+00:54:59.674948 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_locations [success]
+00:54:59.674957 [debug]: Started analyzing model nyc_311_raw_data.dim_locations
+00:54:59.674966 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:54:59.674974 [debug]: Started analyzing model nyc_311_raw_data.fct_nyc_311_performance
+00:54:59.674986 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+00:54:59.674993 [info ]: Finished rendering [  0.00s] (8 nodes, 0 skipped, 0 errors)
+00:54:59.674999 [debug]: Started analyzing model nyc_311_raw_data.dim_complaint_types
+00:54:59.675187 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_date [success]
+00:54:59.675196 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.dim_date (table)
+00:54:59.675220 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+00:54:59.675228 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.dim_complaint_types (table)
+00:54:59.675626 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.dim_locations [success]
+00:54:59.675636 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.dim_locations (table)
+00:54:59.677496 [debug]: Finished analyzing [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+00:54:59.677505 [info ]: Finished analyzing [  0.00s] (8 nodes, 0 skipped, 0 errors)
+00:54:59.677510 [info ]:  Succeeded [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance (table)
+00:54:59.681128 [info ]: Started scheduling
+00:54:59.681162 [info ]: Finished scheduling [  0.00s]
+00:54:59.682585 [info ]: Cached model count updated: 8 models (accurate)
