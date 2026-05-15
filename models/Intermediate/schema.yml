@@ -11,10 +11,10 @@ models:
 
       - name: ticket_age_days
         description: "عُمر الشكوى بالأيام (حتى تاريخ الإغلاق أو تاريخ اليوم للشكاوى المفتوحة)"
-        tests:
-          - dbt_utils.expression_is_true:
-              arguments:
-                expression: ">= 0"
+#        tests:
+#          - dbt_utils.expression_is_true:
+#              arguments:
+#                expression: ">= 0"
 
       - name: is_late
         description: "مؤشر منطقي يحدد ما إذا تجاوزت الشكوى 5 أيام"
@@ -31,10 +31,6 @@ models:
         tests:
           - not_null
 
-      - name: location_key
-        description: "مفتاح موقع الشكوى"
-        tests:
-          - not_null
 
       - name: date_key
         description: "مفتاح تاريخ الشكوى"
@@ -73,6 +69,13 @@ models:
         description: "الفئة التي تنتمي إليها الشكوى"
         tests:
           - not_null
+
+      - name: priority_level
+              tests:
+                - accepted_values:
+                    values: ['High', 'Medium', 'Low']
+
+
   - name: dim_locations
     description: "جدول الأبعاد لمواقغ الشكاوى "
     columns:

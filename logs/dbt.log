@@ -5709,3 +5709,2347 @@ where complaint_id is null
 Finished 'test' with 1 warning and 4 errors for target 'dev' [6.6s]
 Processed: 9 tests
 Summary: 9 total | 6 success | 3 error
+==================== 2026-05-15T01:20:26.253423Z | 019e2938-748b-7563-9de6-fd024d947cf1 ====================
+01:20:26.253497 [info ]: dbt-fusion 2.0.0-preview.175
+01:20:26.253764 [info ]: Started loading project
+01:20:26.255995 [info ]: Loading profiles.yml
+01:20:26.257916 [info ]:    Started resolving packages from packages.yml
+01:20:26.566426 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+01:20:26.566743 [info ]:   Finished [  0.31s] resolving packages from packages.yml (1 items)
+01:20:26.567243 [debug]:    Started loading packages
+01:20:26.578601 [debug]:     Loaded [  0.01s] packages
+01:20:26.579201 [info ]: Finished loading project [  0.33s]
+01:20:26.579710 [info ]: Started parsing
+01:20:26.610090 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+01:20:26.610258 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+01:20:26.611645 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+01:20:26.612087 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+01:20:26.612480 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+01:20:26.612943 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+01:20:26.613296 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+01:20:26.613647 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+01:20:26.614052 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+01:20:26.614513 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+01:20:26.623894 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+01:20:26.624398 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+01:20:26.624801 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+01:20:26.625148 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:20:26.625500 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:20:26.625852 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+01:20:26.626253 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+01:20:26.626613 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+01:20:26.626997 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+01:20:26.627349 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:20:26.627706 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:20:26.628157 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+01:20:26.628584 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+01:20:26.628951 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+01:20:26.629324 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+01:20:26.629690 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_location_key.sql [  0.00s]
+01:20:26.630100 [debug]: Finished parsing target\generic_tests\dbt_utils_expression_is_true_f_8c982072f5c19e0a18b5aa9a0b5cabdf.sql [  0.00s]
+01:20:26.630483 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+01:20:26.630854 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:20:26.631343 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:20:26.631770 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+01:20:26.637719 [info ]: Finished parsing [  0.06s]
+01:20:26.638319 [info ]: Started scheduling
+01:20:26.638517 [info ]: Finished scheduling [  0.00s]
+01:20:26.640434 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "fct_nyc_311_performance" }) and interval: None
+01:20:26.757592 [info ]: Started building task graph
+01:20:26.757760 [info ]: Finished building task graph [  0.00s]
+01:20:26.758011 [info ]: Started rendering (9 nodes)
+01:20:26.758079 [info ]: Started test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:20:26.758089 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:20:26.758106 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key
+01:20:26.758113 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key
+01:20:26.758122 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:20:26.758127 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:20:26.758134 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:20:26.758138 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:20:26.758146 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:20:26.758153 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:20:26.758166 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:20:26.758173 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:20:26.758185 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:20:26.758194 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:20:26.758207 [info ]: Started test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:20:26.758215 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:20:26.758232 [info ]: Started test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:20:26.758241 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:20:26.761002 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql
+01:20:26.761069 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+01:20:26.761215 [info ]: Started analyzing (9 nodes)
+01:20:26.761280 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:20:26.761661 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_location_key.751b0d1a44 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_location_key.sql
+01:20:26.761695 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql
+01:20:26.761754 [debug]: Compiled SQL for node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af at target\compiled\nyc_311_project\target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql
+01:20:26.761771 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql
+01:20:26.761799 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql
+01:20:26.761820 [debug]: Compiled SQL for node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de at target\compiled\nyc_311_project\target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql
+01:20:26.761853 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql
+01:20:26.761886 [debug]: Compiled SQL for node test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43 at target\compiled\nyc_311_project\target\generic_tests\dbt_utils_expression_is_true_f_8c982072f5c19e0a18b5aa9a0b5cabdf.sql
+01:20:26.761853 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key [success]
+01:20:26.761983 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key
+01:20:26.761999 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [success]
+01:20:26.762105 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:20:26.762116 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+01:20:26.762220 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:20:26.762239 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+01:20:26.762347 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:20:26.762362 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+01:20:26.762481 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:20:26.762495 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+01:20:26.762596 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:20:26.762608 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+01:20:26.762701 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:20:26.762714 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 [success]
+01:20:26.762802 [info ]: Finished rendering [  0.00s] (9 nodes, 0 skipped, 0 errors)
+01:20:26.762911 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:20:26.765641 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key [success]
+01:20:26.765757 [info ]: Started running (9 nodes)
+01:20:26.765813 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key
+01:20:26.765827 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+01:20:26.765922 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:20:26.765934 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+01:20:26.766042 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:20:26.766057 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [success]
+01:20:26.766186 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:20:26.766209 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+01:20:26.766337 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:20:26.766358 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+01:20:26.766486 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:20:26.766505 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 [success]
+01:20:26.766658 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:20:26.766686 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+01:20:26.766822 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:20:26.766845 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+01:20:26.766989 [info ]: Finished analyzing [  0.01s] (9 nodes, 0 skipped, 0 errors)
+01:20:26.767142 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:20:26.767390 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_location_key.751b0d1a44"
+01:20:26.767432 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124"
+01:20:26.767638 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27"
+01:20:26.767706 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f"
+01:20:26.767914 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23"
+01:20:26.767990 [debug]: Writing runtime sql for node "test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43"
+01:20:26.768088 [debug]: Writing runtime sql for node "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de"
+01:20:26.768128 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b"
+01:20:26.768307 [debug]: Writing runtime sql for node "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af"
+01:20:28.391742 [debug]: Query executed on node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        time_period as value_field,
+        count(*) as n_records
+
+    from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+    group by time_period
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Morning','Afternoon','Evening','Night'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:20:29.392035 [error]: Error materializing test test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af (models\Intermediate\schema.yml)
+  [BigQuery] googleapi: Error 400: Unrecognized name: time_period at [18:9], invalidQuery (Query: https://console.cloud.google.com/bigquery?project=depi-graduation-project-489604&j=bq:US:MvIR4lledvOPGfZ7VdkYh5KZvvb&page=queryresults)
+  (in compiled\nyc_311_project\target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql:1:1). Treating as failing test.
+01:20:29.392293 [info ]: Finished running [  2.63s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [fail]
+01:20:29.392473 [info ]:     Failed [  2.63s] test  accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night (models\Intermediate\schema.yml:47:13)
+01:20:30.553327 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_late
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where is_late is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:20:30.553708 [info ]: Finished running [  3.79s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [pass]
+01:20:30.553888 [info ]:     Passed [  3.79s] test  not_null_fct_nyc_311_performance_is_late
+01:20:30.593304 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:20:30.593597 [info ]: Finished running [  3.83s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [pass]
+01:20:30.593660 [info ]:     Passed [  3.83s] test  not_null_fct_nyc_311_performance_date_key
+01:20:30.892810 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_id
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:20:30.893096 [info ]: Finished running [  4.13s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [pass]
+01:20:30.893225 [info ]:     Passed [  4.13s] test  not_null_fct_nyc_311_performance_complaint_id
+01:20:31.018007 [debug]: Query executed on node test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+
+where not(ticket_age_days >= 0)
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:20:31.018330 [info ]: Finished running [  4.25s] test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 [fail]
+01:20:31.018484 [info ]:     Failed [  4.26s] test  dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 (models\Intermediate\schema.yml:15:13)
+01:20:31.842845 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_type_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_type_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:20:31.843254 [info ]: Finished running [  5.08s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [pass]
+01:20:31.843330 [info ]:     Passed [  5.08s] test  not_null_fct_nyc_311_performance_complaint_type_key
+01:20:31.844008 [debug]: Query executed on node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select complaint_id as unique_field
+  from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+  where complaint_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:20:31.844266 [info ]: Finished running [  5.08s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [pass]
+01:20:31.844324 [info ]:     Passed [  5.08s] test  unique_fct_nyc_311_performance_complaint_id
+01:20:32.538869 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_location_key.751b0d1a44:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_location_key.751b0d1a44", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select location_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where location_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:20:32.539184 [info ]: Finished running [  5.77s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key [fail]
+01:20:32.539326 [info ]:     Failed [  5.78s] test  not_null_fct_nyc_311_performance_location_key (models\Intermediate\schema.yml:37:13)
+01:20:32.938293 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_open_backlog
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where is_open_backlog is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:20:32.938728 [info ]: Finished running [  6.17s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [pass]
+01:20:32.938820 [info ]: Finished running [  6.17s] (9 nodes, 0 skipped, 3 errors)
+01:20:32.939105 [info ]:     Passed [  6.18s] test  not_null_fct_nyc_311_performance_is_open_backlog
+01:20:32.967398 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+01:20:33.044444 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 1 warning and 4 errors for target 'dev' [6.8s]
+Processed: 9 tests
+Summary: 9 total | 6 success | 3 error
+==================== 2026-05-15T01:21:54.017488Z | 019e2939-cb5f-7b90-a5dd-5e2b71899cd7 ====================
+01:21:54.017560 [info ]: dbt-fusion 2.0.0-preview.175
+01:21:54.017822 [info ]: Started loading project
+01:21:54.020010 [info ]: Loading profiles.yml
+01:21:54.021794 [info ]:    Started resolving packages from packages.yml
+01:21:54.345144 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+01:21:54.345535 [info ]:   Finished [  0.32s] resolving packages from packages.yml (1 items)
+01:21:54.346158 [debug]:    Started loading packages
+01:21:54.362454 [debug]:     Loaded [  0.02s] packages
+01:21:54.363459 [info ]: Finished loading project [  0.35s]
+01:21:54.364182 [info ]: Started parsing
+01:21:54.396763 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+01:21:54.396931 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+01:21:54.398336 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+01:21:54.398703 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+01:21:54.399069 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+01:21:54.399514 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+01:21:54.399855 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+01:21:54.400215 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+01:21:54.400533 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+01:21:54.401006 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+01:21:54.410188 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+01:21:54.410560 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+01:21:54.410935 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+01:21:54.411345 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:21:54.411749 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:21:54.412108 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+01:21:54.412480 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+01:21:54.412833 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+01:21:54.413197 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+01:21:54.413549 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:21:54.414001 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:21:54.414436 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+01:21:54.414820 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+01:21:54.415192 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+01:21:54.415557 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+01:21:54.415929 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_location_key.sql [  0.00s]
+01:21:54.416335 [debug]: Finished parsing target\generic_tests\dbt_utils_expression_is_true_f_8c982072f5c19e0a18b5aa9a0b5cabdf.sql [  0.00s]
+01:21:54.416712 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+01:21:54.417047 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:21:54.417416 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:21:54.417782 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+01:21:54.423710 [info ]: Finished parsing [  0.06s]
+01:21:54.424336 [info ]: Started scheduling
+01:21:54.424481 [info ]: Finished scheduling [  0.00s]
+01:21:54.426548 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "dim_complaint_types" }) and interval: None
+01:21:54.426604 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "stg_nyc_311_requests" }) and interval: None
+01:21:54.426633 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "dim_locations" }) and interval: None
+01:21:54.543423 [info ]: Started building task graph
+01:21:54.543546 [info ]: Finished building task graph [  0.00s]
+01:21:58.724586 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+
+    select distinct schema_name from `depi-graduation-project-489604`.INFORMATION_SCHEMA.SCHEMATA;
+  
+01:21:58.724817 [info ]: Started rendering (1 nodes)
+01:21:58.724899 [info ]: Started model nyc_311_raw_data.fct_nyc_311_performance
+01:21:58.724910 [debug]: Started rendering model nyc_311_raw_data.fct_nyc_311_performance
+01:21:58.725975 [debug]: Compiled SQL for node model.nyc_311_project.fct_nyc_311_performance at target\compiled\nyc_311_project\models\Intermediate\fct_nyc_311_performance.sql
+01:21:58.726042 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+01:21:58.726161 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+01:21:58.726268 [info ]: Started analyzing (1 nodes)
+01:21:58.726321 [debug]: Started analyzing model nyc_311_raw_data.fct_nyc_311_performance
+01:21:58.747553 [debug]: Finished analyzing [  0.02s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+01:21:58.747681 [info ]: Finished analyzing [  0.02s] (1 nodes, 0 skipped, 0 errors)
+01:21:58.747813 [info ]: Started running (1 nodes)
+01:21:58.747880 [info ]: Started running model nyc_311_raw_data.fct_nyc_311_performance
+01:22:02.554101 [debug]: Query executed on node model.nyc_311_project.fct_nyc_311_performance:
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    table_type
+FROM 
+    `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.TABLES
+01:22:02.899386 [debug]: Writing runtime sql for node "model.nyc_311_project.fct_nyc_311_performance"
+01:22:10.644378 [debug]: Query executed on node model.nyc_311_project.fct_nyc_311_performance:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.nyc_311_project.fct_nyc_311_performance", "profile_name": "default", "target_name": "dev"} */
+
+  
+    
+
+    create or replace table `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+WITH staging_data AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`stg_nyc_311_requests`
+),
+
+-- 1. استدعاء الأبعاد لربطها
+dim_complaint AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_complaint_types`
+),
+
+dim_loc AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_locations`
+)
+
+SELECT
+    -- المفاتيح الأساسية للربط (Foreign Keys)
+    s.complaint_id,
+    CAST(FORMAT_DATE('%Y%m%d', s.created_at) AS INT64) AS date_key, -- يربط مع dim_date
+    dc.complaint_type_key,                                         -- يربط مع dim_complaint_types
+    dl.location_key,                                               -- يربط مع dim_locations
+    
+    -- البيانات التشغيلية
+    s.complaint_status,
+    s.created_at,
+    s.closed_at,
+    
+    -- المقاييس (Measures) التي سنحللها
+    DATE_DIFF(COALESCE(DATE(s.closed_at), CURRENT_DATE()), DATE(s.created_at), DAY) AS ticket_age_days,
+
+    CASE 
+        WHEN DATE_DIFF(COALESCE(DATE(s.closed_at), CURRENT_DATE()), DATE(s.created_at), DAY) > 5 THEN TRUE 
+        ELSE FALSE 
+    END AS is_late,
+
+    CASE 
+        WHEN s.closed_at IS NULL THEN TRUE 
+        ELSE FALSE 
+    END AS is_open_backlog,
+
+    -- وقت اليوم لا يزال مهماً في الفاكت للتحليل الدقيق
+    EXTRACT(HOUR FROM s.created_at) AS creation_hour,
+
+    CASE
+WHEN EXTRACT(HOUR FROM created_at) BETWEEN 6 AND 11 THEN 'Morning'
+WHEN EXTRACT(HOUR FROM created_at) BETWEEN 12 AND 17 THEN 'Afternoon'
+WHEN EXTRACT(HOUR FROM created_at) BETWEEN 18 AND 23 THEN 'Evening'
+ELSE 'Night'
+END AS time_period
+
+FROM staging_data s
+-- الربط مع الأبعاد لجلب المفاتيح
+LEFT JOIN dim_complaint dc 
+    ON s.complaint_type = dc.complaint_type
+LEFT JOIN dim_loc dl 
+    ON s.borough = dl.borough 
+    AND s.zip_code = dl.zip_code
+    );
+  
+01:22:10.645460 [info ]: Finished running [ 11.90s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+01:22:10.645604 [info ]: Finished running [ 11.90s] (1 nodes, 0 skipped, 0 errors)
+01:22:10.645813 [info ]:  Succeeded [ 11.92s] model nyc_311_raw_data.fct_nyc_311_performance (table)
+01:22:10.662676 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+01:22:10.799195 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 warning for target 'dev' [16.8s]
+Processed: 1 model
+Summary: 1 total | 1 success
+==================== 2026-05-15T01:24:24.224883Z | 019e293c-161f-75d2-b7a5-e447ca45bbe9 ====================
+01:24:24.224959 [info ]: dbt-fusion 2.0.0-preview.175
+01:24:24.225238 [info ]: Started loading project
+01:24:24.227497 [info ]: Loading profiles.yml
+01:24:24.229512 [info ]:    Started resolving packages from packages.yml
+01:24:24.633277 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+01:24:24.633658 [info ]:   Finished [  0.40s] resolving packages from packages.yml (1 items)
+01:24:24.634273 [debug]:    Started loading packages
+01:24:24.644999 [debug]:     Loaded [  0.01s] packages
+01:24:24.645591 [info ]: Finished loading project [  0.42s]
+01:24:24.646137 [info ]: Started parsing
+01:24:24.676246 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+01:24:24.676410 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+01:24:24.677963 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+01:24:24.678338 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+01:24:24.678839 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+01:24:24.679320 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+01:24:24.679688 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+01:24:24.680067 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+01:24:24.680398 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+01:24:24.680793 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+01:24:24.690204 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+01:24:24.690564 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+01:24:24.690950 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+01:24:24.691307 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:24:24.691664 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:24:24.692094 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+01:24:24.692527 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+01:24:24.692909 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+01:24:24.693273 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+01:24:24.693613 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:24:24.693972 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:24:24.694333 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+01:24:24.694692 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+01:24:24.695114 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+01:24:24.695521 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+01:24:24.695903 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_location_key.sql [  0.00s]
+01:24:24.696300 [debug]: Finished parsing target\generic_tests\dbt_utils_expression_is_true_f_8c982072f5c19e0a18b5aa9a0b5cabdf.sql [  0.00s]
+01:24:24.696657 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+01:24:24.697004 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:24:24.697367 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:24:24.697741 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+01:24:24.703587 [info ]: Finished parsing [  0.06s]
+01:24:24.704176 [info ]: Started scheduling
+01:24:24.704383 [info ]: Finished scheduling [  0.00s]
+01:24:24.706441 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "fct_nyc_311_performance" }) and interval: None
+01:24:24.821271 [info ]: Started building task graph
+01:24:24.821437 [info ]: Finished building task graph [  0.00s]
+01:24:24.821695 [info ]: Started rendering (9 nodes)
+01:24:24.821766 [info ]: Started test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:24:24.821777 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:24:24.821796 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key
+01:24:24.821802 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key
+01:24:24.821811 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:24:24.821817 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:24:24.821826 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:24:24.821831 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:24:24.821840 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:24:24.821845 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:24:24.821854 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:24:24.821859 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:24:24.821868 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:24:24.821874 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:24:24.821883 [info ]: Started test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:24:24.821887 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:24:24.821899 [info ]: Started test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:24:24.821903 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:24:24.824616 [debug]: Compiled SQL for node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de at target\compiled\nyc_311_project\target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql
+01:24:24.824633 [debug]: Compiled SQL for node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af at target\compiled\nyc_311_project\target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql
+01:24:24.824772 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+01:24:24.824920 [info ]: Started analyzing (9 nodes)
+01:24:24.824997 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:24:24.825013 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+01:24:24.825134 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:24:24.825278 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql
+01:24:24.825296 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql
+01:24:24.825313 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql
+01:24:24.825340 [debug]: Compiled SQL for node test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43 at target\compiled\nyc_311_project\target\generic_tests\dbt_utils_expression_is_true_f_8c982072f5c19e0a18b5aa9a0b5cabdf.sql
+01:24:24.825355 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_location_key.751b0d1a44 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_location_key.sql
+01:24:24.825377 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql
+01:24:24.825394 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql
+01:24:24.825323 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+01:24:24.825455 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:24:24.825471 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [success]
+01:24:24.825572 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:24:24.825585 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+01:24:24.825683 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:24:24.825695 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 [success]
+01:24:24.825795 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:24:24.825806 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key [success]
+01:24:24.825901 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key
+01:24:24.825912 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+01:24:24.826018 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:24:24.826140 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+01:24:24.826240 [info ]: Finished rendering [  0.00s] (9 nodes, 0 skipped, 0 errors)
+01:24:24.826351 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:24:24.829778 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+01:24:24.829885 [info ]: Started running (9 nodes)
+01:24:24.829942 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:24:24.829956 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+01:24:24.830062 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:24:24.830081 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [success]
+01:24:24.830200 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:24:24.830216 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+01:24:24.830329 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:24:24.830351 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key [success]
+01:24:24.830472 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key
+01:24:24.830493 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+01:24:24.830624 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:24:24.830643 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 [success]
+01:24:24.830778 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:24:24.830797 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+01:24:24.830933 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:24:24.830956 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+01:24:24.831077 [info ]: Finished analyzing [  0.01s] (9 nodes, 0 skipped, 0 errors)
+01:24:24.831216 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:24:24.831417 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23"
+01:24:24.831483 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b"
+01:24:24.831703 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27"
+01:24:24.831810 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124"
+01:24:24.831859 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f"
+01:24:24.831878 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_location_key.751b0d1a44"
+01:24:24.832130 [debug]: Writing runtime sql for node "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de"
+01:24:24.832197 [debug]: Writing runtime sql for node "test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43"
+01:24:24.832546 [debug]: Writing runtime sql for node "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af"
+01:24:28.610081 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_open_backlog
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where is_open_backlog is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:24:28.610505 [info ]: Finished running [  3.78s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [pass]
+01:24:28.610588 [info ]:     Passed [  3.79s] test  not_null_fct_nyc_311_performance_is_open_backlog
+01:24:28.789903 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_type_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_type_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:24:28.790227 [info ]: Finished running [  3.96s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [pass]
+01:24:28.790412 [info ]:     Passed [  3.97s] test  not_null_fct_nyc_311_performance_complaint_type_key
+01:24:28.832248 [debug]: Query executed on node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select complaint_id as unique_field
+  from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+  where complaint_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:24:28.832509 [info ]: Finished running [  4.00s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [pass]
+01:24:28.832646 [info ]:     Passed [  4.01s] test  unique_fct_nyc_311_performance_complaint_id
+01:24:28.861776 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_id
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:24:28.862056 [info ]: Finished running [  4.03s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [pass]
+01:24:28.862122 [info ]:     Passed [  4.04s] test  not_null_fct_nyc_311_performance_complaint_id
+01:24:29.039544 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:24:29.039821 [info ]: Finished running [  4.21s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [pass]
+01:24:29.039957 [info ]:     Passed [  4.22s] test  not_null_fct_nyc_311_performance_date_key
+01:24:29.121895 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_late
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where is_late is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:24:29.122177 [info ]: Finished running [  4.29s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [pass]
+01:24:29.122310 [info ]:     Passed [  4.30s] test  not_null_fct_nyc_311_performance_is_late
+01:24:29.725980 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_location_key.751b0d1a44:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_location_key.751b0d1a44", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select location_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where location_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:24:29.726264 [info ]: Finished running [  4.90s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_location_key [fail]
+01:24:29.726386 [info ]:     Failed [  4.90s] test  not_null_fct_nyc_311_performance_location_key (models\Intermediate\schema.yml:37:13)
+01:24:29.761722 [debug]: Query executed on node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        time_period as value_field,
+        count(*) as n_records
+
+    from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+    group by time_period
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Morning','Afternoon','Evening','Night'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:24:29.762009 [info ]: Finished running [  4.93s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [pass]
+01:24:29.762077 [info ]:     Passed [  4.94s] test  accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:24:29.901583 [debug]: Query executed on node test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+
+where not(ticket_age_days >= 0)
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:24:29.901914 [info ]: Finished running [  5.07s] test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 [fail]
+01:24:29.901975 [info ]: Finished running [  5.07s] (9 nodes, 0 skipped, 2 errors)
+01:24:29.902167 [info ]:     Failed [  5.08s] test  dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 (models\Intermediate\schema.yml:15:13)
+01:24:29.929280 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+01:24:30.011346 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 1 warning and 2 errors for target 'dev' [5.8s]
+Processed: 9 tests
+Summary: 9 total | 7 success | 2 error
+==================== 2026-05-15T01:47:44.243061Z | 019e2951-72f1-7ec0-bb81-4251c3fa93f9 ====================
+01:47:44.243148 [info ]: dbt-fusion 2.0.0-preview.175
+01:47:44.243428 [info ]: Started loading project
+01:47:44.245540 [info ]: Loading profiles.yml
+01:47:44.247437 [info ]:    Started resolving packages from packages.yml
+01:47:44.554348 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+01:47:44.554682 [info ]:   Finished [  0.31s] resolving packages from packages.yml (1 items)
+01:47:44.555319 [debug]:    Started loading packages
+01:47:44.569176 [debug]:     Loaded [  0.01s] packages
+01:47:44.569959 [info ]: Finished loading project [  0.33s]
+01:47:44.570437 [info ]: Started parsing
+01:47:44.600903 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+01:47:44.601105 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+01:47:44.602602 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+01:47:44.603003 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+01:47:44.603422 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+01:47:44.603929 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+01:47:44.604308 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+01:47:44.604676 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+01:47:44.605031 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+01:47:44.605449 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+01:47:44.615271 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+01:47:44.615674 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+01:47:44.616080 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+01:47:44.616458 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:47:44.616835 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:47:44.617193 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+01:47:44.617564 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+01:47:44.617916 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+01:47:44.618296 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+01:47:44.618659 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:47:44.619036 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:47:44.619502 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+01:47:44.619905 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+01:47:44.620285 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+01:47:44.620660 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+01:47:44.621034 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_location_key.sql [  0.00s]
+01:47:44.621455 [debug]: Finished parsing target\generic_tests\dbt_utils_expression_is_true_f_8c982072f5c19e0a18b5aa9a0b5cabdf.sql [  0.00s]
+01:47:44.621875 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+01:47:44.622236 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:47:44.622612 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:47:44.622991 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+01:47:44.629061 [info ]: Finished parsing [  0.06s]
+01:47:44.629657 [info ]: Started scheduling
+01:47:44.629820 [info ]: Finished scheduling [  0.00s]
+01:47:44.631641 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "dim_complaint_types" }) and interval: None
+01:47:44.631705 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "stg_nyc_311_requests" }) and interval: None
+01:47:44.631736 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "dim_locations" }) and interval: None
+01:47:44.750155 [info ]: Started building task graph
+01:47:44.750278 [info ]: Finished building task graph [  0.00s]
+01:47:48.855260 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+
+    select distinct schema_name from `depi-graduation-project-489604`.INFORMATION_SCHEMA.SCHEMATA;
+  
+01:47:48.855532 [info ]: Started rendering (1 nodes)
+01:47:48.855654 [info ]: Started model nyc_311_raw_data.fct_nyc_311_performance
+01:47:48.855670 [debug]: Started rendering model nyc_311_raw_data.fct_nyc_311_performance
+01:47:48.857197 [debug]: Compiled SQL for node model.nyc_311_project.fct_nyc_311_performance at target\compiled\nyc_311_project\models\Intermediate\fct_nyc_311_performance.sql
+01:47:48.857298 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+01:47:48.857444 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+01:47:48.857597 [info ]: Started analyzing (1 nodes)
+01:47:48.857687 [debug]: Started analyzing model nyc_311_raw_data.fct_nyc_311_performance
+01:47:48.883340 [debug]: Finished analyzing [  0.03s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+01:47:48.883468 [info ]: Finished analyzing [  0.03s] (1 nodes, 0 skipped, 0 errors)
+01:47:48.883642 [info ]: Started running (1 nodes)
+01:47:48.883712 [info ]: Started running model nyc_311_raw_data.fct_nyc_311_performance
+01:47:52.599512 [debug]: Query executed on node model.nyc_311_project.fct_nyc_311_performance:
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    table_type
+FROM 
+    `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.TABLES
+01:47:52.931778 [debug]: Writing runtime sql for node "model.nyc_311_project.fct_nyc_311_performance"
+01:48:01.158395 [debug]: Query executed on node model.nyc_311_project.fct_nyc_311_performance:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.nyc_311_project.fct_nyc_311_performance", "profile_name": "default", "target_name": "dev"} */
+
+  
+    
+
+    create or replace table `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+WITH staging_data AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`stg_nyc_311_requests`
+),
+dim_complaint AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_complaint_types`
+),
+dim_loc AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_locations`
+)
+
+SELECT
+    s.complaint_id,
+    -- ربط التاريخ
+    CAST(FORMAT_DATE('%Y%m%d', s.created_at) AS INT64) AS date_key,
+    
+    -- ربط الأبعاد مع معالجة مفتاح الموقع المفقود
+    COALESCE(dc.complaint_type_key, FARM_FINGERPRINT('Unknown')) AS complaint_type_key,
+    COALESCE(dl.location_key, FARM_FINGERPRINT('Unknown00000')) AS location_key,
+    
+    s.complaint_status,
+    s.created_at,
+    s.closed_at,
+    
+    -- ترك الحساب كما هو (سيُظهر القيم السالبة)
+    DATE_DIFF(COALESCE(DATE(s.closed_at), CURRENT_DATE()), DATE(s.created_at), DAY) AS ticket_age_days,
+
+    CASE 
+        WHEN DATE_DIFF(COALESCE(DATE(s.closed_at), CURRENT_DATE()), DATE(s.created_at), DAY) > 5 THEN TRUE 
+        ELSE FALSE 
+    END AS is_late,
+
+    CASE 
+        WHEN s.closed_at IS NULL THEN TRUE 
+        ELSE FALSE 
+    END AS is_open_backlog,
+
+    CASE 
+        WHEN EXTRACT(HOUR FROM s.created_at) BETWEEN 6 AND 11 THEN 'Morning'
+        WHEN EXTRACT(HOUR FROM s.created_at) BETWEEN 12 AND 17 THEN 'Afternoon'
+        WHEN EXTRACT(HOUR FROM s.created_at) BETWEEN 18 AND 23 THEN 'Evening'
+        ELSE 'Night'
+    END AS time_period
+
+FROM staging_data s
+LEFT JOIN dim_complaint dc ON s.complaint_type = dc.complaint_type
+LEFT JOIN dim_loc dl ON s.borough = dl.borough AND s.zip_code = dl.zip_code
+    );
+  
+01:48:01.159443 [info ]: Finished running [ 12.28s] model nyc_311_raw_data.fct_nyc_311_performance [success]
+01:48:01.159568 [info ]: Finished running [ 12.28s] (1 nodes, 0 skipped, 0 errors)
+01:48:01.159726 [info ]:  Succeeded [ 12.30s] model nyc_311_raw_data.fct_nyc_311_performance (table)
+01:48:01.177293 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+01:48:01.314276 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 warning for target 'dev' [17.1s]
+Processed: 1 model
+Summary: 1 total | 1 success
+==================== 2026-05-15T01:49:49.388189Z | 019e2953-5bca-7391-96cd-313c61d5c34b ====================
+01:49:49.388269 [info ]: dbt-fusion 2.0.0-preview.175
+01:49:49.388538 [info ]: Started loading project
+01:49:49.390939 [info ]: Loading profiles.yml
+01:49:49.392924 [info ]:    Started resolving packages from packages.yml
+01:49:49.724082 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+01:49:49.724318 [info ]:   Finished [  0.33s] resolving packages from packages.yml (1 items)
+01:49:49.724716 [debug]:    Started loading packages
+01:49:49.734737 [debug]:     Loaded [  0.01s] packages
+01:49:49.735339 [info ]: Finished loading project [  0.35s]
+01:49:49.735775 [info ]: Started parsing
+01:49:49.766496 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+01:49:49.766660 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+01:49:49.768073 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+01:49:49.768437 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+01:49:49.768797 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+01:49:49.769317 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+01:49:49.769720 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+01:49:49.770108 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+01:49:49.770437 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+01:49:49.770846 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+01:49:49.780266 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+01:49:49.780630 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+01:49:49.781017 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+01:49:49.781368 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:49:49.781730 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:49:49.782093 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+01:49:49.782448 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+01:49:49.782786 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+01:49:49.783141 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+01:49:49.783492 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:49:49.783853 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:49:49.784320 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+01:49:49.784752 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+01:49:49.785142 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+01:49:49.785536 [debug]: Finished parsing target\generic_tests\dbt_utils_expression_is_true_f_8c982072f5c19e0a18b5aa9a0b5cabdf.sql [  0.00s]
+01:49:49.785906 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+01:49:49.786261 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:49:49.786622 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:49:49.786985 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+01:49:49.792296 [info ]: Finished parsing [  0.06s]
+01:49:49.793027 [info ]: Started scheduling
+01:49:49.793201 [info ]: Finished scheduling [  0.00s]
+01:49:49.795165 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "fct_nyc_311_performance" }) and interval: None
+01:49:49.911596 [info ]: Started building task graph
+01:49:49.911749 [info ]: Finished building task graph [  0.00s]
+01:49:49.912004 [info ]: Started rendering (7 nodes)
+01:49:49.912078 [info ]: Started test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:49:49.912101 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:49:49.912127 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:49:49.912134 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:49:49.912145 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:49:49.912152 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:49:49.912162 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:49:49.912168 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:49:49.912179 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:49:49.912185 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:49:49.912195 [info ]: Started test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:49:49.912200 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:49:49.912211 [info ]: Started test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:49:49.912220 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:49:49.915022 [debug]: Compiled SQL for node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de at target\compiled\nyc_311_project\target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql
+01:49:49.915147 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql
+01:49:49.915165 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql
+01:49:49.915188 [debug]: Compiled SQL for node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af at target\compiled\nyc_311_project\target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql
+01:49:49.915200 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql
+01:49:49.915084 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+01:49:49.915223 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql
+01:49:49.915243 [debug]: Compiled SQL for node test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43 at target\compiled\nyc_311_project\target\generic_tests\dbt_utils_expression_is_true_f_8c982072f5c19e0a18b5aa9a0b5cabdf.sql
+01:49:49.915236 [info ]: Started analyzing (7 nodes)
+01:49:49.915310 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:49:49.915325 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+01:49:49.915434 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:49:49.915446 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+01:49:49.915550 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:49:49.915563 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+01:49:49.915664 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:49:49.915675 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+01:49:49.915781 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:49:49.915797 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+01:49:49.915895 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:49:49.915907 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 [success]
+01:49:49.915998 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+01:49:49.916099 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:49:49.919553 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+01:49:49.919669 [info ]: Started running (7 nodes)
+01:49:49.919725 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:49:49.919739 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+01:49:49.919836 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:49:49.919847 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+01:49:49.919953 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:49:49.919970 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+01:49:49.920100 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:49:49.920127 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 [success]
+01:49:49.920243 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0
+01:49:49.920259 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+01:49:49.920370 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:49:49.920389 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+01:49:49.920489 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+01:49:49.920611 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:49:49.921189 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23"
+01:49:49.921444 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124"
+01:49:49.921499 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f"
+01:49:49.921510 [debug]: Writing runtime sql for node "test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43"
+01:49:49.921631 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b"
+01:49:49.921678 [debug]: Writing runtime sql for node "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af"
+01:49:49.921736 [debug]: Writing runtime sql for node "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de"
+01:49:53.785730 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_late
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where is_late is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:49:53.786098 [info ]: Finished running [  3.87s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [pass]
+01:49:53.786268 [info ]:     Passed [  3.87s] test  not_null_fct_nyc_311_performance_is_late
+01:49:53.840050 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_type_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_type_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:49:53.840372 [info ]: Finished running [  3.92s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [pass]
+01:49:53.840506 [info ]:     Passed [  3.93s] test  not_null_fct_nyc_311_performance_complaint_type_key
+01:49:53.856012 [debug]: Query executed on node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        time_period as value_field,
+        count(*) as n_records
+
+    from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+    group by time_period
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Morning','Afternoon','Evening','Night'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:49:53.856231 [info ]: Finished running [  3.94s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [pass]
+01:49:53.856280 [info ]:     Passed [  3.94s] test  accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:49:54.298246 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:49:54.298576 [info ]: Finished running [  4.38s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [pass]
+01:49:54.298643 [info ]:     Passed [  4.38s] test  not_null_fct_nyc_311_performance_date_key
+01:49:54.824293 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_id
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:49:54.824597 [info ]: Finished running [  4.90s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [pass]
+01:49:54.824736 [info ]:     Passed [  4.91s] test  not_null_fct_nyc_311_performance_complaint_id
+01:49:54.832574 [debug]: Query executed on node test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0.af0c958b43", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+
+where not(ticket_age_days >= 0)
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:49:54.832799 [info ]: Finished running [  4.91s] test nyc_311_raw_data_dbt_test__audit.dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 [fail]
+01:49:54.832850 [info ]:     Failed [  4.92s] test  dbt_utils_expression_is_true_fct_nyc_311_performance_ticket_age_days___0 (models\Intermediate\schema.yml:15:13)
+01:49:55.037411 [debug]: Query executed on node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select complaint_id as unique_field
+  from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+  where complaint_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:49:55.037728 [info ]: Finished running [  5.12s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [pass]
+01:49:55.037859 [info ]: Finished running [  5.12s] (7 nodes, 0 skipped, 1 errors)
+01:49:55.038004 [info ]:     Passed [  5.12s] test  unique_fct_nyc_311_performance_complaint_id
+01:49:55.062153 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+01:49:55.137794 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 1 warning and 1 error for target 'dev' [5.7s]
+Processed: 7 tests
+Summary: 7 total | 6 success | 1 error
+==================== 2026-05-15T01:50:58.417349Z | 019e2954-696f-78f1-bc7a-c9b32fb3d7e7 ====================
+01:50:58.417421 [info ]: dbt-fusion 2.0.0-preview.175
+01:50:58.417684 [info ]: Started loading project
+01:50:58.419841 [info ]: Loading profiles.yml
+01:50:58.421657 [info ]:    Started resolving packages from packages.yml
+01:50:58.742768 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+01:50:58.743059 [info ]:   Finished [  0.32s] resolving packages from packages.yml (1 items)
+01:50:58.743494 [debug]:    Started loading packages
+01:50:58.753697 [debug]:     Loaded [  0.01s] packages
+01:50:58.754295 [info ]: Finished loading project [  0.34s]
+01:50:58.754768 [info ]: Started parsing
+01:50:58.785063 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+01:50:58.785226 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+01:50:58.786658 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+01:50:58.787013 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+01:50:58.787362 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+01:50:58.787773 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+01:50:58.788111 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+01:50:58.788453 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+01:50:58.788768 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+01:50:58.789153 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+01:50:58.798061 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+01:50:58.798438 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+01:50:58.798817 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+01:50:58.799159 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:50:58.799517 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:50:58.799859 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+01:50:58.800211 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+01:50:58.800556 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+01:50:58.800920 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+01:50:58.801266 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:50:58.801686 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:50:58.802064 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+01:50:58.802452 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+01:50:58.802813 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+01:50:58.803155 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+01:50:58.803527 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+01:50:58.803867 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:50:58.804222 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:50:58.804583 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+01:50:58.809825 [info ]: Finished parsing [  0.06s]
+01:50:58.810520 [info ]: Started scheduling
+01:50:58.810723 [info ]: Finished scheduling [  0.00s]
+01:50:58.812906 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "fct_nyc_311_performance" }) and interval: None
+01:50:58.926170 [info ]: Started building task graph
+01:50:58.926324 [info ]: Finished building task graph [  0.00s]
+01:50:58.926579 [info ]: Started rendering (7 nodes)
+01:50:58.926660 [info ]: Started test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:50:58.926673 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:50:58.926693 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:50:58.926699 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:50:58.926709 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:50:58.926716 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:50:58.926725 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:50:58.926731 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:50:58.926741 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:50:58.926747 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:50:58.926756 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:50:58.926762 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:50:58.926775 [info ]: Started test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:50:58.926786 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:50:58.929785 [debug]: Compiled SQL for node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de at target\compiled\nyc_311_project\target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql
+01:50:58.929793 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql
+01:50:58.929811 [debug]: Compiled SQL for node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af at target\compiled\nyc_311_project\target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql
+01:50:58.929828 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql
+01:50:58.929848 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql
+01:50:58.929861 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql
+01:50:58.929881 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql
+01:50:58.929863 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+01:50:58.929997 [info ]: Started analyzing (7 nodes)
+01:50:58.930048 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:50:58.930061 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [success]
+01:50:58.930174 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:50:58.930187 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+01:50:58.930287 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:50:58.930298 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+01:50:58.930406 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:50:58.930419 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+01:50:58.930519 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:50:58.930534 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+01:50:58.930636 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:50:58.930647 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+01:50:58.930738 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+01:50:58.930836 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:50:58.934608 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+01:50:58.934718 [info ]: Started running (7 nodes)
+01:50:58.934784 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+01:50:58.934799 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+01:50:58.934902 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+01:50:58.934914 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+01:50:58.935027 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+01:50:58.935042 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+01:50:58.935174 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+01:50:58.935196 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [success]
+01:50:58.935315 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+01:50:58.935414 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+01:50:58.935528 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:50:58.935556 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+01:50:58.935674 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+01:50:58.935818 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+01:50:58.936251 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b"
+01:50:58.936346 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124"
+01:50:58.936404 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f"
+01:50:58.936461 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23"
+01:50:58.936508 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27"
+01:50:58.936943 [debug]: Writing runtime sql for node "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af"
+01:50:58.936962 [debug]: Writing runtime sql for node "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de"
+01:51:02.849710 [debug]: Query executed on node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        time_period as value_field,
+        count(*) as n_records
+
+    from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+    group by time_period
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Morning','Afternoon','Evening','Night'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:51:02.850237 [info ]: Finished running [  3.91s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [pass]
+01:51:02.850646 [debug]: Query executed on node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select complaint_id as unique_field
+  from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+  where complaint_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:51:02.850435 [info ]:     Passed [  3.92s] test  accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+01:51:02.850889 [info ]: Finished running [  3.92s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [pass]
+01:51:02.850951 [info ]:     Passed [  3.92s] test  unique_fct_nyc_311_performance_complaint_id
+01:51:02.934080 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_late
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where is_late is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:51:02.934394 [info ]: Finished running [  4.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [pass]
+01:51:02.934585 [info ]:     Passed [  4.01s] test  not_null_fct_nyc_311_performance_is_late
+01:51:03.073663 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_id
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:51:03.073986 [info ]: Finished running [  4.14s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [pass]
+01:51:03.074167 [info ]:     Passed [  4.15s] test  not_null_fct_nyc_311_performance_complaint_id
+01:51:03.112213 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_open_backlog
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where is_open_backlog is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:51:03.112483 [info ]: Finished running [  4.18s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [pass]
+01:51:03.112544 [info ]:     Passed [  4.18s] test  not_null_fct_nyc_311_performance_is_open_backlog
+01:51:03.543655 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_type_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_type_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:51:03.544032 [info ]: Finished running [  4.61s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [pass]
+01:51:03.544253 [info ]:     Passed [  4.62s] test  not_null_fct_nyc_311_performance_complaint_type_key
+01:51:03.557144 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+01:51:03.557351 [info ]: Finished running [  4.62s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [pass]
+01:51:03.557394 [info ]: Finished running [  4.62s] (7 nodes, 0 skipped, 0 errors)
+01:51:03.557542 [info ]:     Passed [  4.63s] test  not_null_fct_nyc_311_performance_date_key
+01:51:03.580025 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+01:51:03.721146 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 1 warning for target 'dev' [5.3s]
+Processed: 7 tests
+Summary: 7 total | 7 success
+==================== 2026-05-15T01:57:45.696595Z | 019e295a-a05e-7de3-b8d4-3a05d6b514f0 ====================
+01:57:45.696669 [info ]: dbt-fusion 2.0.0-preview.175
+01:57:45.696941 [info ]: Started loading project
+01:57:45.699195 [info ]: Loading profiles.yml
+01:57:45.701097 [info ]:    Started resolving packages from packages.yml
+01:57:46.057952 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+01:57:46.058197 [info ]:   Finished [  0.36s] resolving packages from packages.yml (1 items)
+01:57:46.058622 [debug]:    Started loading packages
+01:57:46.068485 [debug]:     Loaded [  0.01s] packages
+01:57:46.069072 [info ]: Finished loading project [  0.37s]
+01:57:46.069576 [info ]: Started parsing
+01:57:46.099301 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+01:57:46.099473 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+01:57:46.100864 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+01:57:46.101244 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+01:57:46.101632 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+01:57:46.102075 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+01:57:46.102519 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+01:57:46.102887 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+01:57:46.103224 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+01:57:46.103613 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+01:57:46.112583 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+01:57:46.112932 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+01:57:46.113291 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+01:57:46.113625 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:57:46.113967 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+01:57:46.114320 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+01:57:46.114704 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+01:57:46.115067 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+01:57:46.115445 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+01:57:46.115793 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:57:46.116250 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+01:57:46.116625 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+01:57:46.116989 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+01:57:46.117354 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+01:57:46.117712 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+01:57:46.118080 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+01:57:46.118422 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:57:46.118781 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+01:57:46.119145 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+01:57:46.124501 [info ]: Finished parsing [  0.05s]
+01:57:46.125072 [info ]: Started scheduling
+01:57:46.125246 [info ]: Finished scheduling [  0.00s]
+01:57:46.127283 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "stg_nyc_311_requests" }) and interval: None
+01:57:46.252318 [info ]: Started building task graph
+01:57:46.252463 [info ]: Finished building task graph [  0.00s]
+01:57:50.129086 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+
+    select distinct schema_name from `depi-graduation-project-489604`.INFORMATION_SCHEMA.SCHEMATA;
+  
+01:57:50.129303 [info ]: Started rendering (1 nodes)
+01:57:50.129395 [info ]: Started model nyc_311_raw_data.dim_complaint_types
+01:57:50.129405 [debug]: Started rendering model nyc_311_raw_data.dim_complaint_types
+01:57:50.130536 [debug]: Compiled SQL for node model.nyc_311_project.dim_complaint_types at target\compiled\nyc_311_project\models\Intermediate\dim_complaint_types.sql
+01:57:50.130601 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_complaint_types [success]
+01:57:50.130707 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+01:57:50.130821 [info ]: Started analyzing (1 nodes)
+01:57:50.130888 [debug]: Started analyzing model nyc_311_raw_data.dim_complaint_types
+01:57:50.137961 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.dim_complaint_types [success]
+01:57:50.138073 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+01:57:50.138194 [info ]: Started running (1 nodes)
+01:57:50.138280 [info ]: Started running model nyc_311_raw_data.dim_complaint_types
+01:57:53.871262 [debug]: Query executed on node model.nyc_311_project.dim_complaint_types:
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    table_type
+FROM 
+    `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.TABLES
+01:57:54.186461 [debug]: Writing runtime sql for node "model.nyc_311_project.dim_complaint_types"
+01:57:58.880342 [debug]: Query executed on node model.nyc_311_project.dim_complaint_types:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.nyc_311_project.dim_complaint_types", "profile_name": "default", "target_name": "dev"} */
+
+  
+    
+
+    create or replace table `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_complaint_types`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+WITH unique_types AS (
+    SELECT DISTINCT 
+        complaint_type 
+    FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`stg_nyc_311_requests`
+    WHERE complaint_type IS NOT NULL
+)
+
+SELECT
+    FARM_FINGERPRINT(complaint_type) AS complaint_type_key,
+    complaint_type,
+    
+    -- 1. تصنيف المجموعات (الذي فعلناه سابقاً)
+    CASE 
+        WHEN complaint_type LIKE '%Noise%' THEN 'Noise Pollution'
+        WHEN complaint_type LIKE '%Heat%' OR complaint_type LIKE '%Water%' THEN 'Utilities & Maintenance'
+        WHEN complaint_type LIKE '%Street%' OR complaint_type LIKE '%Sidewalk%' THEN 'Infrastructure'
+        WHEN complaint_type LIKE '%Vehicle%' OR complaint_type LIKE '%Traffic%' THEN 'Transportation'
+        ELSE 'General Inquiry/Other'
+    END AS complaint_category,
+
+    -- 2. إضافة الأولوية (Priority)
+    CASE 
+        -- أولوية قصوى: تهدد الحياة أو الصحة (مثل انقطاع التدفئة في الشتاء أو تسرب مياه)
+        WHEN complaint_type IN ('HEAT/HOT WATER', 'UNSANITARY CONDITION', 'Water System', 'Hazardous Materials') THEN 'High'
+        -- أولوية متوسطة: تعيق الحركة أو تسبب إزعاجاً مستمراً (مثل مشاكل الشوارع أو الضوضاء المستمرة)
+        WHEN complaint_type LIKE '%Noise%' OR complaint_type LIKE '%Street%' OR complaint_type LIKE '%Traffic%' THEN 'Medium'
+        -- أولوية عادية: استفسارات أو مشاكل غير عاجلة
+        ELSE 'Low'
+    END AS priority_level
+
+FROM unique_types
+    );
+  
+01:57:58.881549 [info ]: Finished running [  8.74s] model nyc_311_raw_data.dim_complaint_types [success]
+01:57:58.881707 [info ]: Finished running [  8.74s] (1 nodes, 0 skipped, 0 errors)
+01:57:58.881900 [info ]:  Succeeded [  8.75s] model nyc_311_raw_data.dim_complaint_types (table)
+01:57:58.898283 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+01:57:59.046530 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 warning for target 'dev' [13.3s]
+Processed: 1 model
+Summary: 1 total | 1 success
+==================== 2026-05-15T02:00:20.610970Z | 019e295c-fd81-7b30-b42a-7dea2e70be55 ====================
+02:00:20.611046 [info ]: dbt-fusion 2.0.0-preview.175
+02:00:20.611301 [info ]: Started loading project
+02:00:20.613551 [info ]: Loading profiles.yml
+02:00:20.615404 [info ]:    Started resolving packages from packages.yml
+02:00:21.042187 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+02:00:21.042427 [info ]:   Finished [  0.43s] resolving packages from packages.yml (1 items)
+02:00:21.042895 [debug]:    Started loading packages
+02:00:21.053630 [debug]:     Loaded [  0.01s] packages
+02:00:21.054233 [info ]: Finished loading project [  0.44s]
+02:00:21.054752 [info ]: Started parsing
+02:00:21.085221 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+02:00:21.085391 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+02:00:21.086904 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+02:00:21.087279 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+02:00:21.087716 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+02:00:21.088238 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+02:00:21.088603 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+02:00:21.088969 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+02:00:21.089318 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+02:00:21.089699 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+02:00:21.098759 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+02:00:21.099153 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+02:00:21.099537 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+02:00:21.099898 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+02:00:21.100247 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+02:00:21.100593 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+02:00:21.100952 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+02:00:21.101291 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+02:00:21.101647 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+02:00:21.101987 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+02:00:21.102469 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+02:00:21.102964 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+02:00:21.103375 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+02:00:21.103757 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+02:00:21.104132 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+02:00:21.104510 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+02:00:21.104862 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+02:00:21.105239 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+02:00:21.105612 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+02:00:21.111107 [info ]: Finished parsing [  0.06s]
+02:00:21.111738 [info ]: Started scheduling
+02:00:21.111923 [info ]: Finished scheduling [  0.00s]
+02:00:21.114072 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "dim_complaint_types" }) and interval: None
+02:00:21.230736 [info ]: Started building task graph
+02:00:21.230898 [info ]: Finished building task graph [  0.00s]
+02:00:21.231145 [info ]: Started rendering (5 nodes)
+02:00:21.231220 [info ]: Started test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type_key
+02:00:21.231231 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type_key
+02:00:21.231250 [info ]: Started test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type
+02:00:21.231256 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type
+02:00:21.231266 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type_key
+02:00:21.231271 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type_key
+02:00:21.231280 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type
+02:00:21.231288 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type
+02:00:21.231305 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_category
+02:00:21.231314 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_category
+02:00:21.233853 [debug]: Compiled SQL for node test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f at target\compiled\nyc_311_project\target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql
+02:00:21.233866 [debug]: Compiled SQL for node test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b at target\compiled\nyc_311_project\target\generic_tests\not_null_dim_complaint_types_complaint_category.sql
+02:00:21.233887 [debug]: Compiled SQL for node test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450 at target\compiled\nyc_311_project\target\generic_tests\unique_dim_complaint_types_complaint_type.sql
+02:00:21.233901 [debug]: Compiled SQL for node test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e at target\compiled\nyc_311_project\target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql
+02:00:21.233929 [debug]: Compiled SQL for node test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3 at target\compiled\nyc_311_project\target\generic_tests\not_null_dim_complaint_types_complaint_type.sql
+02:00:21.233921 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type_key [success]
+02:00:21.234055 [info ]: Started analyzing (5 nodes)
+02:00:21.234109 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type_key
+02:00:21.234125 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_category [success]
+02:00:21.234235 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_category
+02:00:21.234250 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type [success]
+02:00:21.234367 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type
+02:00:21.234381 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type_key [success]
+02:00:21.234481 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type_key
+02:00:21.234493 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type [success]
+02:00:21.234592 [info ]: Finished rendering [  0.00s] (5 nodes, 0 skipped, 0 errors)
+02:00:21.234702 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type
+02:00:21.238642 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_category [success]
+02:00:21.238748 [info ]: Started running (5 nodes)
+02:00:21.238812 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_category
+02:00:21.238827 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type [success]
+02:00:21.238936 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type
+02:00:21.238951 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type_key [success]
+02:00:21.239056 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type_key
+02:00:21.240244 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3"
+02:00:21.240300 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b"
+02:00:21.240459 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e"
+02:00:21.240599 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type [success]
+02:00:21.240779 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type
+02:00:21.240804 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type_key [success]
+02:00:21.240936 [info ]: Finished analyzing [  0.01s] (5 nodes, 0 skipped, 0 errors)
+02:00:21.241056 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type_key
+02:00:21.241934 [debug]: Writing runtime sql for node "test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450"
+02:00:21.242111 [debug]: Writing runtime sql for node "test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f"
+02:00:25.027713 [debug]: Query executed on node test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select complaint_type as unique_field
+  from `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_complaint_types`
+  where complaint_type is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+02:00:25.028232 [info ]: Finished running [  3.79s] test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type [pass]
+02:00:25.028367 [info ]:     Passed [  3.79s] test  unique_dim_complaint_types_complaint_type
+02:00:25.035083 [debug]: Query executed on node test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select complaint_type_key as unique_field
+  from `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_complaint_types`
+  where complaint_type_key is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+02:00:25.035258 [info ]: Finished running [  3.79s] test nyc_311_raw_data_dbt_test__audit.unique_dim_complaint_types_complaint_type_key [pass]
+02:00:25.035369 [info ]:     Passed [  3.80s] test  unique_dim_complaint_types_complaint_type_key
+02:00:25.045012 [debug]: Query executed on node test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_type
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_complaint_types`
+where complaint_type is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+02:00:25.045195 [info ]: Finished running [  3.81s] test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type [pass]
+02:00:25.045313 [info ]:     Passed [  3.81s] test  not_null_dim_complaint_types_complaint_type
+02:00:25.149910 [debug]: Query executed on node test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_category
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_complaint_types`
+where complaint_category is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+02:00:25.150212 [info ]: Finished running [  3.91s] test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_category [pass]
+02:00:25.150342 [info ]:     Passed [  3.92s] test  not_null_dim_complaint_types_complaint_category
+02:00:25.347868 [debug]: Query executed on node test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_type_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_complaint_types`
+where complaint_type_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+02:00:25.348158 [info ]: Finished running [  4.11s] test nyc_311_raw_data_dbt_test__audit.not_null_dim_complaint_types_complaint_type_key [pass]
+02:00:25.348301 [info ]: Finished running [  4.11s] (5 nodes, 0 skipped, 0 errors)
+02:00:25.348448 [info ]:     Passed [  4.12s] test  not_null_dim_complaint_types_complaint_type_key
+02:00:25.369388 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+02:00:25.449658 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 1 warning for target 'dev' [4.8s]
+Processed: 5 tests
+Summary: 5 total | 5 success
+==================== 2026-05-15T02:06:22.371725Z | 019e2962-82a1-7f00-bff2-b6c4ea636056 ====================
+02:06:22.371798 [info ]: dbt-fusion 2.0.0-preview.175
+02:06:22.372063 [info ]: Started loading project
+02:06:22.374236 [info ]: Loading profiles.yml
+02:06:22.376058 [info ]:    Started resolving packages from packages.yml
+02:06:22.683203 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+02:06:22.683517 [info ]:   Finished [  0.31s] resolving packages from packages.yml (1 items)
+02:06:22.684009 [debug]:    Started loading packages
+02:06:22.694001 [debug]:     Loaded [  0.01s] packages
+02:06:22.694604 [info ]: Finished loading project [  0.32s]
+02:06:22.695101 [info ]: Started parsing
+02:06:22.725354 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+02:06:22.725520 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+02:06:22.726947 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+02:06:22.727319 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+02:06:22.727701 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+02:06:22.728158 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+02:06:22.728545 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+02:06:22.728907 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+02:06:22.729239 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+02:06:22.729639 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+02:06:22.738707 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+02:06:22.739087 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+02:06:22.739468 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+02:06:22.739828 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+02:06:22.740199 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+02:06:22.740548 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+02:06:22.740977 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+02:06:22.741388 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+02:06:22.741790 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+02:06:22.742149 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+02:06:22.742542 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+02:06:22.742943 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+02:06:22.743307 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+02:06:22.743684 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+02:06:22.744062 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+02:06:22.744438 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+02:06:22.744801 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+02:06:22.745163 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+02:06:22.745530 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+02:06:22.750964 [info ]: Finished parsing [  0.06s]
+02:06:22.751583 [info ]: Started scheduling
+02:06:22.751747 [info ]: Finished scheduling [  0.00s]
+02:06:22.753922 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "fct_nyc_311_performance" }) and interval: None
+02:06:22.753979 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "dim_date" }) and interval: None
+02:06:22.754011 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "dim_complaint_types" }) and interval: None
+02:06:22.870169 [info ]: Started building task graph
+02:06:22.870286 [info ]: Finished building task graph [  0.00s]
+02:06:26.954086 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+
+    select distinct schema_name from `depi-graduation-project-489604`.INFORMATION_SCHEMA.SCHEMATA;
+  
+02:06:26.954461 [info ]: Started rendering (1 nodes)
+02:06:26.954597 [info ]: Started model nyc_311_raw_data.dim_nyc_311_monthly_summary
+02:06:26.954620 [debug]: Started rendering model nyc_311_raw_data.dim_nyc_311_monthly_summary
+02:06:26.956385 [debug]: Compiled SQL for node model.nyc_311_project.dim_nyc_311_monthly_summary at target\compiled\nyc_311_project\models\Marts\dim_nyc_311_monthly_summary.sql
+02:06:26.956490 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+02:06:26.956682 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+02:06:26.956878 [info ]: Started analyzing (1 nodes)
+02:06:26.956988 [debug]: Started analyzing model nyc_311_raw_data.dim_nyc_311_monthly_summary
+02:06:26.981149 [debug]: Finished analyzing [  0.02s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+02:06:26.981267 [info ]: Finished analyzing [  0.02s] (1 nodes, 0 skipped, 0 errors)
+02:06:26.981403 [info ]: Started running (1 nodes)
+02:06:26.981469 [info ]: Started running model nyc_311_raw_data.dim_nyc_311_monthly_summary
+02:06:30.978515 [debug]: Query executed on node model.nyc_311_project.dim_nyc_311_monthly_summary:
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    table_type
+FROM 
+    `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.TABLES
+02:06:31.320576 [debug]: Writing runtime sql for node "model.nyc_311_project.dim_nyc_311_monthly_summary"
+02:06:35.950205 [debug]: Query executed on node model.nyc_311_project.dim_nyc_311_monthly_summary:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.nyc_311_project.dim_nyc_311_monthly_summary", "profile_name": "default", "target_name": "dev"} */
+
+  
+    
+
+    create or replace table `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_nyc_311_monthly_summary`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+WITH fact_data AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+),
+dim_complaint AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_complaint_types`
+),
+dim_date AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_date`
+)
+
+SELECT
+    d.month_name,
+    d.year,
+    c.complaint_category,
+    c.priority_level,
+    
+    -- 1. إجمالي عدد البلاغات
+    COUNT(f.complaint_id) AS total_requests,
+    
+    -- 2. عدد البلاغات المتأخرة
+    COUNTIF(f.is_late = TRUE) AS late_requests_count,
+    
+    -- 3. متوسط عمر الشكوى (سيظهر القيم السالبة كما اتفقنا للتحليل)
+    ROUND(AVG(f.ticket_age_days), 2) AS avg_ticket_age,
+    
+    -- 4. نسبة البلاغات ذات الأولوية القصوى التي تم إغلاقها
+    ROUND(
+        SAFE_DIVIDE(
+            COUNTIF(c.priority_level = 'High' AND f.is_open_backlog = FALSE), 
+            COUNTIF(c.priority_level = 'High')
+        ) * 100, 2
+    ) AS high_priority_resolution_rate
+
+FROM fact_data f
+JOIN dim_complaint c ON f.complaint_type_key = c.complaint_type_key
+JOIN dim_date d ON f.date_key = d.date_key
+
+GROUP BY 1, 2, 3, 4
+ORDER BY d.year DESC, d.month_name, total_requests DESC
+    );
+  
+02:06:35.951301 [info ]: Finished running [  8.97s] model nyc_311_raw_data.dim_nyc_311_monthly_summary [success]
+02:06:35.951460 [info ]: Finished running [  8.97s] (1 nodes, 0 skipped, 0 errors)
+02:06:35.951653 [info ]:  Succeeded [  8.99s] model nyc_311_raw_data.dim_nyc_311_monthly_summary (table)
+02:06:35.970108 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+02:06:36.108758 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 warning for target 'dev' [13.7s]
+Processed: 1 model
+Summary: 1 total | 1 success
