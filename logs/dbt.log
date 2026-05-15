@@ -9834,3 +9834,118 @@ LEFT JOIN dim_agency da ON s.agency_code = da.agency_code
 Finished 'run' with 1 warning for target 'dev' [17.7s]
 Processed: 1 model
 Summary: 1 total | 1 success
+==================== 2026-05-15T12:30:23.832446Z | 019e2b9d-d256-7733-8194-63568801819e ====================
+12:30:23.832538 [info ]: dbt-fusion 2.0.0-preview.175
+12:30:23.832810 [info ]: Started loading project
+12:30:23.835229 [info ]: Loading profiles.yml
+12:30:23.837202 [info ]:    Started resolving packages from packages.yml
+12:30:24.167109 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+12:30:24.167425 [info ]:   Finished [  0.33s] resolving packages from packages.yml (1 items)
+12:30:24.167919 [debug]:    Started loading packages
+12:30:24.180896 [debug]:     Loaded [  0.01s] packages
+12:30:24.181671 [info ]: Finished loading project [  0.35s]
+12:30:24.182271 [info ]: Started parsing
+12:30:24.213362 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+12:30:24.213526 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+12:30:24.214975 [debug]: Finished parsing models\Intermediate\dim_agency.sql [  0.00s]
+12:30:24.215450 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+12:30:24.215805 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+12:30:24.216209 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+12:30:24.216676 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+12:30:24.217060 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+12:30:24.217405 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+12:30:24.217757 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+12:30:24.218144 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+12:30:24.227728 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+12:30:24.228119 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+12:30:24.228504 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+12:30:24.228851 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+12:30:24.229231 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+12:30:24.229611 [debug]: Finished parsing target\generic_tests\accepted_values_dim_complaint__56c3210e47a9328a8e772407aa645029.sql [  0.00s]
+12:30:24.229962 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+12:30:24.230332 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+12:30:24.230680 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+12:30:24.231049 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+12:30:24.231400 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+12:30:24.231770 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+12:30:24.232146 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+12:30:24.232516 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+12:30:24.232883 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+12:30:24.233249 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+12:30:24.233619 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+12:30:24.233961 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+12:30:24.234322 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+12:30:24.234684 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+12:30:24.240398 [info ]: Finished parsing [  0.06s]
+12:30:24.240977 [info ]: Started scheduling
+12:30:24.241143 [info ]: Finished scheduling [  0.00s]
+12:30:24.243053 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "stg_nyc_311_requests" }) and interval: None
+12:30:24.357544 [info ]: Started building task graph
+12:30:24.357655 [info ]: Finished building task graph [  0.00s]
+12:30:28.746466 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+
+    select distinct schema_name from `depi-graduation-project-489604`.INFORMATION_SCHEMA.SCHEMATA;
+  
+12:30:28.746941 [info ]: Started rendering (1 nodes)
+12:30:28.747148 [info ]: Started model nyc_311_raw_data.dim_agency
+12:30:28.747176 [debug]: Started rendering model nyc_311_raw_data.dim_agency
+12:30:28.749525 [debug]: Compiled SQL for node model.nyc_311_project.dim_agency at target\compiled\nyc_311_project\models\Intermediate\dim_agency.sql
+12:30:28.749690 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_agency [success]
+12:30:28.749928 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:30:28.750184 [info ]: Started analyzing (1 nodes)
+12:30:28.750330 [debug]: Started analyzing model nyc_311_raw_data.dim_agency
+12:30:28.760252 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.dim_agency [success]
+12:30:28.760355 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+12:30:28.760457 [info ]: Started running (1 nodes)
+12:30:28.760511 [info ]: Started running model nyc_311_raw_data.dim_agency
+12:30:33.074927 [debug]: Query executed on node model.nyc_311_project.dim_agency:
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    table_type
+FROM 
+    `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.TABLES
+12:30:33.419568 [debug]: Writing runtime sql for node "model.nyc_311_project.dim_agency"
+12:30:39.987539 [debug]: Query executed on node model.nyc_311_project.dim_agency:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.nyc_311_project.dim_agency", "profile_name": "default", "target_name": "dev"} */
+
+  
+    
+
+    create or replace table `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_agency`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+
+    with unique_agency AS (
+        SELECT DISTINCT 
+            agency_code,agency_name
+        FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`stg_nyc_311_requests`
+        WHERE agency_code IS NOT NULL
+    )
+
+    SELECT 
+    farm_fingerprint(agency_code) AS agency_key,
+    agency_code,
+    agency_name 
+
+     FROM unique_agency
+    );
+  
+12:30:39.988678 [info ]: Finished running [ 11.23s] model nyc_311_raw_data.dim_agency [success]
+12:30:39.988826 [info ]: Finished running [ 11.23s] (1 nodes, 0 skipped, 0 errors)
+12:30:39.989012 [info ]:  Succeeded [ 11.24s] model nyc_311_raw_data.dim_agency (table)
+12:30:40.006790 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+12:30:40.183888 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 warning for target 'dev' [16.4s]
+Processed: 1 model
+Summary: 1 total | 1 success
