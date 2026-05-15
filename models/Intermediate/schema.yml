@@ -71,10 +71,12 @@ models:
           - not_null
 
       - name: priority_level
-              tests:
-                - accepted_values:
-                    values: ['High', 'Medium', 'Low']
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['High', 'Medium', 'Low']
 
+  # 3. الموديل الرابع (بُعد مواقع الشكاوى)
 
   - name: dim_locations
     description: "جدول الأبعاد لمواقغ الشكاوى "

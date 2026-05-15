@@ -102,5 +102,31 @@
         "index": 342
       }
     }
+  },
+  {
+    "macro_span": {
+      "start": {
+        "line": 13,
+        "col": 19,
+        "index": 294
+      },
+      "stop": {
+        "line": 13,
+        "col": 42,
+        "index": 317
+      }
+    },
+    "expanded_span": {
+      "start": {
+        "line": 13,
+        "col": 19,
+        "index": 383
+      },
+      "stop": {
+        "line": 13,
+        "col": 83,
+        "index": 447
+      }
+    }
   }
 ]

@@ -8,6 +8,9 @@ dim_complaint AS (
 ),
 dim_loc AS (
     SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_locations`
+),
+dim_agency AS (
+    SELECT * FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_agency`
 )
 
 SELECT
@@ -18,11 +21,11 @@ SELECT
     -- ربط الأبعاد مع معالجة مفتاح الموقع المفقود
     COALESCE(dc.complaint_type_key, FARM_FINGERPRINT('Unknown')) AS complaint_type_key,
     COALESCE(dl.location_key, FARM_FINGERPRINT('Unknown00000')) AS location_key,
-    
+    COALESCE(da.agency_key, FARM_FINGERPRINT('Unknown00000')) AS agency_key,    
     s.complaint_status,
     s.created_at,
     s.closed_at,
-    
+   
     -- ترك الحساب كما هو (سيُظهر القيم السالبة)
     DATE_DIFF(COALESCE(DATE(s.closed_at), CURRENT_DATE()), DATE(s.created_at), DAY) AS ticket_age_days,
 
@@ -46,3 +49,4 @@ SELECT
 FROM staging_data s
 LEFT JOIN dim_complaint dc ON s.complaint_type = dc.complaint_type
 LEFT JOIN dim_loc dl ON s.borough = dl.borough AND s.zip_code = dl.zip_code
+LEFT JOIN dim_agency da ON s.agency_code = da.agency_code
