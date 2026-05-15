@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="complaint_type_key", model=get_where_subquery(ref('fct_nyc_311_performance'))) }}

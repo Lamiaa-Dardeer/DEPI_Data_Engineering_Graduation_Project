@@ -26,13 +26,20 @@ models:
         tests:
           - not_null
 
-      - name: creation_month
-        description: "الشهر الذي قُدمت فيه الشكوى"
+      - name: complaint_type_key
+        description: "مفتاح نوع الشكوى"
         tests:
-          - accepted_values:
-              arguments:
-                values: ['January', 'February', 'March', 'April', 'May', 'June', 
-                         'July', 'August', 'September', 'October', 'November', 'December']
+          - not_null
+
+      - name: location_key
+        description: "مفتاح موقع الشكوى"
+        tests:
+          - not_null
+
+      - name: date_key
+        description: "مفتاح تاريخ الشكوى"
+        tests:
+          - not_null
 
       - name: time_period
         description: "فترة اليوم التي تم تقديم الشكوى فيها"
@@ -40,3 +47,36 @@ models:
           - accepted_values:
               arguments:
                 values: ['Morning', 'Afternoon', 'Evening', 'Night']
+
+  # 2. الموديل الثاني (بُعد التاريخ)
+  - name: dim_date
+    description: "جدول أبعاد الوقت"
+    columns:
+      - name: date_key
+        tests:
+          - unique
+          - not_null
+
+  # 3. الموديل الثالث (بُعد أنواع الشكاوى)
+  - name: dim_complaint_types
+    description: "جدول الأبعاد لأنواع الشكاوى وتصنيفاتها"
+    columns:
+      - name: complaint_type_key
+        tests:
+          - unique
+          - not_null
+      - name: complaint_type
+        tests:
+          - unique
+          - not_null
+      - name: complaint_category
+        description: "الفئة التي تنتمي إليها الشكوى"
+        tests:
+          - not_null
+  - name: dim_locations
+    description: "جدول الأبعاد لمواقغ الشكاوى "
+    columns:
+      - name: location_key
+        tests:
+          - unique
+          - not_null
