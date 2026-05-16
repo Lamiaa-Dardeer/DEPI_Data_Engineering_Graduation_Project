@@ -31,9 +31,18 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dbt
+      #- name: Install dbt
+      #  run: |
+      #   pip install dbt-bigquery
+      # الإضافة الأولى: تثبيت المكتبات المطلوبة للـ Script وللـ dbt
+      - name: Install Dependencies
         run: |
-          pip install dbt-bigquery
+          pip install pandas pandas-gbq sodapy google-cloud-bigquery dbt-bigquery
+
+      # الإضافة الثانية: تشغيل سحب البيانات التاريخية وتصفير العداد من المنبع
+      - name: Ingest Data from 2020 Onwards
+        run: |
+          python ingest_nyc_311.py    
 
       - name: Run dbt
         run: |

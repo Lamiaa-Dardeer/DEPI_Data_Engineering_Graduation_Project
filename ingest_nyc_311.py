@@ -21,7 +21,7 @@ query = f"created_date >= '{start_date}'"
 print(f"Starting data ingestion from {start_date}...")
 
 # سحب البيانات (يمكنكِ زيادة الـ limit إذا كان حجم البيانات ضخماً جداً)
-results = client_socrata.get("erm2-nwe9", where=query, limit=1000000) 
+results = client_socrata.get("erm2-nwe9", where=query, limit=1500000) 
 
 df = pd.DataFrame.from_records(results)
 
@@ -32,4 +32,4 @@ df.to_gbq(
     if_exists='replace'
 )
 
-print(f"Successfully ingested {len(df)} rows from 2020 onwards!")
+print(f"Successfully ingested {len(df)} rows from 2020 onwards! to BigQuery.")  
