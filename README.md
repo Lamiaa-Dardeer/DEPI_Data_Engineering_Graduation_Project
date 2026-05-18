@@ -1,62 +1,55 @@
-# 🚀 Project: Data Modeling with dbt and BigQuery
+# Project: NYC 311 Data Modeling & Automated Pipeline
 **DEPI Graduation Project - Data Engineering Track**
 
-## 📋 Project Overview
-This project focuses on building a modern data transformation pipeline. We use **BigQuery** as our Data Warehouse and **dbt (data build tool)** for transforming raw data into clean, analytics-ready models, following software engineering best practices like modularity and testing.
-
-## 🚀 Automated Data Pipeline & Maintenance
-To overcome the Google BigQuery Sandbox 60-day expiration policy, I implemented a robust automation workflow using dbt (Data Build Tool) and GitHub Actions.
-
-How it works:
-Orchestration: A GitHub Actions workflow is scheduled to run weekly.
-
-Security: Authentication is handled securely via Workload Identity Federation, eliminating the need for sensitive JSON keys.
-
-Data Transformation: The system uses dbt run --full-refresh to recreate the core datasets, effectively resetting the expiration timer while maintaining data integrity.
-
-Reliability: This ensures that the 2M+ air quality records remain available for analysis throughout the duration of the graduation project.
+##  Project Overview
+This project focuses on building an end-to-end modern data transformation pipeline. We use **Google BigQuery** as our Cloud Data Warehouse and **dbt (data build tool)** for transforming raw, complex data into highly optimized, analytics-ready models following software engineering best practices like modularity, version control, and data testing.
 
 ---
 
-## 🏗️ Project Architecture & Milestones
+##  Project Architecture & Data Flow
 
-### 📍 Milestone 1: Data Collection & Exploration
-* **Source:** [---------------].
-* **Ingestion:** Loading raw data into **Google BigQuery** (Bronze Layer).
-* **Exploration:** Initial SQL queries to understand data distribution and quality.
 
-### 📍 Milestone 2: Model Development (dbt)
-* **Staging:** Cleaning and renaming raw fields.
-* **Intermediate/Mart:** Applying business logic (Joins, Aggregations).
-* **Testing:** Implementing `unique`, `not_null`, and custom tests to ensure data integrity.
 
-### 📍 Milestone 3: Deployment & Orchestration
-* **Batch Processing:** Setting up dbt runs on a schedule.
-* **Environment:** Production vs. Development schemas in BigQuery.
+###  Phase 1: Data Ingestion & Historic Load (Bronze Layer)
+* **Source:** New York City Open Data Portal (NYC 311 Service Requests).
+* **Initial Load:** A specialized Python script (`scripts/ingest_nyc_311.py`) was used to ingest **1.5+ Million rows** of historical data from **2020 to the present** via the Socrata Open Data API directly into BigQuery.
 
-### 📍 Milestone 4: MLOps & Monitoring
-* **Lineage:** Tracking data flow from source to final dashboard.
-* **CI/CD:** Automated testing using dbt Cloud or GitHub Actions.
+###  Phase 2: Cost-Effective Automation & Sandbox Maintenance
+To overcome the Google BigQuery Sandbox 60-day table expiration policy without incurring network costs or draining GitHub Actions runtime minutes, a highly optimized orchestration strategy was implemented:
+* **Orchestration:** A GitHub Actions workflow is scheduled to run automatically **every Sunday** (`cron: '0 0 * * 0'`).
+* **Security:** Authentication with Google Cloud is handled securely via **Workload Identity Federation**, eliminating the need for sensitive, hardcoded JSON service account keys.
+* **The Smart SQL Refresh (Counteracting Expiration):** Instead of re-downloading millions of rows via API every week, the workflow triggers a dbt model (`raw_service_requests.sql`) that reads the existing historical table and completely overwrites it internally inside BigQuery. This "touch" operation completely resets BigQuery's 60-day expiration timer in just a few seconds.
 
-### 📍 Milestone 5: Documentation & Results
-* **dbt Docs:** Auto-generated documentation for all models.
-* **Key Metrics:** [---------------].
+###  Phase 3: Dimensional Data Modeling (dbt - Silver & Gold Layers)
+* **Staging:** Cleaning, casting data types, and renaming raw fields.
+* **Intermediate:** Building enterprise-grade business logic. A dedicated **Star Schema** architecture was designed by decoupling entities into specific dimensional models:
+  * `dim_date`: Temporal analytics.
+  * `dim_locations`: Geographical analysis of complaints.
+  * `dim_complaint_types`: Categorizing the nature of service requests.
+  * `dim_agency`: Analyzing specific agency performance (e.g., NYPD, DOT, DSNY).
+* **Fact Table (`fct_nyc_311_performance`):** The central hub joining all dimensions to track resolution times, SLAs, and operational performance metrics.
+* **Data Quality & Testing:** Implementing automated schema tests (`unique`, `not_null`) via `schema.yml` to maintain data integrity across the pipeline.
+
+###  Phase 4: BI Analytics & Visualization (Gold Layer)
+* **Tool:** Microsoft Power BI.
+* **Design & Insights:** A specialized dark-themed dashboard leveraging the iconic **NYC Taxi Yellow** color palette. It tracks long-term historical trends (2020-2026), Year-over-Year (YoY) operational performance, agency response efficiency, and complaint seasonality patterns.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 * **Data Warehouse:** Google BigQuery
-* **Transformation Tool:** dbt (Core/Cloud)
-* **Language:** SQL & Python
-* **Version Control:** GitHub
+* **Transformation & Modeling:** dbt Core
+* **Orchestration / CI-CD:** GitHub Actions
+* **Language:** SQL (BigQuery Standard SQL) & Python (Initial Ingestion)
+* **BI & Visualization:** Microsoft Power BI
 
 ---
 
-## 👥 Team Members
-* **Aliaa Raafat Anwar Elbaz** (https://github.com/aliaelbaz)
-* **Elsayed Hussein Mohamed Gouda** (https://github.com/godajr)
-* **Lamiaa Mohammad Abdulhameed Dardeer** (https://github.com/Lamiaa-Dardeer)
-* **Makary Makeen Makary** (https://github.com/MakaryMakeen10)
+## Team Members
+* **Aliaa Raafat Anwar Elbaz** ([GitHub](https://github.com/aliaelbaz))
+* **Elsayed Hussein Mohamed Gouda** ([GitHub](https://github.com/godajr))
+* **Lamiaa Mohammad Abdulhameed Dardeer** ([GitHub](https://github.com/Lamiaa-Dardeer))
+* **Makary Makeen Makary** ([GitHub](https://github.com/MakaryMakeen10))
 
 ---
 *Generated as part of the Digital Egypt Pioneers Initiative (DEPI).*
