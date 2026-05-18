@@ -26,23 +26,10 @@ jobs:
           workload_identity_provider: 'projects/113456966208/locations/global/workloadIdentityPools/depi-pool/providers/github-new-provider'
           service_account: 'dbt-user-311@depi-graduation-project-489604.iam.gserviceaccount.com'
 
-      - name: Setup Python
-        uses: actions/setup-python@v6 # تم التحديث من v5 لـ v6
-        with:
-          python-version: '3.10'
-
-      #- name: Install dbt
-      #  run: |
-      #   pip install dbt-bigquery
-      # الإضافة الأولى: تثبيت المكتبات المطلوبة للـ Script وللـ dbt
-      - name: Install Dependencies
+# نكتفي بتثبيت dbt-bigquery فقط لتوفير الوقت والموارد
+      - name: Install dbt
         run: |
-          pip install pandas pandas-gbq sodapy google-cloud-bigquery dbt-bigquery
-
-      # الإضافة الثانية: تشغيل سحب البيانات التاريخية وتصفير العداد من المنبع
-      - name: Ingest Data from 2020 Onwards
-        run: |
-          python ingest_nyc_311.py    
+          pip install dbt-bigquery
 
       - name: Run dbt
         run: |
@@ -58,4 +45,7 @@ jobs:
                 threads: 1
             target: dev
           EOF
-          dbt run --full-refresh
+          # تشغيل المشروع بالكامل بما فيه جدول التصفير الـ Raw وبقية النماذج
+          dbt run --profiles-dir ~/.dbt
+
+ 

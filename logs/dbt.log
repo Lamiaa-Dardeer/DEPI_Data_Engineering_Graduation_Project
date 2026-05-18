@@ -9949,3 +9949,939 @@ FROM
 Finished 'run' with 1 warning for target 'dev' [16.4s]
 Processed: 1 model
 Summary: 1 total | 1 success
+==================== 2026-05-15T12:36:22.874839Z | 019e2ba3-4cd8-7153-952f-5eae64f727f9 ====================
+12:36:22.874928 [info ]: dbt-fusion 2.0.0-preview.175
+12:36:22.875340 [info ]: Started loading project
+12:36:22.878052 [info ]: Loading profiles.yml
+12:36:22.880346 [info ]:    Started resolving packages from packages.yml
+12:36:23.553976 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+12:36:23.554440 [info ]:   Finished [  0.67s] resolving packages from packages.yml (1 items)
+12:36:23.555234 [debug]:    Started loading packages
+12:36:23.565561 [debug]:     Loaded [  0.01s] packages
+12:36:23.566136 [info ]: Finished loading project [  0.69s]
+12:36:23.566566 [info ]: Started parsing
+12:36:23.596863 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+12:36:23.597030 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+12:36:23.598379 [debug]: Finished parsing models\Intermediate\dim_agency.sql [  0.00s]
+12:36:23.598907 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+12:36:23.599315 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+12:36:23.599700 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+12:36:23.600156 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+12:36:23.600553 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+12:36:23.600919 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+12:36:23.601241 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+12:36:23.601627 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+12:36:23.611105 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+12:36:23.611473 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+12:36:23.611875 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+12:36:23.612227 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+12:36:23.612606 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+12:36:23.612979 [debug]: Finished parsing target\generic_tests\accepted_values_dim_complaint__56c3210e47a9328a8e772407aa645029.sql [  0.00s]
+12:36:23.613334 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+12:36:23.613695 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+12:36:23.614038 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+12:36:23.614392 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+12:36:23.614734 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+12:36:23.615096 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+12:36:23.615463 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+12:36:23.615944 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+12:36:23.616379 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+12:36:23.616755 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+12:36:23.617122 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+12:36:23.617460 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+12:36:23.617850 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+12:36:23.618228 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+12:36:23.623898 [info ]: Finished parsing [  0.06s]
+12:36:23.624463 [info ]: Started scheduling
+12:36:23.624602 [info ]: Finished scheduling [  0.00s]
+12:36:23.626589 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "stg_nyc_311_requests" }) and interval: None
+12:36:23.743749 [info ]: Started building task graph
+12:36:23.743876 [info ]: Finished building task graph [  0.00s]
+12:36:27.933062 [debug]: Query executed on node unknown:
+/* {"app": "dbt", "connection_name": "", "dbt_version": "2.0.0", "profile_name": "default", "target_name": "dev"} */
+
+    select distinct schema_name from `depi-graduation-project-489604`.INFORMATION_SCHEMA.SCHEMATA;
+  
+12:36:27.933318 [info ]: Started rendering (1 nodes)
+12:36:27.933417 [info ]: Started model nyc_311_raw_data.dim_agency
+12:36:27.933429 [debug]: Started rendering model nyc_311_raw_data.dim_agency
+12:36:27.934805 [debug]: Compiled SQL for node model.nyc_311_project.dim_agency at target\compiled\nyc_311_project\models\Intermediate\dim_agency.sql
+12:36:27.934896 [debug]: Finished rendering [  0.00s] model nyc_311_raw_data.dim_agency [success]
+12:36:27.935033 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:36:27.935191 [info ]: Started analyzing (1 nodes)
+12:36:27.935265 [debug]: Started analyzing model nyc_311_raw_data.dim_agency
+12:36:27.940376 [debug]: Finished analyzing [  0.01s] model nyc_311_raw_data.dim_agency [success]
+12:36:27.940471 [info ]: Finished analyzing [  0.01s] (1 nodes, 0 skipped, 0 errors)
+12:36:27.940597 [info ]: Started running (1 nodes)
+12:36:27.940669 [info ]: Started running model nyc_311_raw_data.dim_agency
+12:36:31.819276 [debug]: Query executed on node model.nyc_311_project.dim_agency:
+SELECT
+    table_catalog,
+    table_schema,
+    table_name,
+    table_type
+FROM 
+    `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.TABLES
+12:36:32.194460 [debug]: Writing runtime sql for node "model.nyc_311_project.dim_agency"
+12:36:37.094548 [debug]: Query executed on node model.nyc_311_project.dim_agency:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.nyc_311_project.dim_agency", "profile_name": "default", "target_name": "dev"} */
+
+  
+    
+
+    create or replace table `depi-graduation-project-489604`.`nyc_311_raw_data`.`dim_agency`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+
+    with unique_agency AS (
+        SELECT DISTINCT 
+            agency_code,agency_name
+        FROM `depi-graduation-project-489604`.`nyc_311_raw_data`.`stg_nyc_311_requests`
+        WHERE agency_code IS NOT NULL
+    )
+
+    SELECT 
+    farm_fingerprint(agency_code) AS agency_key,
+    agency_code,
+    agency_name 
+
+     FROM unique_agency
+
+    );
+  
+12:36:37.095611 [info ]: Finished running [  9.15s] model nyc_311_raw_data.dim_agency [success]
+12:36:37.095760 [info ]: Finished running [  9.16s] (1 nodes, 0 skipped, 0 errors)
+12:36:37.095965 [info ]:  Succeeded [  9.16s] model nyc_311_raw_data.dim_agency (table)
+12:36:37.116036 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+12:36:37.211024 [info ]: 
+==================== Execution Summary =====================
+Finished 'run' with 1 warning for target 'dev' [14.3s]
+Processed: 1 model
+Summary: 1 total | 1 success
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e3131-c9a7-7eb2-bad1-da433d679712","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":16528,"thread":"tokio-rt-worker","ts":"2026-05-16T14:30:07.018150Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e3131-c9a7-7eb2-bad1-da433d679712","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":16528,"thread":"tokio-rt-worker","ts":"2026-05-16T14:30:07.018169Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e3131-c9a7-7eb2-bad1-da433d679712","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":16528,"thread":"tokio-rt-worker","ts":"2026-05-16T14:30:07.021408Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e3131-c9a7-7eb2-bad1-da433d679712","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":16528,"thread":"tokio-rt-worker","ts":"2026-05-16T14:30:07.021953Z"}}
+{"data":{"completed_at":"2026-05-16T14:30:08.623407Z","elapsed":1.6054023504257202,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e3131-c9a7-7eb2-bad1-da433d679712","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.6s]","name":"CommandCompleted","pid":16528,"thread":"tokio-rt-worker","ts":"2026-05-16T14:30:08.623540Z"}}
+[0m17:30:21.462417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288D663F610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288D79CC430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288D79CC220>]}
+
+
+============================== 17:30:21.466421 | d1dee3de-2c82-4299-8a01-dde835837ab3 ==============================
+[0m17:30:21.466421 [info ] [MainThread]: Running with dbt=1.11.8
+[0m17:30:21.467422 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m17:30:21.643545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd1dee3de-2c82-4299-8a01-dde835837ab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288D39C2680>]}
+[0m17:30:21.716865 [debug] [MainThread]: Set downloads directory='C:\Users\user\AppData\Local\Temp\dbt-downloads-1an8sk1x'
+[0m17:30:21.717865 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m17:30:22.023753 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m17:30:22.025756 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m17:30:22.199731 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m17:30:22.205737 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m17:30:23.082994 [info ] [MainThread]: Installed from version 1.1.1
+[0m17:30:23.083995 [info ] [MainThread]: Updated version available: 1.3.3
+[0m17:30:23.083995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'd1dee3de-2c82-4299-8a01-dde835837ab3', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288D69E6980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288D7C63FA0>]}
+[0m17:30:23.084996 [info ] [MainThread]: 
+[0m17:30:23.084996 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m17:30:23.086998 [debug] [MainThread]: Command `cli deps` succeeded at 17:30:23.086998 after 1.73 seconds
+[0m17:30:23.087999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288D663F610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288D69C03D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000288D69E6980>]}
+[0m17:30:23.089000 [debug] [MainThread]: Flushing usage events
+[0m17:30:23.732836 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-05-16T21:12:29.990420Z | 019e32a2-2e24-7550-9501-f00f8dd10f10 ====================
+21:12:29.990502 [info ]: dbt-fusion 2.0.0-preview.175
+21:12:29.990784 [info ]: Started loading project
+21:12:29.993078 [info ]: Loading profiles.yml
+21:12:29.995150 [info ]:    Started resolving packages from packages.yml
+21:12:30.459763 [warn ]: dbt1080: Package 'dbt_utils' may not be compatible with your dbt version: Required dbt version does not match current version. Check Package Hub (https://hub.getdbt.com) for compatible versions or contact the package maintainer.
+21:12:30.460016 [info ]:   Finished [  0.46s] resolving packages from packages.yml (1 items)
+21:12:30.460491 [debug]:    Started loading packages
+21:12:30.470620 [debug]:     Loaded [  0.01s] packages
+21:12:30.471265 [info ]: Finished loading project [  0.48s]
+21:12:30.471814 [info ]: Started parsing
+21:12:30.503074 [debug]: Finished parsing models\Intermediate\schema.yml [  0.00s]
+21:12:30.503292 [debug]: Finished parsing models\Staging\schema.yml [  0.00s]
+21:12:30.504858 [debug]: Finished parsing models\Intermediate\dim_agency.sql [  0.00s]
+21:12:30.505308 [debug]: Finished parsing models\Intermediate\dim_complaint_types.sql [  0.00s]
+21:12:30.505674 [debug]: Finished parsing models\Intermediate\dim_date.sql [  0.00s]
+21:12:30.506050 [debug]: Finished parsing models\Intermediate\dim_locations.sql [  0.00s]
+21:12:30.506499 [debug]: Finished parsing models\Intermediate\fct_nyc_311_performance.sql [  0.00s]
+21:12:30.506870 [debug]: Finished parsing models\Marts\dim_nyc_311_monthly_summary.sql [  0.00s]
+21:12:30.507228 [debug]: Finished parsing models\Staging\audit_raw_311_data.sql [  0.00s]
+21:12:30.507557 [debug]: Finished parsing models\Staging\raw_service_requests.sql [  0.00s]
+21:12:30.507947 [debug]: Finished parsing models\Staging\stg_nyc_311_requests.sql [  0.00s]
+21:12:30.517820 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_category.sql [  0.00s]
+21:12:30.518196 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type.sql [  0.00s]
+21:12:30.518573 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type.sql [  0.00s]
+21:12:30.518946 [debug]: Finished parsing target\generic_tests\unique_dim_complaint_types_complaint_type_key.sql [  0.00s]
+21:12:30.519340 [debug]: Finished parsing target\generic_tests\not_null_dim_complaint_types_complaint_type_key.sql [  0.00s]
+21:12:30.519714 [debug]: Finished parsing target\generic_tests\accepted_values_dim_complaint__56c3210e47a9328a8e772407aa645029.sql [  0.00s]
+21:12:30.520068 [debug]: Finished parsing target\generic_tests\unique_dim_date_date_key.sql [  0.00s]
+21:12:30.520438 [debug]: Finished parsing target\generic_tests\not_null_dim_date_date_key.sql [  0.00s]
+21:12:30.520792 [debug]: Finished parsing target\generic_tests\unique_dim_locations_location_key.sql [  0.00s]
+21:12:30.521178 [debug]: Finished parsing target\generic_tests\not_null_dim_locations_location_key.sql [  0.00s]
+21:12:30.521529 [debug]: Finished parsing target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+21:12:30.521890 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql [  0.00s]
+21:12:30.522246 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql [  0.00s]
+21:12:30.522609 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql [  0.00s]
+21:12:30.522964 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql [  0.00s]
+21:12:30.523346 [debug]: Finished parsing target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql [  0.00s]
+21:12:30.523728 [debug]: Finished parsing target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql [  0.00s]
+21:12:30.524084 [debug]: Finished parsing target\generic_tests\unique_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+21:12:30.524453 [debug]: Finished parsing target\generic_tests\not_null_stg_nyc_311_requests_complaint_id.sql [  0.00s]
+21:12:30.524816 [debug]: Finished parsing target\generic_tests\accepted_values_stg_nyc_311_re_1e3ca429c9bcaa1eb5505f1193c659a5.sql [  0.00s]
+21:12:30.530532 [info ]: Finished parsing [  0.06s]
+21:12:30.531124 [info ]: Started scheduling
+21:12:30.531341 [info ]: Finished scheduling [  0.00s]
+21:12:30.533448 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "depi-graduation-project-489604", schema: "nyc_311_raw_data", table: "fct_nyc_311_performance" }) and interval: None
+21:12:30.650743 [info ]: Started building task graph
+21:12:30.650902 [info ]: Finished building task graph [  0.00s]
+21:12:30.651163 [info ]: Started rendering (7 nodes)
+21:12:30.651242 [info ]: Started test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+21:12:30.651254 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+21:12:30.651273 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+21:12:30.651280 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+21:12:30.651291 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+21:12:30.651299 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+21:12:30.651309 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+21:12:30.651315 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+21:12:30.651324 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+21:12:30.651329 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+21:12:30.651342 [info ]: Started test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+21:12:30.651348 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+21:12:30.651357 [info ]: Started test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+21:12:30.651364 [debug]: Started rendering test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+21:12:30.654644 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_date_key.sql
+21:12:30.654692 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_type_key.sql
+21:12:30.654707 [debug]: Compiled SQL for node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de at target\compiled\nyc_311_project\target\generic_tests\unique_fct_nyc_311_performance_complaint_id.sql
+21:12:30.654729 [debug]: Compiled SQL for node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af at target\compiled\nyc_311_project\target\generic_tests\accepted_values_fct_nyc_311_pe_078caa7c7b499a448bdb908d990a8912.sql
+21:12:30.654704 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+21:12:30.654829 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_is_late.sql
+21:12:30.654851 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_complaint_id.sql
+21:12:30.654868 [debug]: Compiled SQL for node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27 at target\compiled\nyc_311_project\target\generic_tests\not_null_fct_nyc_311_performance_is_open_backlog.sql
+21:12:30.654839 [info ]: Started analyzing (7 nodes)
+21:12:30.654909 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+21:12:30.654923 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+21:12:30.655035 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+21:12:30.655049 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+21:12:30.655150 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+21:12:30.655165 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+21:12:30.655265 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+21:12:30.655275 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+21:12:30.655375 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+21:12:30.655389 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+21:12:30.655485 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+21:12:30.655498 [debug]: Finished rendering [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [success]
+21:12:30.655588 [info ]: Finished rendering [  0.00s] (7 nodes, 0 skipped, 0 errors)
+21:12:30.655684 [debug]: Started analyzing test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+21:12:30.659640 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [success]
+21:12:30.659751 [info ]: Started running (7 nodes)
+21:12:30.659821 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key
+21:12:30.659836 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [success]
+21:12:30.659945 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id
+21:12:30.659959 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [success]
+21:12:30.660080 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog
+21:12:30.660099 [debug]: Finished analyzing [  0.00s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [success]
+21:12:30.660218 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late
+21:12:30.660238 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [success]
+21:12:30.660362 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key
+21:12:30.660578 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [success]
+21:12:30.660719 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id
+21:12:30.660742 [debug]: Finished analyzing [  0.01s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [success]
+21:12:30.660873 [info ]: Finished analyzing [  0.01s] (7 nodes, 0 skipped, 0 errors)
+21:12:30.661013 [info ]: Started running test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+21:12:30.661374 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124"
+21:12:30.661405 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23"
+21:12:30.661425 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27"
+21:12:30.661559 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f"
+21:12:30.661623 [debug]: Writing runtime sql for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b"
+21:12:30.661936 [debug]: Writing runtime sql for node "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de"
+21:12:30.662497 [debug]: Writing runtime sql for node "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af"
+21:12:35.289926 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_late
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where is_late is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+21:12:35.290450 [info ]: Finished running [  4.63s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_late [pass]
+21:12:35.290577 [info ]:     Passed [  4.64s] test  not_null_fct_nyc_311_performance_is_late
+21:12:35.299530 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where date_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+21:12:35.299727 [info ]: Finished running [  4.64s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_date_key [pass]
+21:12:35.299779 [info ]:     Passed [  4.65s] test  not_null_fct_nyc_311_performance_date_key
+21:12:35.329753 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_open_backlog
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where is_open_backlog is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+21:12:35.330041 [info ]: Finished running [  4.67s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_is_open_backlog [pass]
+21:12:35.330106 [info ]:     Passed [  4.68s] test  not_null_fct_nyc_311_performance_is_open_backlog
+21:12:35.489931 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_id
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+21:12:35.490226 [info ]: Finished running [  4.83s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_id [pass]
+21:12:35.490367 [info ]:     Passed [  4.84s] test  not_null_fct_nyc_311_performance_complaint_id
+21:12:35.586797 [debug]: Query executed on node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select complaint_type_key
+from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+where complaint_type_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+21:12:35.587116 [info ]: Finished running [  4.93s] test nyc_311_raw_data_dbt_test__audit.not_null_fct_nyc_311_performance_complaint_type_key [pass]
+21:12:35.587185 [info ]:     Passed [  4.93s] test  not_null_fct_nyc_311_performance_complaint_type_key
+21:12:35.591756 [debug]: Query executed on node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select complaint_id as unique_field
+  from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+  where complaint_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+21:12:35.591959 [info ]: Finished running [  4.93s] test nyc_311_raw_data_dbt_test__audit.unique_fct_nyc_311_performance_complaint_id [pass]
+21:12:35.592082 [info ]:     Passed [  4.94s] test  unique_fct_nyc_311_performance_complaint_id
+21:12:35.615177 [debug]: Query executed on node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af", "profile_name": "default", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        time_period as value_field,
+        count(*) as n_records
+
+    from `depi-graduation-project-489604`.`nyc_311_raw_data`.`fct_nyc_311_performance`
+    group by time_period
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Morning','Afternoon','Evening','Night'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+21:12:35.615503 [info ]: Finished running [  4.95s] test nyc_311_raw_data_dbt_test__audit.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night [pass]
+21:12:35.615587 [info ]: Finished running [  4.96s] (7 nodes, 0 skipped, 0 errors)
+21:12:35.615792 [info ]:     Passed [  4.96s] test  accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night
+21:12:35.647100 [info ]: New version available 2.0.0-preview.176 (run `dbt system update`)
+21:12:35.721558 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' with 1 warning for target 'dev' [5.7s]
+Processed: 7 tests
+Summary: 7 total | 7 success
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e3599-932c-7760-b386-880f17f35dd1","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":13416,"thread":"tokio-rt-worker","ts":"2026-05-17T11:01:57.679698Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e3599-932c-7760-b386-880f17f35dd1","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":13416,"thread":"tokio-rt-worker","ts":"2026-05-17T11:01:57.679723Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e3599-932c-7760-b386-880f17f35dd1","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":13416,"thread":"tokio-rt-worker","ts":"2026-05-17T11:01:57.684045Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e3599-932c-7760-b386-880f17f35dd1","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":13416,"thread":"tokio-rt-worker","ts":"2026-05-17T11:01:57.684710Z"}}
+{"data":{"completed_at":"2026-05-17T11:01:58.089407Z","elapsed":0.409901887178421,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e3599-932c-7760-b386-880f17f35dd1","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [409ms]","name":"CommandCompleted","pid":13416,"thread":"tokio-rt-worker","ts":"2026-05-17T11:01:58.089529Z"}}
+[0m14:02:10.219358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A41BF5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A555C430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A555C220>]}
+
+
+============================== 14:02:10.223362 | 9e9f073b-8e1a-46bf-9016-94536adf9b33 ==============================
+[0m14:02:10.223362 [info ] [MainThread]: Running with dbt=1.11.8
+[0m14:02:10.224363 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m14:02:10.400522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9e9f073b-8e1a-46bf-9016-94536adf9b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A1556EF0>]}
+[0m14:02:10.470721 [debug] [MainThread]: Set downloads directory='C:\Users\user\AppData\Local\Temp\dbt-downloads-ztwcauhu'
+[0m14:02:10.471723 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m14:02:10.593226 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m14:02:10.595657 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m14:02:10.742575 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m14:02:10.748581 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m14:02:20.827450 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f3250>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+[0m14:02:20.828451 [debug] [MainThread]: Retrying external call. Attempt: 0 Max attempts: 5
+[0m14:02:31.898145 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f3b20>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+[0m14:02:31.899146 [debug] [MainThread]: Retrying external call. Attempt: 1 Max attempts: 5
+[0m14:02:42.972470 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f25c0>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+[0m14:02:42.973470 [debug] [MainThread]: Retrying external call. Attempt: 2 Max attempts: 5
+[0m14:02:54.099786 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f2020>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+[0m14:02:54.100787 [debug] [MainThread]: Retrying external call. Attempt: 3 Max attempts: 5
+[0m14:03:05.189363 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f1750>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+[0m14:03:05.190365 [debug] [MainThread]: Retrying external call. Attempt: 4 Max attempts: 5
+[0m14:03:16.277352 [error] [MainThread]: Encountered an error:
+External connection exception occurred: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f0e80>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+[0m14:03:16.296114 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f3250>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f3250>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\base.py", line 132, in download_and_untar
+    system.download(download_url, tar_path)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\clients\system.py", line 597, in download
+    response = requests.get(url, timeout=connection_timeout)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 666, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f3250>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f3b20>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f3b20>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\base.py", line 132, in download_and_untar
+    system.download(download_url, tar_path)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\clients\system.py", line 597, in download
+    response = requests.get(url, timeout=connection_timeout)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 666, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f3b20>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f25c0>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f25c0>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\base.py", line 132, in download_and_untar
+    system.download(download_url, tar_path)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\clients\system.py", line 597, in download
+    response = requests.get(url, timeout=connection_timeout)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 666, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f25c0>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f2020>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f2020>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\base.py", line 132, in download_and_untar
+    system.download(download_url, tar_path)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\clients\system.py", line 597, in download
+    response = requests.get(url, timeout=connection_timeout)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 666, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f2020>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f1750>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f1750>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\base.py", line 132, in download_and_untar
+    system.download(download_url, tar_path)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\clients\system.py", line 597, in download
+    response = requests.get(url, timeout=connection_timeout)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 666, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f1750>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f0e80>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f0e80>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\base.py", line 132, in download_and_untar
+    system.download(download_url, tar_path)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\clients\system.py", line 597, in download
+    response = requests.get(url, timeout=connection_timeout)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 666, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f0e80>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\requires.py", line 258, in wrapper
+    return func(*args, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\main.py", line 466, in deps
+    results = task.run()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\task\deps.py", line 332, in run
+    package.install(self.project, renderer)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\registry.py", line 63, in install
+    self._install(project, renderer)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\base.py", line 121, in _install
+    connection_exception_retry(download_untar_fn, 5)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 36, in connection_exception_retry
+    return connection_exception_retry(fn, max_attempts, attempt + 1)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 36, in connection_exception_retry
+    return connection_exception_retry(fn, max_attempts, attempt + 1)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 36, in connection_exception_retry
+    return connection_exception_retry(fn, max_attempts, attempt + 1)
+  [Previous line repeated 2 more times]
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 38, in connection_exception_retry
+    raise ConnectionError("External connection exception occurred: " + str(exc))
+dbt_common.exceptions.connection.ConnectionError: External connection exception occurred: HTTPSConnectionPool(host='codeload.github.com', port=443): Max retries exceeded with url: /dbt-labs/dbt-utils/tar.gz/1.1.1 (Caused by ConnectTimeoutError(<HTTPSConnection(host='codeload.github.com', port=443) at 0x226a57f0e80>, 'Connection to codeload.github.com timed out. (connect timeout=10.0)'))
+
+[0m14:03:16.299117 [debug] [MainThread]: Command `cli deps` failed at 14:03:16.299117 after 66.19 seconds
+[0m14:03:16.299117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A41BF5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A57F0B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226A57F0CA0>]}
+[0m14:03:16.300118 [debug] [MainThread]: Flushing usage events
+[0m14:03:22.760354 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e3b07-6ae4-7951-b3df-4df3aa718b5a","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":20032,"thread":"tokio-rt-worker","ts":"2026-05-18T12:20:02.407111Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e3b07-6ae4-7951-b3df-4df3aa718b5a","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":20032,"thread":"tokio-rt-worker","ts":"2026-05-18T12:20:02.407140Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e3b07-6ae4-7951-b3df-4df3aa718b5a","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":20032,"thread":"tokio-rt-worker","ts":"2026-05-18T12:20:02.410792Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e3b07-6ae4-7951-b3df-4df3aa718b5a","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":20032,"thread":"tokio-rt-worker","ts":"2026-05-18T12:20:02.411429Z"}}
+{"data":{"completed_at":"2026-05-18T12:20:03.271945Z","elapsed":0.8650328516960144,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e3b07-6ae4-7951-b3df-4df3aa718b5a","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [865ms]","name":"CommandCompleted","pid":20032,"thread":"tokio-rt-worker","ts":"2026-05-18T12:20:03.272181Z"}}
+[0m15:20:18.242897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002032205F5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203233EC430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203233EC220>]}
+
+
+============================== 15:20:18.247409 | 28052307-990e-4da9-a50b-21cfe45a9407 ==============================
+[0m15:20:18.247409 [info ] [MainThread]: Running with dbt=1.11.8
+[0m15:20:18.247409 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m15:20:18.423570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '28052307-990e-4da9-a50b-21cfe45a9407', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002031F3F6EF0>]}
+[0m15:20:18.457298 [debug] [MainThread]: Set downloads directory='C:\Users\user\AppData\Local\Temp\dbt-downloads-i26r5o32'
+[0m15:20:18.457298 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:20:18.556232 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m15:20:18.558981 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m15:20:18.650389 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m15:20:18.663402 [info ] [MainThread]: Updating lock file in file path: C:\Users\user\DEPI_Data_Engineering_Graduation_Project/package-lock.yml
+[0m15:20:18.700436 [debug] [MainThread]: Set downloads directory='C:\Users\user\AppData\Local\Temp\dbt-downloads-pay54vyv'
+[0m15:20:18.704439 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m15:20:19.523295 [info ] [MainThread]: Installed from version 1.1.1
+[0m15:20:19.524295 [info ] [MainThread]: Updated version available: 1.3.3
+[0m15:20:19.524295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '28052307-990e-4da9-a50b-21cfe45a9407', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203223E17B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002032367C3A0>]}
+[0m15:20:19.525297 [info ] [MainThread]: 
+[0m15:20:19.525297 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m15:20:19.527298 [debug] [MainThread]: Command `cli deps` succeeded at 15:20:19.527298 after 1.45 seconds
+[0m15:20:19.528299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002032205F5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203224033D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203223E17B0>]}
+[0m15:20:19.528299 [debug] [MainThread]: Flushing usage events
+[0m15:20:20.147870 [debug] [MainThread]: An error was encountered while trying to flush usage events
