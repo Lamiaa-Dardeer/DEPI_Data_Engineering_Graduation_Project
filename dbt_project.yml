@@ -12,3 +12,4 @@ models:
   nyc_311_project:
     staging:
       +materialized: table
+      

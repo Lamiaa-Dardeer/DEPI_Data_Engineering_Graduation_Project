@@ -10885,3 +10885,542 @@ Update your versions in packages.yml, then run dbt deps
 [0m15:20:19.528299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002032205F5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203224033D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203223E17B0>]}
 [0m15:20:19.528299 [debug] [MainThread]: Flushing usage events
 [0m15:20:20.147870 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e3cbd-44c7-74c0-8184-b7e684ccf716","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":11328,"thread":"tokio-rt-worker","ts":"2026-05-18T20:18:17.417859Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e3cbd-44c7-74c0-8184-b7e684ccf716","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":11328,"thread":"tokio-rt-worker","ts":"2026-05-18T20:18:17.417876Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e3cbd-44c7-74c0-8184-b7e684ccf716","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":11328,"thread":"tokio-rt-worker","ts":"2026-05-18T20:18:17.421438Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e3cbd-44c7-74c0-8184-b7e684ccf716","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":11328,"thread":"tokio-rt-worker","ts":"2026-05-18T20:18:17.421973Z"}}
+{"data":{"completed_at":"2026-05-18T20:18:18.500959Z","elapsed":1.0832397937774658,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e3cbd-44c7-74c0-8184-b7e684ccf716","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.1s]","name":"CommandCompleted","pid":11328,"thread":"tokio-rt-worker","ts":"2026-05-18T20:18:18.501122Z"}}
+[0m23:18:31.507845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015DBC4AF5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015DBD83C430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015DBD83C220>]}
+
+
+============================== 23:18:31.511848 | 54e006d2-babb-4ce1-ba27-c767a0e02da1 ==============================
+[0m23:18:31.511848 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:18:31.512849 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'indirect_selection': 'eager', 'invocation_command': 'dbt ', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m23:18:31.691012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '54e006d2-babb-4ce1-ba27-c767a0e02da1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015DB9846EF0>]}
+[0m23:18:31.762875 [debug] [MainThread]: Set downloads directory='C:\Users\user\AppData\Local\Temp\dbt-downloads-em7ijwng'
+[0m23:18:31.762875 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m23:18:31.926169 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m23:18:31.928172 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m23:18:32.004240 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m23:18:32.010246 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m23:18:32.915082 [info ] [MainThread]: Installed from version 1.1.1
+[0m23:18:32.916083 [info ] [MainThread]: Updated version available: 1.3.3
+[0m23:18:32.917084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '54e006d2-babb-4ce1-ba27-c767a0e02da1', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015DBC88C280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015DBDAD3FA0>]}
+[0m23:18:32.917084 [info ] [MainThread]: 
+[0m23:18:32.918084 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m23:18:32.920086 [debug] [MainThread]: Command `cli deps` succeeded at 23:18:32.919085 after 1.52 seconds
+[0m23:18:32.920086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015DBC4AF5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015DBC8533D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015DBC88C280>]}
+[0m23:18:32.921087 [debug] [MainThread]: Flushing usage events
+[0m23:18:33.655628 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e3f35-e094-7463-8281-baecb9e09e65","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":9320,"thread":"tokio-rt-worker","ts":"2026-05-19T07:49:16.055343Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e3f35-e094-7463-8281-baecb9e09e65","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":9320,"thread":"tokio-rt-worker","ts":"2026-05-19T07:49:16.055364Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e3f35-e094-7463-8281-baecb9e09e65","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":9320,"thread":"tokio-rt-worker","ts":"2026-05-19T07:49:16.059195Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e3f35-e094-7463-8281-baecb9e09e65","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":9320,"thread":"tokio-rt-worker","ts":"2026-05-19T07:49:16.059890Z"}}
+{"data":{"completed_at":"2026-05-19T07:49:16.508798Z","elapsed":0.4535966217517853,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e3f35-e094-7463-8281-baecb9e09e65","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [453ms]","name":"CommandCompleted","pid":9320,"thread":"tokio-rt-worker","ts":"2026-05-19T07:49:16.508922Z"}}
+[0m10:49:31.356711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CC544EF5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CC5587C430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CC5587C220>]}
+
+
+============================== 10:49:31.360761 | 3640a051-9b17-4431-91c6-c34353d3fe03 ==============================
+[0m10:49:31.360761 [info ] [MainThread]: Running with dbt=1.11.8
+[0m10:49:31.360761 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'invocation_command': 'dbt ', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m10:49:31.536862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3640a051-9b17-4431-91c6-c34353d3fe03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CC55875480>]}
+[0m10:49:31.608517 [debug] [MainThread]: Set downloads directory='C:\Users\user\AppData\Local\Temp\dbt-downloads-k4fu1706'
+[0m10:49:31.608517 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m10:49:31.788759 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m10:49:31.791654 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m10:49:31.903828 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m10:49:31.909833 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m10:49:32.780385 [info ] [MainThread]: Installed from version 1.1.1
+[0m10:49:32.781386 [info ] [MainThread]: Updated version available: 1.3.3
+[0m10:49:32.781386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '3640a051-9b17-4431-91c6-c34353d3fe03', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CC548CEAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CC55B13FA0>]}
+[0m10:49:32.782387 [info ] [MainThread]: 
+[0m10:49:32.782387 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m10:49:32.784389 [debug] [MainThread]: Command `cli deps` succeeded at 10:49:32.784389 after 1.54 seconds
+[0m10:49:32.785389 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CC544EF5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CC55875480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CC548CEAD0>]}
+[0m10:49:32.785389 [debug] [MainThread]: Flushing usage events
+[0m10:49:33.463632 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e4241-f198-72a1-b7b5-c04c99c1a40f","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":20752,"thread":"tokio-rt-worker","ts":"2026-05-19T22:01:18.491519Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e4241-f198-72a1-b7b5-c04c99c1a40f","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":20752,"thread":"tokio-rt-worker","ts":"2026-05-19T22:01:18.491538Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e4241-f198-72a1-b7b5-c04c99c1a40f","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":20752,"thread":"tokio-rt-worker","ts":"2026-05-19T22:01:18.495254Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e4241-f198-72a1-b7b5-c04c99c1a40f","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":20752,"thread":"tokio-rt-worker","ts":"2026-05-19T22:01:18.495801Z"}}
+{"data":{"completed_at":"2026-05-19T22:01:19.159913Z","elapsed":0.6685372591018677,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e4241-f198-72a1-b7b5-c04c99c1a40f","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [668ms]","name":"CommandCompleted","pid":20752,"thread":"tokio-rt-worker","ts":"2026-05-19T22:01:19.160060Z"}}
+[0m01:01:33.413244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002818F22F5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281905BC430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281905BC220>]}
+
+
+============================== 01:01:33.417248 | 39d618b9-2779-4487-8023-b2c785c05cbb ==============================
+[0m01:01:33.417248 [info ] [MainThread]: Running with dbt=1.11.8
+[0m01:01:33.418248 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt ', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m01:01:33.599414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '39d618b9-2779-4487-8023-b2c785c05cbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281905B1480>]}
+[0m01:01:33.676805 [debug] [MainThread]: Set downloads directory='C:\Users\user\AppData\Local\Temp\dbt-downloads-duhjkzbu'
+[0m01:01:33.677807 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m01:01:34.116466 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m01:01:34.120909 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m01:01:34.390218 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m01:01:34.396223 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m01:01:35.412334 [info ] [MainThread]: Installed from version 1.1.1
+[0m01:01:35.413335 [info ] [MainThread]: Updated version available: 1.3.3
+[0m01:01:35.413335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '39d618b9-2779-4487-8023-b2c785c05cbb', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002818F60EAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028190853FA0>]}
+[0m01:01:35.414336 [info ] [MainThread]: 
+[0m01:01:35.414336 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m01:01:35.416338 [debug] [MainThread]: Command `cli deps` succeeded at 01:01:35.416338 after 2.13 seconds
+[0m01:01:35.417339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002818F22F5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000281905B1480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002818F60EAD0>]}
+[0m01:01:35.417339 [debug] [MainThread]: Flushing usage events
+[0m01:01:38.328015 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e4a8c-a935-76e0-9b04-5bd33713ba05","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":20336,"thread":"tokio-rt-worker","ts":"2026-05-21T12:39:52.887750Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e4a8c-a935-76e0-9b04-5bd33713ba05","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":20336,"thread":"tokio-rt-worker","ts":"2026-05-21T12:39:52.887764Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e4a8c-a935-76e0-9b04-5bd33713ba05","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":20336,"thread":"tokio-rt-worker","ts":"2026-05-21T12:39:52.893235Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e4a8c-a935-76e0-9b04-5bd33713ba05","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":20336,"thread":"tokio-rt-worker","ts":"2026-05-21T12:39:52.893924Z"}}
+{"data":{"completed_at":"2026-05-21T12:39:52.894685Z","elapsed":0.007054099813103676,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e4a8c-a935-76e0-9b04-5bd33713ba05","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [7ms]","name":"CommandCompleted","pid":20336,"thread":"tokio-rt-worker","ts":"2026-05-21T12:39:52.894767Z"}}
+[0m15:40:10.250628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002740B11F580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002740C4AC430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002740C4AC220>]}
+
+
+============================== 15:40:10.254612 | 3c026d36-7800-40e2-a318-d974b74b4aee ==============================
+[0m15:40:10.254612 [info ] [MainThread]: Running with dbt=1.11.8
+[0m15:40:10.254612 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m15:40:10.430362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3c026d36-7800-40e2-a318-d974b74b4aee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000274084B7A60>]}
+[0m15:40:10.502564 [debug] [MainThread]: Set downloads directory='C:\Users\user\AppData\Local\Temp\dbt-downloads-s8n3atuc'
+[0m15:40:10.502564 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:40:10.508872 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+[0m15:40:10.509874 [debug] [MainThread]: Retrying external call. Attempt: 0 Max attempts: 5
+[0m15:40:11.512417 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:40:11.514419 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+[0m15:40:11.514419 [debug] [MainThread]: Retrying external call. Attempt: 1 Max attempts: 5
+[0m15:40:12.521444 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:40:24.549349 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+[0m15:40:24.550351 [debug] [MainThread]: Retrying external call. Attempt: 2 Max attempts: 5
+[0m15:40:25.553633 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:40:25.555635 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+[0m15:40:25.555635 [debug] [MainThread]: Retrying external call. Attempt: 3 Max attempts: 5
+[0m15:40:26.559559 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:40:26.561561 [debug] [MainThread]: External call exception: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+[0m15:40:26.561561 [debug] [MainThread]: Retrying external call. Attempt: 4 Max attempts: 5
+[0m15:40:27.569508 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:40:27.571511 [error] [MainThread]: Encountered an error:
+External connection exception occurred: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+[0m15:40:27.587821 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\clients\registry.py", line 168, in _get_index
+    resp = requests.get(url, timeout=30)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\clients\registry.py", line 168, in _get_index
+    resp = requests.get(url, timeout=30)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\clients\registry.py", line 168, in _get_index
+    resp = requests.get(url, timeout=30)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\clients\registry.py", line 168, in _get_index
+    resp = requests.get(url, timeout=30)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\clients\registry.py", line 168, in _get_index
+    resp = requests.get(url, timeout=30)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\clients\registry.py", line 168, in _get_index
+    resp = requests.get(url, timeout=30)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\requests\adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\requires.py", line 258, in wrapper
+    return func(*args, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\cli\main.py", line 466, in deps
+    results = task.run()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\task\deps.py", line 321, in run
+    lock_defined_deps = resolve_lock_packages(packages_lock_config)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\resolver.py", line 147, in resolve_lock_packages
+    resolved = final.resolved()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\resolver.py", line 95, in resolved
+    return [p.resolved() for p in self.packages.values()]
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\resolver.py", line 95, in <listcomp>
+    return [p.resolved() for p in self.packages.values()]
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\registry.py", line 98, in resolved
+    self._check_in_index()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\deps\registry.py", line 75, in _check_in_index
+    index = registry.index_cached()
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\utils\utils.py", line 127, in __call__
+    value = self.func(*args)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt\clients\registry.py", line 189, in index
+    return connection_exception_retry(get_index_fn, 5)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 36, in connection_exception_retry
+    return connection_exception_retry(fn, max_attempts, attempt + 1)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 36, in connection_exception_retry
+    return connection_exception_retry(fn, max_attempts, attempt + 1)
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 36, in connection_exception_retry
+    return connection_exception_retry(fn, max_attempts, attempt + 1)
+  [Previous line repeated 2 more times]
+  File "D:\users\user\miniconda3\envs\dbt_depi\lib\site-packages\dbt_common\utils\connection.py", line 38, in connection_exception_retry
+    raise ConnectionError("External connection exception occurred: " + str(exc))
+dbt_common.exceptions.connection.ConnectionError: External connection exception occurred: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NameResolutionError("HTTPSConnection(host='hub.getdbt.com', port=443): Failed to resolve 'hub.getdbt.com' ([Errno 11001] getaddrinfo failed)"))
+
+[0m15:40:27.589822 [debug] [MainThread]: Command `cli deps` failed at 15:40:27.589822 after 17.46 seconds
+[0m15:40:27.590823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002740B11F580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002740C701D80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002740C701C90>]}
+[0m15:40:27.590823 [debug] [MainThread]: Flushing usage events
+[0m15:40:27.592825 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.175"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e4f86-e136-7a63-9d50-48eadb692309","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.175","name":"MainReportVersion","pid":16456,"thread":"tokio-rt-worker","ts":"2026-05-22T11:51:40.087970Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\user\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e4f86-e136-7a63-9d50-48eadb692309","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":16456,"thread":"tokio-rt-worker","ts":"2026-05-22T11:51:40.087986Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e4f86-e136-7a63-9d50-48eadb692309","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":16456,"thread":"tokio-rt-worker","ts":"2026-05-22T11:51:40.091922Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e4f86-e136-7a63-9d50-48eadb692309","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":16456,"thread":"tokio-rt-worker","ts":"2026-05-22T11:51:40.092569Z"}}
+[0m14:51:42.230353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000111571BF580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001115854C430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001115854C220>]}
+
+
+============================== 14:51:42.234358 | be9cf79e-4bfc-4874-8d64-5108fa18bb66 ==============================
+[0m14:51:42.234358 [info ] [MainThread]: Running with dbt=1.11.8
+[0m14:51:42.235358 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'use_colors': 'True', 'invocation_command': 'dbt ', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'c:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs'}
+[0m14:51:42.433362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'be9cf79e-4bfc-4874-8d64-5108fa18bb66', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001115854E830>]}
+[0m14:51:42.469201 [debug] [MainThread]: Set downloads directory='C:\Users\user\AppData\Local\Temp\dbt-downloads-6rvkz1r6'
+[0m14:51:42.470202 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+{"data":{"completed_at":"2026-05-22T11:51:49.560672Z","elapsed":9.472858428955078,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e4f86-e136-7a63-9d50-48eadb692309","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [9.5s]","name":"CommandCompleted","pid":16456,"thread":"tokio-rt-worker","ts":"2026-05-22T11:51:49.560812Z"}}
+[0m14:52:03.991652 [debug] [MainThread]: External call exception: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[0m14:52:03.992653 [debug] [MainThread]: Retrying external call. Attempt: 0 Max attempts: 5
+[0m14:52:05.002668 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m14:52:24.125371 [debug] [MainThread]: External call exception: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[0m14:52:24.126372 [debug] [MainThread]: Retrying external call. Attempt: 1 Max attempts: 5
+[0m14:52:25.135242 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m14:52:25.318242 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m14:52:25.320244 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m14:52:25.645953 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m14:52:25.651960 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m14:52:28.322668 [info ] [MainThread]: Installed from version 1.1.1
+[0m14:52:28.323669 [info ] [MainThread]: Updated version available: 1.3.3
+[0m14:52:28.323669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'be9cf79e-4bfc-4874-8d64-5108fa18bb66', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001115759FE20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001115879BC70>]}
+[0m14:52:28.324670 [info ] [MainThread]: 
+[0m14:52:28.324670 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m14:52:28.326672 [debug] [MainThread]: Command `cli deps` succeeded at 14:52:28.326672 after 46.21 seconds
+[0m14:52:28.327673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000111571BF580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001115551CA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001115879BBB0>]}
+[0m14:52:28.327673 [debug] [MainThread]: Flushing usage events
+[0m14:52:29.061006 [debug] [MainThread]: An error was encountered while trying to flush usage events
