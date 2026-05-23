@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="priority_level", model=get_where_subquery(ref('dim_complaint_types')), values=["High","Medium","Low"]) }}

@@ -1,0 +1,1 @@
+{{ dbt_utils.test_expression_is_true(column_name="ticket_age_days", expression=">= 0", model=get_where_subquery(ref('fct_nyc_311_performance'))) }}

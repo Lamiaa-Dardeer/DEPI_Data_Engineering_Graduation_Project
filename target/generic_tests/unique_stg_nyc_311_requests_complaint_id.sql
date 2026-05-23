@@ -1,0 +1,1 @@
+{{ test_unique(column_name="complaint_id", model=get_where_subquery(ref('stg_nyc_311_requests'))) }}
