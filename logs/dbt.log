@@ -15549,3 +15549,421 @@ Update your versions in packages.yml, then run dbt deps
 [0m14:47:58.497624 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'log_path': 'C:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs serve', 'send_anonymous_usage_stats': 'True'}
 [0m14:47:59.861862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ec1c2bee-05ed-47cc-bdc1-79622995723a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236F6F841F0>]}
 [0m14:47:59.914910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ec1c2bee-05ed-47cc-bdc1-79622995723a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236F63B2950>]}
+[0m17:06:46.114782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D993562BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9962FF910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9962FF2E0>]}
+
+
+============================== 17:06:46.118786 | bbbe68b3-1f06-422f-8786-8607e091b21a ==============================
+[0m17:06:46.118786 [info ] [MainThread]: Running with dbt=1.8.9
+[0m17:06:46.118786 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\user\\DEPI_Data_Engineering_Graduation_Project\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs generate', 'send_anonymous_usage_stats': 'True'}
+[0m17:06:47.440129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bbbe68b3-1f06-422f-8786-8607e091b21a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D993811090>]}
+[0m17:06:47.493177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bbbe68b3-1f06-422f-8786-8607e091b21a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B714DA80>]}
+[0m17:06:47.494178 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m17:06:48.246861 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m17:06:48.502092 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:06:48.502092 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:06:48.544130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bbbe68b3-1f06-422f-8786-8607e091b21a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B8E5FE50>]}
+[0m17:06:48.570154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bbbe68b3-1f06-422f-8786-8607e091b21a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B8E09690>]}
+[0m17:06:48.571155 [info ] [MainThread]: Found 9 models, 20 data tests, 603 macros
+[0m17:06:48.571155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bbbe68b3-1f06-422f-8786-8607e091b21a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B8E08C10>]}
+[0m17:06:48.573157 [info ] [MainThread]: 
+[0m17:06:48.574158 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:06:48.579162 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_depi-graduation-project-489604_nyc_311_raw_data'
+[0m17:06:48.580164 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:12:10.486698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bbbe68b3-1f06-422f-8786-8607e091b21a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B714D450>]}
+[0m17:12:10.487713 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:12:10.488714 [info ] [MainThread]: 
+[0m17:12:10.492702 [debug] [Thread-1 (]: Began running node model.nyc_311_project.dim_date
+[0m17:12:10.493703 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.nyc_311_project.dim_date'
+[0m17:12:10.494704 [debug] [Thread-1 (]: Began compiling node model.nyc_311_project.dim_date
+[0m17:12:10.503713 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_311_project.dim_date"
+[0m17:12:10.504714 [debug] [Thread-1 (]: Began executing node model.nyc_311_project.dim_date
+[0m17:12:10.505714 [debug] [Thread-1 (]: Finished running node model.nyc_311_project.dim_date
+[0m17:12:10.506715 [debug] [Thread-1 (]: Began running node model.nyc_311_project.raw_service_requests
+[0m17:12:10.506715 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nyc_311_project.dim_date, now model.nyc_311_project.raw_service_requests)
+[0m17:12:10.507716 [debug] [Thread-1 (]: Began compiling node model.nyc_311_project.raw_service_requests
+[0m17:12:10.510719 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_311_project.raw_service_requests"
+[0m17:12:10.511719 [debug] [Thread-1 (]: Began executing node model.nyc_311_project.raw_service_requests
+[0m17:12:10.511719 [debug] [Thread-1 (]: Finished running node model.nyc_311_project.raw_service_requests
+[0m17:12:10.512720 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_dim_date_date_key.881d0a31b6
+[0m17:12:10.513721 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nyc_311_project.raw_service_requests, now test.nyc_311_project.not_null_dim_date_date_key.881d0a31b6)
+[0m17:12:10.513721 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_dim_date_date_key.881d0a31b6
+[0m17:12:10.524732 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_dim_date_date_key.881d0a31b6"
+[0m17:12:10.525733 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_dim_date_date_key.881d0a31b6
+[0m17:12:10.526733 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_dim_date_date_key.881d0a31b6
+[0m17:12:10.526733 [debug] [Thread-1 (]: Began running node test.nyc_311_project.unique_dim_date_date_key.0869fd48f9
+[0m17:12:10.527734 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_dim_date_date_key.881d0a31b6, now test.nyc_311_project.unique_dim_date_date_key.0869fd48f9)
+[0m17:12:10.527734 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.unique_dim_date_date_key.0869fd48f9
+[0m17:12:10.534740 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.unique_dim_date_date_key.0869fd48f9"
+[0m17:12:10.535742 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.unique_dim_date_date_key.0869fd48f9
+[0m17:12:10.536742 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.unique_dim_date_date_key.0869fd48f9
+[0m17:12:10.536742 [debug] [Thread-1 (]: Began running node model.nyc_311_project.audit_raw_311_data
+[0m17:12:10.537743 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.unique_dim_date_date_key.0869fd48f9, now model.nyc_311_project.audit_raw_311_data)
+[0m17:12:10.537743 [debug] [Thread-1 (]: Began compiling node model.nyc_311_project.audit_raw_311_data
+[0m17:12:10.540746 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_311_project.audit_raw_311_data"
+[0m17:12:10.541747 [debug] [Thread-1 (]: Began executing node model.nyc_311_project.audit_raw_311_data
+[0m17:12:10.542748 [debug] [Thread-1 (]: Finished running node model.nyc_311_project.audit_raw_311_data
+[0m17:12:10.543749 [debug] [Thread-1 (]: Began running node model.nyc_311_project.stg_nyc_311_requests
+[0m17:12:10.543749 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nyc_311_project.audit_raw_311_data, now model.nyc_311_project.stg_nyc_311_requests)
+[0m17:12:10.544750 [debug] [Thread-1 (]: Began compiling node model.nyc_311_project.stg_nyc_311_requests
+[0m17:12:10.547752 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_311_project.stg_nyc_311_requests"
+[0m17:12:10.548753 [debug] [Thread-1 (]: Began executing node model.nyc_311_project.stg_nyc_311_requests
+[0m17:12:10.548753 [debug] [Thread-1 (]: Finished running node model.nyc_311_project.stg_nyc_311_requests
+[0m17:12:10.549754 [debug] [Thread-1 (]: Began running node model.nyc_311_project.dim_agency
+[0m17:12:10.550755 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nyc_311_project.stg_nyc_311_requests, now model.nyc_311_project.dim_agency)
+[0m17:12:10.550755 [debug] [Thread-1 (]: Began compiling node model.nyc_311_project.dim_agency
+[0m17:12:10.553757 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_311_project.dim_agency"
+[0m17:12:10.554758 [debug] [Thread-1 (]: Began executing node model.nyc_311_project.dim_agency
+[0m17:12:10.555760 [debug] [Thread-1 (]: Finished running node model.nyc_311_project.dim_agency
+[0m17:12:10.555760 [debug] [Thread-1 (]: Began running node model.nyc_311_project.dim_complaint_types
+[0m17:12:10.556760 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nyc_311_project.dim_agency, now model.nyc_311_project.dim_complaint_types)
+[0m17:12:10.556760 [debug] [Thread-1 (]: Began compiling node model.nyc_311_project.dim_complaint_types
+[0m17:12:10.559763 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_311_project.dim_complaint_types"
+[0m17:12:10.560764 [debug] [Thread-1 (]: Began executing node model.nyc_311_project.dim_complaint_types
+[0m17:12:10.561766 [debug] [Thread-1 (]: Finished running node model.nyc_311_project.dim_complaint_types
+[0m17:12:10.562766 [debug] [Thread-1 (]: Began running node model.nyc_311_project.dim_locations
+[0m17:12:10.562766 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nyc_311_project.dim_complaint_types, now model.nyc_311_project.dim_locations)
+[0m17:12:10.563767 [debug] [Thread-1 (]: Began compiling node model.nyc_311_project.dim_locations
+[0m17:12:10.566769 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_311_project.dim_locations"
+[0m17:12:10.567770 [debug] [Thread-1 (]: Began executing node model.nyc_311_project.dim_locations
+[0m17:12:10.567770 [debug] [Thread-1 (]: Finished running node model.nyc_311_project.dim_locations
+[0m17:12:10.568772 [debug] [Thread-1 (]: Began running node test.nyc_311_project.accepted_values_stg_nyc_311_requests_complaint_status__Closed__Open__Pending__Assigned__In_Progress__Started__Unspecified.d34c5e987f
+[0m17:12:10.569772 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nyc_311_project.dim_locations, now test.nyc_311_project.accepted_values_stg_nyc_311_requests_complaint_status__Closed__Open__Pending__Assigned__In_Progress__Started__Unspecified.d34c5e987f)
+[0m17:12:10.569772 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.accepted_values_stg_nyc_311_requests_complaint_status__Closed__Open__Pending__Assigned__In_Progress__Started__Unspecified.d34c5e987f
+[0m17:12:10.580782 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.accepted_values_stg_nyc_311_requests_complaint_status__Closed__Open__Pending__Assigned__In_Progress__Started__Unspecified.d34c5e987f"
+[0m17:12:10.581784 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.accepted_values_stg_nyc_311_requests_complaint_status__Closed__Open__Pending__Assigned__In_Progress__Started__Unspecified.d34c5e987f
+[0m17:12:10.582785 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.accepted_values_stg_nyc_311_requests_complaint_status__Closed__Open__Pending__Assigned__In_Progress__Started__Unspecified.d34c5e987f
+[0m17:12:10.582785 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_stg_nyc_311_requests_complaint_id.23b3f0651c
+[0m17:12:10.583785 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.accepted_values_stg_nyc_311_requests_complaint_status__Closed__Open__Pending__Assigned__In_Progress__Started__Unspecified.d34c5e987f, now test.nyc_311_project.not_null_stg_nyc_311_requests_complaint_id.23b3f0651c)
+[0m17:12:10.583785 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_stg_nyc_311_requests_complaint_id.23b3f0651c
+[0m17:12:10.587788 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_stg_nyc_311_requests_complaint_id.23b3f0651c"
+[0m17:12:10.588789 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_stg_nyc_311_requests_complaint_id.23b3f0651c
+[0m17:12:10.589790 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_stg_nyc_311_requests_complaint_id.23b3f0651c
+[0m17:12:10.589790 [debug] [Thread-1 (]: Began running node test.nyc_311_project.unique_stg_nyc_311_requests_complaint_id.d7b14166b7
+[0m17:12:10.590791 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_stg_nyc_311_requests_complaint_id.23b3f0651c, now test.nyc_311_project.unique_stg_nyc_311_requests_complaint_id.d7b14166b7)
+[0m17:12:10.590791 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.unique_stg_nyc_311_requests_complaint_id.d7b14166b7
+[0m17:12:10.594795 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.unique_stg_nyc_311_requests_complaint_id.d7b14166b7"
+[0m17:12:10.595796 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.unique_stg_nyc_311_requests_complaint_id.d7b14166b7
+[0m17:12:10.596797 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.unique_stg_nyc_311_requests_complaint_id.d7b14166b7
+[0m17:12:10.597797 [debug] [Thread-1 (]: Began running node test.nyc_311_project.accepted_values_dim_complaint_types_priority_level__High__Medium__Low.bc8761adcb
+[0m17:12:10.597797 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.unique_stg_nyc_311_requests_complaint_id.d7b14166b7, now test.nyc_311_project.accepted_values_dim_complaint_types_priority_level__High__Medium__Low.bc8761adcb)
+[0m17:12:10.598798 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.accepted_values_dim_complaint_types_priority_level__High__Medium__Low.bc8761adcb
+[0m17:12:10.603803 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.accepted_values_dim_complaint_types_priority_level__High__Medium__Low.bc8761adcb"
+[0m17:12:10.604804 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.accepted_values_dim_complaint_types_priority_level__High__Medium__Low.bc8761adcb
+[0m17:12:10.605805 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.accepted_values_dim_complaint_types_priority_level__High__Medium__Low.bc8761adcb
+[0m17:12:10.605805 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b
+[0m17:12:10.606805 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.accepted_values_dim_complaint_types_priority_level__High__Medium__Low.bc8761adcb, now test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b)
+[0m17:12:10.606805 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b
+[0m17:12:10.610809 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b"
+[0m17:12:10.611810 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b
+[0m17:12:10.612811 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b
+[0m17:12:10.613812 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3
+[0m17:12:10.613812 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_dim_complaint_types_complaint_category.258eea6f7b, now test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3)
+[0m17:12:10.614813 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3
+[0m17:12:10.618816 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3"
+[0m17:12:10.619817 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3
+[0m17:12:10.620819 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3
+[0m17:12:10.620819 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e
+[0m17:12:10.621819 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_dim_complaint_types_complaint_type.99497b08b3, now test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e)
+[0m17:12:10.621819 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e
+[0m17:12:10.625823 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e"
+[0m17:12:10.626824 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e
+[0m17:12:10.627825 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e
+[0m17:12:10.627825 [debug] [Thread-1 (]: Began running node test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450
+[0m17:12:10.628826 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_dim_complaint_types_complaint_type_key.de7c97800e, now test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450)
+[0m17:12:10.629826 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450
+[0m17:12:10.632829 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450"
+[0m17:12:10.633831 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450
+[0m17:12:10.634831 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450
+[0m17:12:10.635832 [debug] [Thread-1 (]: Began running node test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f
+[0m17:12:10.635832 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.unique_dim_complaint_types_complaint_type.32dc29e450, now test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f)
+[0m17:12:10.636833 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f
+[0m17:12:10.640836 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f"
+[0m17:12:10.640836 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f
+[0m17:12:10.641837 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f
+[0m17:12:10.642838 [debug] [Thread-1 (]: Began running node model.nyc_311_project.fct_nyc_311_performance
+[0m17:12:10.642838 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.unique_dim_complaint_types_complaint_type_key.188a662b8f, now model.nyc_311_project.fct_nyc_311_performance)
+[0m17:12:10.643839 [debug] [Thread-1 (]: Began compiling node model.nyc_311_project.fct_nyc_311_performance
+[0m17:12:10.647844 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_311_project.fct_nyc_311_performance"
+[0m17:12:10.648843 [debug] [Thread-1 (]: Began executing node model.nyc_311_project.fct_nyc_311_performance
+[0m17:12:10.648843 [debug] [Thread-1 (]: Finished running node model.nyc_311_project.fct_nyc_311_performance
+[0m17:12:10.649845 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_dim_locations_location_key.375a9dc0f3
+[0m17:12:10.650846 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nyc_311_project.fct_nyc_311_performance, now test.nyc_311_project.not_null_dim_locations_location_key.375a9dc0f3)
+[0m17:12:10.650846 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_dim_locations_location_key.375a9dc0f3
+[0m17:12:10.655850 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_dim_locations_location_key.375a9dc0f3"
+[0m17:12:10.656851 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_dim_locations_location_key.375a9dc0f3
+[0m17:12:10.657853 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_dim_locations_location_key.375a9dc0f3
+[0m17:12:10.657853 [debug] [Thread-1 (]: Began running node test.nyc_311_project.unique_dim_locations_location_key.9d6de2f887
+[0m17:12:10.658853 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_dim_locations_location_key.375a9dc0f3, now test.nyc_311_project.unique_dim_locations_location_key.9d6de2f887)
+[0m17:12:10.658853 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.unique_dim_locations_location_key.9d6de2f887
+[0m17:12:10.662856 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.unique_dim_locations_location_key.9d6de2f887"
+[0m17:12:10.663857 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.unique_dim_locations_location_key.9d6de2f887
+[0m17:12:10.664859 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.unique_dim_locations_location_key.9d6de2f887
+[0m17:12:10.664859 [debug] [Thread-1 (]: Began running node model.nyc_311_project.dim_nyc_311_monthly_summary
+[0m17:12:10.665859 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.unique_dim_locations_location_key.9d6de2f887, now model.nyc_311_project.dim_nyc_311_monthly_summary)
+[0m17:12:10.665859 [debug] [Thread-1 (]: Began compiling node model.nyc_311_project.dim_nyc_311_monthly_summary
+[0m17:12:10.669863 [debug] [Thread-1 (]: Writing injected SQL for node "model.nyc_311_project.dim_nyc_311_monthly_summary"
+[0m17:12:10.670864 [debug] [Thread-1 (]: Began executing node model.nyc_311_project.dim_nyc_311_monthly_summary
+[0m17:12:10.671865 [debug] [Thread-1 (]: Finished running node model.nyc_311_project.dim_nyc_311_monthly_summary
+[0m17:12:10.671865 [debug] [Thread-1 (]: Began running node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af
+[0m17:12:10.672866 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.nyc_311_project.dim_nyc_311_monthly_summary, now test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af)
+[0m17:12:10.672866 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af
+[0m17:12:10.678872 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af"
+[0m17:12:10.679872 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af
+[0m17:12:10.680873 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af
+[0m17:12:10.680873 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23
+[0m17:12:10.681874 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.accepted_values_fct_nyc_311_performance_time_period__Morning__Afternoon__Evening__Night.cd0727e3af, now test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23)
+[0m17:12:10.681874 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23
+[0m17:12:10.685877 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23"
+[0m17:12:10.686878 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23
+[0m17:12:10.687879 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23
+[0m17:12:10.687879 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b
+[0m17:12:10.688880 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_id.86af9c5d23, now test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b)
+[0m17:12:10.688880 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b
+[0m17:12:10.692884 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b"
+[0m17:12:10.693885 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b
+[0m17:12:10.694886 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b
+[0m17:12:10.694886 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124
+[0m17:12:10.695886 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_fct_nyc_311_performance_complaint_type_key.bb1c2f438b, now test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124)
+[0m17:12:10.695886 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124
+[0m17:12:10.700891 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124"
+[0m17:12:10.701892 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124
+[0m17:12:10.702893 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124
+[0m17:12:10.702893 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f
+[0m17:12:10.703893 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_fct_nyc_311_performance_date_key.e98ed30124, now test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f)
+[0m17:12:10.703893 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f
+[0m17:12:10.707897 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f"
+[0m17:12:10.708898 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f
+[0m17:12:10.709899 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f
+[0m17:12:10.709899 [debug] [Thread-1 (]: Began running node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27
+[0m17:12:10.710900 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_fct_nyc_311_performance_is_late.692386874f, now test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27)
+[0m17:12:10.710900 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27
+[0m17:12:10.714904 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27"
+[0m17:12:10.715904 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27
+[0m17:12:10.716906 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27
+[0m17:12:10.716906 [debug] [Thread-1 (]: Began running node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de
+[0m17:12:10.717906 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.nyc_311_project.not_null_fct_nyc_311_performance_is_open_backlog.0ead6d5b27, now test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de)
+[0m17:12:10.717906 [debug] [Thread-1 (]: Began compiling node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de
+[0m17:12:10.721910 [debug] [Thread-1 (]: Writing injected SQL for node "test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de"
+[0m17:12:10.722911 [debug] [Thread-1 (]: Began executing node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de
+[0m17:12:10.723912 [debug] [Thread-1 (]: Finished running node test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de
+[0m17:12:10.724913 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:12:10.724913 [debug] [MainThread]: Connection 'list_depi-graduation-project-489604_nyc_311_raw_data' was properly closed.
+[0m17:12:10.725914 [debug] [MainThread]: Connection 'test.nyc_311_project.unique_fct_nyc_311_performance_complaint_id.8754e738de' was properly closed.
+[0m17:12:10.729917 [debug] [MainThread]: Command end result
+[0m17:12:10.827017 [debug] [MainThread]: Acquiring new bigquery connection 'generate_catalog'
+[0m17:12:10.828018 [info ] [MainThread]: Building catalog
+[0m17:12:10.834023 [debug] [ThreadPool]: Acquiring new bigquery connection 'depi-graduation-project-489604.information_schema'
+[0m17:12:10.912094 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:12:10.913095 [debug] [ThreadPool]: On depi-graduation-project-489604.information_schema: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "default", "target_name": "dev", "connection_name": "depi-graduation-project-489604.information_schema"} */
+
+    with
+                table_shards_stage as (
+    select
+        tables.project_id as table_catalog,
+        tables.dataset_id as table_schema,
+        coalesce(REGEXP_EXTRACT(tables.table_id, '^(.+)[0-9]{8}$'), tables.table_id) as table_name,
+        tables.table_id as shard_name,
+        REGEXP_EXTRACT(tables.table_id, '^.+([0-9]{8})$') as shard_index,
+        REGEXP_CONTAINS(tables.table_id, '^.+[0-9]{8}$') and tables.type = 1 as is_date_shard,
+        case
+            when materialized_views.table_name is not null then 'materialized view'
+            when tables.type = 1 then 'table'
+            when tables.type = 2 then 'view'
+            else 'external'
+        end as table_type,
+        tables.type = 1 as is_table,
+        JSON_VALUE(table_description.option_value) as table_comment,
+        tables.size_bytes,
+        tables.row_count
+    from `depi-graduation-project-489604`.`nyc_311_raw_data`.__TABLES__ tables
+    left join `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.MATERIALIZED_VIEWS materialized_views
+        on materialized_views.table_catalog = tables.project_id
+        and materialized_views.table_schema = tables.dataset_id
+        and materialized_views.table_name = tables.table_id
+    left join `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.TABLE_OPTIONS table_description
+        on table_description.table_catalog = tables.project_id
+        and table_description.table_schema = tables.dataset_id
+        and table_description.table_name = tables.table_id
+        and table_description.option_name = 'description'
+),
+                table_shards as (
+                    select * from table_shards_stage
+                    where ((
+                                upper(table_schema) = upper('nyc_311_raw_data')
+                            and upper(table_name) = upper('dim_complaint_types')
+                            ) or (
+                                upper(table_schema) = upper('nyc_311_raw_data')
+                            and upper(table_name) = upper('dim_locations')
+                            ) or (
+                                upper(table_schema) = upper('nyc_311_raw_data')
+                            and upper(table_name) = upper('stg_nyc_311_requests')
+                            ) or (
+                                upper(table_schema) = upper('nyc_311_raw_data')
+                            and upper(table_name) = upper('fct_nyc_311_performance')
+                            ) or (
+                                upper(table_schema) = upper('nyc_311_raw_data')
+                            and upper(table_name) = upper('dim_date')
+                            ) or (
+                                upper(table_schema) = upper('nyc_311_raw_data')
+                            and upper(table_name) = upper('audit_raw_311_data')
+                            ) or (
+                                upper(table_schema) = upper('nyc_311_raw_data')
+                            and upper(table_name) = upper('dim_nyc_311_monthly_summary')
+                            ) or (
+                                upper(table_schema) = upper('nyc_311_raw_data')
+                            and upper(table_name) = upper('raw_service_requests')
+                            ) or (
+                                upper(table_schema) = upper('nyc_311_raw_data')
+                            and upper(table_name) = upper('dim_agency')
+                            ))
+                ),
+                tables as (
+    select distinct
+        table_catalog,
+        table_schema,
+        table_name,
+        is_date_shard,
+        table_type,
+        is_table,
+        table_comment
+    from table_shards
+),
+                table_stats as (
+    select
+        table_catalog,
+        table_schema,
+        table_name,
+        max(shard_name) as latest_shard_name,
+        min(shard_index) as shard_min,
+        max(shard_index) as shard_max,
+        count(shard_index) as shard_count,
+        sum(size_bytes) as size_bytes,
+        sum(row_count) as row_count
+    from table_shards
+    group by 1, 2, 3
+),
+
+                columns as (
+    select
+        columns.table_catalog,
+        columns.table_schema,
+        columns.table_name as shard_name,
+        coalesce(paths.field_path, '<unknown>') as column_name,
+        -- invent a row number to account for nested fields
+        -- BQ does not treat these nested properties as independent fields
+        row_number() over (
+            partition by
+                columns.table_catalog,
+                columns.table_schema,
+                columns.table_name
+            order by
+                columns.ordinal_position,
+                paths.field_path
+        ) as column_index,
+        coalesce(paths.data_type, '<unknown>') as column_type,
+        paths.description as column_comment,
+        case when columns.is_partitioning_column = 'YES' then 1 else 0 end as is_partitioning_column,
+        case when columns.is_partitioning_column = 'YES' then paths.field_path end as partition_column,
+        case when columns.clustering_ordinal_position is not null then 1 else 0 end as is_clustering_column,
+        case when columns.clustering_ordinal_position is not null then paths.field_path end as cluster_column,
+        columns.clustering_ordinal_position
+    from `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.COLUMNS columns
+    join `depi-graduation-project-489604`.`nyc_311_raw_data`.INFORMATION_SCHEMA.COLUMN_FIELD_PATHS paths
+        on paths.table_catalog = columns.table_catalog
+        and paths.table_schema = columns.table_schema
+        and paths.table_name = columns.table_name
+        and paths.column_name = columns.column_name
+    where columns.ordinal_position is not null
+),
+                column_stats as (
+    select
+        table_catalog,
+        table_schema,
+        shard_name,
+        max(is_partitioning_column) = 1 as is_partitioned,
+        max(partition_column) as partition_column,
+        max(is_clustering_column) = 1 as is_clustered,
+        array_to_string(
+            array_agg(
+                cluster_column ignore nulls
+                order by clustering_ordinal_position
+            ), ', '
+        ) as clustering_columns
+    from columns
+    group by 1, 2, 3
+)
+
+            
+    select
+        tables.table_catalog as table_database,
+        tables.table_schema,
+        case
+            when tables.is_date_shard then concat(tables.table_name, '*')
+            else tables.table_name
+        end as table_name,
+        tables.table_type,
+        tables.table_comment,
+        -- coalesce column metadata fields to ensure they are non-null for catalog generation
+        -- external table columns are not present in COLUMN_FIELD_PATHS
+        coalesce(columns.column_name, '<unknown>') as column_name,
+        coalesce(columns.column_index, 1) as column_index,
+        coalesce(columns.column_type, '<unknown>') as column_type,
+        coalesce(columns.column_comment, '') as column_comment,
+
+        'Shard count' as `stats__date_shards__label`,
+        table_stats.shard_count as `stats__date_shards__value`,
+        'The number of date shards in this table' as `stats__date_shards__description`,
+        tables.is_date_shard as `stats__date_shards__include`,
+
+        'Shard (min)' as `stats__date_shard_min__label`,
+        table_stats.shard_min as `stats__date_shard_min__value`,
+        'The first date shard in this table' as `stats__date_shard_min__description`,
+        tables.is_date_shard as `stats__date_shard_min__include`,
+
+        'Shard (max)' as `stats__date_shard_max__label`,
+        table_stats.shard_max as `stats__date_shard_max__value`,
+        'The last date shard in this table' as `stats__date_shard_max__description`,
+        tables.is_date_shard as `stats__date_shard_max__include`,
+
+        '# Rows' as `stats__num_rows__label`,
+        table_stats.row_count as `stats__num_rows__value`,
+        'Approximate count of rows in this table' as `stats__num_rows__description`,
+        tables.is_table as `stats__num_rows__include`,
+
+        'Approximate Size' as `stats__num_bytes__label`,
+        table_stats.size_bytes as `stats__num_bytes__value`,
+        'Approximate size of table as reported by BigQuery' as `stats__num_bytes__description`,
+        tables.is_table as `stats__num_bytes__include`,
+
+        'Partitioned By' as `stats__partitioning_type__label`,
+        column_stats.partition_column as `stats__partitioning_type__value`,
+        'The partitioning column for this table' as `stats__partitioning_type__description`,
+        column_stats.is_partitioned as `stats__partitioning_type__include`,
+
+        'Clustered By' as `stats__clustering_fields__label`,
+        column_stats.clustering_columns as `stats__clustering_fields__value`,
+        'The clustering columns for this table' as `stats__clustering_fields__description`,
+        column_stats.is_clustered as `stats__clustering_fields__include`
+
+    from tables
+    join table_stats
+        on table_stats.table_catalog = tables.table_catalog
+        and table_stats.table_schema = tables.table_schema
+        and table_stats.table_name = tables.table_name
+    left join column_stats
+        on column_stats.table_catalog = tables.table_catalog
+        and column_stats.table_schema = tables.table_schema
+        and column_stats.shard_name = table_stats.latest_shard_name
+    left join columns
+        on columns.table_catalog = tables.table_catalog
+        and columns.table_schema = tables.table_schema
+        and columns.shard_name = table_stats.latest_shard_name
+
+  
+[0m17:12:11.692744 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=depi-graduation-project-489604&j=bq:US:03d1ce68-09ea-4010-9af7-ce0e84b0c12c&page=queryresults
+[0m17:12:14.126845 [info ] [MainThread]: Catalog written to C:\Users\user\DEPI_Data_Engineering_Graduation_Project\target\catalog.json
+[0m17:12:14.127847 [debug] [MainThread]: Command `dbt docs generate` succeeded at 17:12:14.127847 after 328.09 seconds
+[0m17:12:14.128848 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m17:12:14.128848 [debug] [MainThread]: Connection 'depi-graduation-project-489604.information_schema' was properly closed.
+[0m17:12:14.128848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D993562BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B8CE6320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D9B724AE30>]}
+[0m17:12:14.129848 [debug] [MainThread]: Flushing usage events
