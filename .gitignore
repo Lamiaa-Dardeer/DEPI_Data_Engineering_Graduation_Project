@@ -1,3 +1,7 @@
-target/
-logs/
-dbt_internal_packages/
+
+target/ # dbt generated artifacts (compiled SQL, docs, manifests)
+dbt_packages/ # dbt downloaded packages from packages.yml
+dbt_internal_packages/ # Internal packages used by newer dbt versions
+dbt_modules/ # Older dbt dependency folder (legacy)
+logs/ # Runtime log files generated during execution
+*.log # Ignore any .log file anywhere in the project

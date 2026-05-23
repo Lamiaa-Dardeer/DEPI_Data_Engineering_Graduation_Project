@@ -1,1 +1,0 @@
-{{ test_unique(column_name="complaint_type", model=get_where_subquery(ref('dim_complaint_types'))) }}

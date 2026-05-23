@@ -1,1 +1,0 @@
-{{ test_accepted_values(column_name="complaint_status", model=get_where_subquery(ref('stg_nyc_311_requests')), values=["Closed","Open","Pending","Assigned","In Progress"]) }}
