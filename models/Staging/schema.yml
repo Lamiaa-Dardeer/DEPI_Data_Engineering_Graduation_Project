@@ -14,5 +14,4 @@ models:
         description: "حالة الشكوى الحالية"
         tests:
           - accepted_values:
-              arguments:
-                values: ['Closed', 'Open', 'Pending', 'Assigned', 'In Progress','Started', 'Unspecified']
+              values: ['Closed', 'Open', 'Pending', 'Assigned', 'In Progress','Started', 'Unspecified']

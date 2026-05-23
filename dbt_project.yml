@@ -10,6 +10,5 @@ test-paths: ["tests"]
 
 models:
   nyc_311_project:
-    staging:
+    Staging:
       +materialized: table
-      

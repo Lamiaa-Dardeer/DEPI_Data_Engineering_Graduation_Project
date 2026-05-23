@@ -43,8 +43,19 @@ To overcome the Google BigQuery Sandbox 60-day table expiration policy without i
 * **Language:** SQL (BigQuery Standard SQL) & Python (Initial Ingestion)
 * **BI & Visualization:** Microsoft Power BI
 
----
+-------------------
+## Archived Ingestion Scripts
 
+This folder (scripts_archive) contains legacy ingestion scripts used initially
+to pull NYC 311 raw data from the public API.
+
+These scripts are kept for:
+- Documentation
+- Historical reference
+- Demonstration purposes
+
+The active analytics pipeline currently depends on BigQuery + dbt models.
+-------------------
 ## Team Members
 * **Aliaa Raafat Anwar Elbaz** ([GitHub](https://github.com/aliaelbaz))
 * **Elsayed Hussein Mohamed Gouda** ([GitHub](https://github.com/godajr))
