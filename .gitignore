@@ -5,3 +5,4 @@ dbt_internal_packages/ # Internal packages used by newer dbt versions
 dbt_modules/ # Older dbt dependency folder (legacy)
 logs/ # Runtime log files generated during execution
 *.log # Ignore any .log file anywhere in the project
+*.pbix # Power BI files

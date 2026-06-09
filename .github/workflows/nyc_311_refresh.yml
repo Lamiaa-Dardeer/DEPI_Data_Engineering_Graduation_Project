@@ -26,7 +26,7 @@ jobs:
           workload_identity_provider: 'projects/113456966208/locations/global/workloadIdentityPools/depi-pool/providers/github-new-provider'
           service_account: 'dbt-user-311@depi-graduation-project-489604.iam.gserviceaccount.com'
 
-# نكتفي بتثبيت dbt-bigquery فقط لتوفير الوقت والموارد
+#  بتثبيت dbt-bigquery فقط لتوفير الوقت والموارد
       - name: Install dbt
         run: |
           pip install dbt-bigquery

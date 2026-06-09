@@ -7,7 +7,6 @@
     
     
 
-    
     OPTIONS()
     as (
       
@@ -26,6 +25,5 @@
     agency_name 
 
      FROM unique_agency
-
     );
   

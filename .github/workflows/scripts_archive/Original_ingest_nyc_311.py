@@ -15,7 +15,6 @@ start_date = "2020-01-01T00:00:00"
 
 # 3. صياغة الاستعلام (Query) لجلب البيانات من 2020 إلى الآن
 # تم استبدال limit الثابت بفلتر زمني
-# ملاحظة: سحب 6 سنوات من البيانات قد يستغرق وقتاً أطول ويزيد حجم البيانات
 query = f"created_date >= '{start_date}'"
 
 print(f"Starting data ingestion from {start_date}...")

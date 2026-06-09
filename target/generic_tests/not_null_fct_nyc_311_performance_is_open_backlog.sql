@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="is_open_backlog", model=get_where_subquery(ref('fct_nyc_311_performance'))) }}

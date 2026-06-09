@@ -7,14 +7,13 @@
     
     
 
-    
     OPTIONS()
     as (
       
 
 WITH date_series AS (
     SELECT *
-    FROM UNNEST(GENERATE_DATE_ARRAY('2023-01-01', '2026-12-31', INTERVAL 1 DAY)) AS date_day
+    FROM UNNEST(GENERATE_DATE_ARRAY('2024-01-01', '2026-12-31', INTERVAL 1 DAY)) AS date_day
 )
 
 SELECT

@@ -1,1 +1,0 @@
-{{ dbt_utils.test_expression_is_true(column_name="days_to_close", expression=">= 0", model=get_where_subquery(ref('fct_nyc_311_performance'))) }}
