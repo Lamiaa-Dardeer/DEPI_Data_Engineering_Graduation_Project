@@ -1,7 +1,7 @@
 {{ config(materialized='view') }} -- طبقة الـ Staging يفضل أن تكون View لتوفير المساحة
 
 WITH raw_data AS (
-    SELECT * FROM {{ ref('raw_service_requests') }} -- هنا dbt سيفهم أنه يقرأ من الجدول الذي قمنا بحمايته
+    SELECT distinct * FROM {{ ref('raw_service_requests') }} -- هنا dbt سيفهم أنه يقرأ من الجدول الذي قمنا بحمايته
 )
 
 SELECT
