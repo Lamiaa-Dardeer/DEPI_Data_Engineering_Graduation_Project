@@ -66,3 +66,15 @@ To handle the Google BigQuery Sandbox 60-day table expiration policy without pay
 │   ├── Marts/                   # Analytics-ready Business Gold Datasets
 │   └── Staging/                 # Raw Base Views and Cleaning Layer
 └── scripts_archive/             # Legacy Ingestion Python Scripts
+
+
+---
+
+## Team Members
+* Aliaa Raafat Anwar Elbaz ([GitHub](https://github.com/aliaelbaz))
+* Elsayed Hussein Mohamed Gouda ([GitHub](https://github.com/godajr))
+* Lamiaa Mohammad Abdulhameed Dardeer ([GitHub](https://github.com/Lamiaa-Dardeer))
+* Makary Makeen Makary ([GitHub](https://github.com/MakaryMakeen10))
+
+---
+*Generated as part of the Digital Egypt Pioneers Initiative (DEPI).*
