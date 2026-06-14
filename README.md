@@ -42,7 +42,8 @@ To handle the Google BigQuery Sandbox 60-day table expiration policy without pay
 ### Phase 4: BI Analytics and Visualization (Gold Layer)
 * **Tool:** Microsoft Power BI.
 * **Design and Insights:** We designed a dark-themed dashboard using the NYC Taxi Yellow color palette. It tracks historical trends (2024-2026), Year-over-Year (YoY) performance, agency response times, and seasonal complaint patterns.
-* https://drive.google.com/file/d/18f2Ms-SClwqQqv4rhrtyEwk8IgSA6epi/view
+* https://drive.google.com/file/d/18f2Ms-SClwqQqv4rhrtyEwk8IgSA6epi/view .
+* https://app.powerbi.com/groups/me/reports/39144f71-9096-4b6e-8bda-e56c3bea14e8?ctid=0bc92751-071a-4e2c-a48b-633206fef374&pbi_source=linkShare
 
 ---
 
