@@ -10,7 +10,7 @@ This project focuses on building an end-to-end data transformation pipeline. We 
 All project assets, presentation slides, and technical workflows are fully documented and accessible below:
 * **Interactive Data Catalog:** [Click Here to View Live dbt Documentation Website](https://lamiaa-dardeer.github.io/DEPI_Data_Engineering_Graduation_Project/)
 * **Graduation Presentation:** [Download Project Presentation Slides](./docs/DEPI_Data_Engineering_Graduation_Presentation_2026.pptx)
-* **Power BI Dashboard:** (___________________________________________________________________________________________)
+* **Power BI Dashboard:** [Download Project Dashboard File (.pbix)](https://github.com/Lamiaa-Dardeer/DEPI_Data_Engineering_Graduation_Project/blob/main/NYC_311.pbix)
 * **Production Workflows:** [View GitHub Actions CI/CD Pipeline Code](./.github/workflows/nyc_311_refresh.yml)
 
 ---
