@@ -67,8 +67,7 @@ To handle the Google BigQuery Sandbox 60-day table expiration policy without pay
 │   └── Staging/                 # Raw Base Views and Cleaning Layer
 └── scripts_archive/             # Legacy Ingestion Python Scripts
 
-
----
+```
 
 ## Team Members
 * Aliaa Raafat Anwar Elbaz ([GitHub](https://github.com/aliaelbaz))
